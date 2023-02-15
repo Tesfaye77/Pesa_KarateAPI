@@ -1,0 +1,54 @@
+[
+  {
+  "first_name": "Tesfaye7",
+  "last_name": "Zara",
+  "email": "tesf5@gmail.com",
+  "phone": "696894199",
+  "birth_day": "19990509",
+  "password": 362014,
+  "role": ["User"],
+  "isActive": true,
+  "isEmailConfirmed": false,
+  "isCreatedByAdmin": true
+},
+
+
+  {
+
+    "product": "63e4f9e4e1cbdc16bbbe9d82",
+    "user": "63c80c13e56165ca64b4a6cb",
+    "designation": "string",
+    "initial_value": 0,
+    "liquidity_frequency": 0,
+    "cumulative_performance": 0,
+    "performance_hebdo": 0,
+    "cumulative_performance_date": "2023-02-15",
+    "liquidity_value": 0,
+    "YTD": 0
+
+  },
+
+  {
+    "designation": "Ulrich",
+    "transmitter": "Kamer",
+    "value_initial": 15000,
+    "value_liquidity": 10000,
+    "perfomance_hebdo": 20,
+    "maturity": "ZZ20",
+    "rate_of_return": 0,
+    "Annual_rate": 12,
+    "Annual_return": 13,
+    "liquidity_frequency": "mensuel",
+    "subscription_deadline_date": "2023-02-15T13:38:10.988Z",
+    "value_date": "2023-02-15T13:38:10.988Z",
+    "type": "obligation"
+  },
+
+
+  {
+    "product": "63e4f9e4e1cbdc16bbbe9d82",
+    "user": "63c80c13e56165ca64b4a6cb",
+    "volume": 10
+  }
+
+]

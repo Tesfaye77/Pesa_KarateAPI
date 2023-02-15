@@ -1,0 +1,3211 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports  - Failures Overview</title>
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation"  class="active" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>Report-Name</td>
+      <td>15 f&eacute;vr. 2023, 17:17</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Failures Overview</h2>
+      <p>The following summary displays scenarios that failed.</p>
+  </div>
+</div>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-1 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+
+        <div class="elements">
+
+<div class="element">
+    <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_1759317257.html">examples/tests/Get.feature</a>
+    </div>
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_4048441208.html">@Get03</a>
+       <a href="report-tag_494055589.html">@GetScenario</a>
+</div>
+
+
+  <span class="lead-duration duration">2.009</span>
+
+
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
+
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">GET all wallet</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-1" class="collapse collapsable-details  in ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-2">
+
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-2" class="inner-level collapse collapsable-details  in ">
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">path '/api/v1/wallet'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">method GET</span>
+
+  <span class="lead-duration duration">1.989</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-3">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-3" class="collapse collapsable-details">
+        <pre>17:17:27.884 request:
+1 &gt; GET https://pesa-backend-production.up.railway.app/api/v1/wallet
+1 &gt; Content-type: application/json
+1 &gt; Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZWNhNzVjMjFlNjcxM2Y4YjlmNTRiZiIsImlhdCI6MTY3NjQ3Nzg0NSwiZXhwIjoxNjc2NTY0MjQ1fQ.QUHJg0xeVM3JID0ypz_RheLVsJLHTphT8FyMFwllKes
+1 &gt; Host: pesa-backend-production.up.railway.app
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_261)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+17:17:29.869 response time in milliseconds: 1976
+1 &lt; 200
+1 &lt; x-powered-by: Express
+1 &lt; access-control-allow-origin: *
+1 &lt; content-type: application/json; charset=utf-8
+1 &lt; content-length: 40135
+1 &lt; etag: W/&quot;9cc7-kh2TksCU7xjVf9wiNeqeHmzFPug&quot;
+1 &lt; date: Wed, 15 Feb 2023 16:17:30 GMT
+1 &lt; x-envoy-upstream-service-time: 738
+1 &lt; server: railway
+[{&quot;initial_value&quot;:0,&quot;cumulative_performance&quot;:0,&quot;liquidity_value&quot;:0,&quot;performance_hebdo&quot;:0,&quot;liquidity_frequency&quot;:0,&quot;ytd&quot;:0,&quot;products&quot;:[],&quot;gestionnaire&quot;:{&quot;birth_day&quot;:&quot;1970-01-01T05:28:20.118Z&quot;,&quot;password&quot;:&quot;$2b$10$CmVSy8UmmadypLu7y7d\/eOs4baSNkYk6ja2gsFrI\/4Z74ix0r4PZy&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;696074199&quot;,&quot;isCreatedByAdmin&quot;:false,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;fafnirukihj&quot;,&quot;_id&quot;:&quot;63c80c13e56165ca64b4a6cb&quot;,&quot;isActive&quot;:false,&quot;first_name&quot;:&quot;Fafnirou3kl&quot;,&quot;email&quot;:&quot;hamman2@mail.com&quot;,&quot;isEmailConfirmed&quot;:false},&quot;__v&quot;:0,&quot;_id&quot;:&quot;63df5c36ad437ea9f60e8034&quot;,&quot;designation&quot;:&quot;Default wallet&quot;,&quot;cumulative_performance_date&quot;:&quot;2023-02-05T07:35:01.012Z&quot;,&quot;user&quot;:{&quot;birth_day&quot;:&quot;2000-12-12T00:00:00.000Z&quot;,&quot;password&quot;:&quot;$2b$10$1DVBH2HY8R4WMBDSkdCaEOTLIe\/\/6tXF9BbrxEmYz5atQYQbf7iK.&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;655757902&quot;,&quot;isCreatedByAdmin&quot;:false,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;Gabriel&quot;,&quot;_id&quot;:&quot;63df5c36ad437ea9f60e8033&quot;,&quot;isActive&quot;:false,&quot;first_name&quot;:&quot;Tendong&quot;,&quot;email&quot;:&quot;gabitendong1@gmail.com&quot;,&quot;isEmailConfirmed&quot;:false}},{&quot;product&quot;:[],&quot;initial_value&quot;:0,&quot;cumulative_performance&quot;:0,&quot;liquidity_value&quot;:0,&quot;performance_hebdo&quot;:0,&quot;liquidity_frequency&quot;:0,&quot;ytd&quot;:0,&quot;products&quot;:[],&quot;gestionnaire&quot;:{&quot;birth_day&quot;:&quot;1970-01-01T05:28:20.118Z&quot;,&quot;password&quot;:&quot;$2b$10$CmVSy8UmmadypLu7y7d\/eOs4baSNkYk6ja2gsFrI\/4Z74ix0r4PZy&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;696074199&quot;,&quot;isCreatedByAdmin&quot;:false,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;fafnirukihj&quot;,&quot;_id&quot;:&quot;63c80c13e56165ca64b4a6cb&quot;,&quot;isActive&quot;:false,&quot;first_name&quot;:&quot;Fafnirou3kl&quot;,&quot;email&quot;:&quot;hamman2@mail.com&quot;,&quot;isEmailConfirmed&quot;:false},&quot;__v&quot;:0,&quot;_id&quot;:&quot;63e250f6993b5f9a52eb8009&quot;,&quot;designation&quot;:&quot;Default wallet&quot;,&quot;cumulative_performance_date&quot;:&quot;2023-02-07T09:48:26.239Z&quot;,&quot;user&quot;:{&quot;birth_day&quot;:&quot;1999-02-06T00:00:00.000Z&quot;,&quot;password&quot;:&quot;$2b$10$PbKmpsh7.ZPP40kT56FYAub5.p6NWrIJrI8D5sMWmvbQaJ8ybjMMi&quot;,&quot;role&quot;:[&quot;Admin&quot;],&quot;phone&quot;:&quot;696074199'#string'&quot;,&quot;isCreatedByAdmin&quot;:false,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;fafniruER&quot;,&quot;_id&quot;:&quot;63e250f6993b5f9a52eb8008&quot;,&quot;isActive&quot;:false,&quot;first_name&quot;:&quot;Tcheuguen&quot;,&quot;email&quot;:&quot;fredy@mail.com&quot;,&quot;isEmailConfirmed&quot;:true}},{&quot;product&quot;:[],&quot;initial_value&quot;:0,&quot;cumulative_performance&quot;:0,&quot;liquidity_value&quot;:0,&quot;performance_hebdo&quot;:0,&quot;liquidity_frequency&quot;:0,&quot;ytd&quot;:0,&quot;products&quot;:[],&quot;gestionnaire&quot;:{&quot;birth_day&quot;:&quot;1970-01-01T05:28:20.118Z&quot;,&quot;password&quot;:&quot;$2b$10$CmVSy8UmmadypLu7y7d\/eOs4baSNkYk6ja2gsFrI\/4Z74ix0r4PZy&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;696074199&quot;,&quot;isCreatedByAdmin&quot;:false,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;fafnirukihj&quot;,&quot;_id&quot;:&quot;63c80c13e56165ca64b4a6cb&quot;,&quot;isActive&quot;:false,&quot;first_name&quot;:&quot;Fafnirou3kl&quot;,&quot;email&quot;:&quot;hamman2@mail.com&quot;,&quot;isEmailConfirmed&quot;:false},&quot;__v&quot;:0,&quot;_id&quot;:&quot;63e26e62993b5f9a52eb825a&quot;,&quot;designation&quot;:&quot;Default wallet&quot;,&quot;cumulative_performance_date&quot;:&quot;2023-02-07T09:48:26.239Z&quot;,&quot;user&quot;:{&quot;birth_day&quot;:&quot;2004-12-09T00:00:00.000Z&quot;,&quot;password&quot;:&quot;$2b$10$XhZiWjmSyJod8dFtueiKP.52OoaJsSiucn6RM7kapHMV3yzPPbtiC&quot;,&quot;role&quot;:[&quot;Admin&quot;],&quot;phone&quot;:&quot;+33607703069&quot;,&quot;isCreatedByAdmin&quot;:true,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;Luttrell.L&quot;,&quot;_id&quot;:&quot;63e26e62993b5f9a52eb8259&quot;,&quot;isActive&quot;:false,&quot;first_name&quot;:&quot;Daniel &quot;,&quot;email&quot;:&quot;daniel.luttrell@yopmail.com&quot;,&quot;isEmailConfirmed&quot;:true}},{&quot;product&quot;:[],&quot;initial_value&quot;:0,&quot;cumulative_performance&quot;:0,&quot;liquidity_value&quot;:0,&quot;performance_hebdo&quot;:0,&quot;liquidity_frequency&quot;:0,&quot;ytd&quot;:0,&quot;products&quot;:[],&quot;gestionnaire&quot;:{&quot;birth_day&quot;:&quot;1970-01-01T05:28:20.118Z&quot;,&quot;password&quot;:&quot;$2b$10$CmVSy8UmmadypLu7y7d\/eOs4baSNkYk6ja2gsFrI\/4Z74ix0r4PZy&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;696074199&quot;,&quot;isCreatedByAdmin&quot;:false,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;fafnirukihj&quot;,&quot;_id&quot;:&quot;63c80c13e56165ca64b4a6cb&quot;,&quot;isActive&quot;:false,&quot;first_name&quot;:&quot;Fafnirou3kl&quot;,&quot;email&quot;:&quot;hamman2@mail.com&quot;,&quot;isEmailConfirmed&quot;:false},&quot;__v&quot;:0,&quot;_id&quot;:&quot;63e27048993b5f9a52eb82ad&quot;,&quot;designation&quot;:&quot;Default wallet&quot;,&quot;cumulative_performance_date&quot;:&quot;2023-02-07T09:48:26.239Z&quot;,&quot;user&quot;:{&quot;birth_day&quot;:&quot;2004-12-09T00:00:00.000Z&quot;,&quot;password&quot;:&quot;$2b$10$rhqmsRb9dt9lejVLe8UDwewqIN7R\/Xkojf5LAwlZ.RdFWr5pw880W&quot;,&quot;role&quot;:[&quot;Admin&quot;],&quot;phone&quot;:&quot;+334567898765&quot;,&quot;isCreatedByAdmin&quot;:true,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;L. Luttrell&quot;,&quot;_id&quot;:&quot;63e27048993b5f9a52eb82ac&quot;,&quot;isActive&quot;:true,&quot;first_name&quot;:&quot;Daniel &quot;,&quot;email&quot;:&quot;dankiel.luttrell@yopmail.com&quot;,&quot;isEmailConfirmed&quot;:true}},{&quot;product&quot;:[],&quot;initial_value&quot;:0,&quot;cumulative_performance&quot;:0,&quot;liquidity_value&quot;:0,&quot;performance_hebdo&quot;:0,&quot;liquidity_frequency&quot;:0,&quot;ytd&quot;:0,&quot;products&quot;:[],&quot;gestionnaire&quot;:{&quot;birth_day&quot;:&quot;1970-01-01T05:28:20.118Z&quot;,&quot;password&quot;:&quot;$2b$10$CmVSy8UmmadypLu7y7d\/eOs4baSNkYk6ja2gsFrI\/4Z74ix0r4PZy&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;696074199&quot;,&quot;isCreatedByAdmin&quot;:false,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;fafnirukihj&quot;,&quot;_id&quot;:&quot;63c80c13e56165ca64b4a6cb&quot;,&quot;isActive&quot;:false,&quot;first_name&quot;:&quot;Fafnirou3kl&quot;,&quot;email&quot;:&quot;hamman2@mail.com&quot;,&quot;isEmailConfirmed&quot;:false},&quot;__v&quot;:0,&quot;_id&quot;:&quot;63e271d6993b5f9a52eb8306&quot;,&quot;designation&quot;:&quot;Default wallet&quot;,&quot;cumulative_performance_date&quot;:&quot;2023-02-07T09:48:26.239Z&quot;,&quot;user&quot;:{&quot;birth_day&quot;:&quot;2004-12-09T00:00:00.000Z&quot;,&quot;password&quot;:&quot;$2b$10$YWQxjT7rTY4mTrMzqWP\/r.iE9jSPk\/g68Z1FoTJOOOM77CnCt3XiC&quot;,&quot;role&quot;:[&quot;Admin&quot;],&quot;phone&quot;:&quot;333333333&quot;,&quot;isCreatedByAdmin&quot;:true,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;ffffffffffffffff&quot;,&quot;_id&quot;:&quot;63e271d6993b5f9a52eb8305&quot;,&quot;isActive&quot;:false,&quot;first_name&quot;:&quot;fffffffffff&quot;,&quot;email&quot;:&quot;ffffffffff@fff.fff&quot;,&quot;isEmailConfirmed&quot;:true}},{&quot;product&quot;:[],&quot;initial_value&quot;:0,&quot;cumulative_performance&quot;:0,&quot;liquidity_value&quot;:0,&quot;performance_hebdo&quot;:0,&quot;liquidity_frequency&quot;:0,&quot;ytd&quot;:0,&quot;products&quot;:[],&quot;gestionnaire&quot;:{&quot;birth_day&quot;:&quot;1970-01-01T05:28:20.118Z&quot;,&quot;password&quot;:&quot;$2b$10$CmVSy8UmmadypLu7y7d\/eOs4baSNkYk6ja2gsFrI\/4Z74ix0r4PZy&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;696074199&quot;,&quot;isCreatedByAdmin&quot;:false,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;fafnirukihj&quot;,&quot;_id&quot;:&quot;63c80c13e56165ca64b4a6cb&quot;,&quot;isActive&quot;:false,&quot;first_name&quot;:&quot;Fafnirou3kl&quot;,&quot;email&quot;:&quot;hamman2@mail.com&quot;,&quot;isEmailConfirmed&quot;:false},&quot;__v&quot;:0,&quot;_id&quot;:&quot;63e27913993b5f9a52eb83d4&quot;,&quot;designation&quot;:&quot;Default wallet&quot;,&quot;cumulative_performance_date&quot;:&quot;2023-02-07T09:48:26.239Z&quot;,&quot;user&quot;:{&quot;birth_day&quot;:&quot;2004-12-09T00:00:00.000Z&quot;,&quot;password&quot;:&quot;$2b$10$sP.A0rPhSmxKb0cHZeYkAeAOpC.VeBhwSU\/.H.yAtCxvWYnDvKePq&quot;,&quot;role&quot;:[&quot;Admin&quot;],&quot;phone&quot;:&quot;+237696074190&quot;,&quot;isCreatedByAdmin&quot;:true,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;POLA&quot;,&quot;_id&quot;:&quot;63e27913993b5f9a52eb83d3&quot;,&quot;isActive&quot;:true,&quot;first_name&quot;:&quot;AHMADOU&quot;,&quot;email&quot;:&quot;dankiel.luttrfell@yopmail.com&quot;,&quot;isEmailConfirmed&quot;:true}},{&quot;product&quot;:[],&quot;initial_value&quot;:0,&quot;cumulative_performance&quot;:0,&quot;liquidity_value&quot;:0,&quot;performance_hebdo&quot;:0,&quot;liquidity_frequency&quot;:0,&quot;ytd&quot;:0,&quot;products&quot;:[],&quot;gestionnaire&quot;:{&quot;birth_day&quot;:&quot;1970-01-01T05:28:20.118Z&quot;,&quot;password&quot;:&quot;$2b$10$CmVSy8UmmadypLu7y7d\/eOs4baSNkYk6ja2gsFrI\/4Z74ix0r4PZy&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;696074199&quot;,&quot;isCreatedByAdmin&quot;:false,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;fafnirukihj&quot;,&quot;_id&quot;:&quot;63c80c13e56165ca64b4a6cb&quot;,&quot;isActive&quot;:false,&quot;first_name&quot;:&quot;Fafnirou3kl&quot;,&quot;email&quot;:&quot;hamman2@mail.com&quot;,&quot;isEmailConfirmed&quot;:false},&quot;__v&quot;:0,&quot;_id&quot;:&quot;63e283ad993b5f9a52eb859e&quot;,&quot;designation&quot;:&quot;Default wallet&quot;,&quot;cumulative_performance_date&quot;:&quot;2023-02-07T09:48:26.239Z&quot;,&quot;user&quot;:{&quot;birth_day&quot;:&quot;2004-12-09T00:00:00.000Z&quot;,&quot;password&quot;:&quot;$2b$10$KkZCbA3Uply7zeFH7i5oq.NiBqeSsSSysvv4JxNJ27vNQkSPdxla.&quot;,&quot;role&quot;:[&quot;Admin&quot;],&quot;phone&quot;:&quot;+336767898765&quot;,&quot;isCreatedByAdmin&quot;:true,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;E. Bryan&quot;,&quot;_id&quot;:&quot;63e283ad993b5f9a52eb859d&quot;,&quot;isActive&quot;:true,&quot;first_name&quot;:&quot;judith&quot;,&quot;email&quot;:&quot;judith.bryan@yopmail.com&quot;,&quot;isEmailConfirmed&quot;:true}},{&quot;product&quot;:[],&quot;initial_value&quot;:0,&quot;cumulative_performance&quot;:0,&quot;liquidity_value&quot;:0,&quot;performance_hebdo&quot;:0,&quot;liquidity_frequency&quot;:0,&quot;ytd&quot;:0,&quot;products&quot;:[],&quot;gestionnaire&quot;:{&quot;birth_day&quot;:&quot;1970-01-01T05:28:20.118Z&quot;,&quot;password&quot;:&quot;$2b$10$CmVSy8UmmadypLu7y7d\/eOs4baSNkYk6ja2gsFrI\/4Z74ix0r4PZy&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;696074199&quot;,&quot;isCreatedByAdmin&quot;:false,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;fafnirukihj&quot;,&quot;_id&quot;:&quot;63c80c13e56165ca64b4a6cb&quot;,&quot;isActive&quot;:false,&quot;first_name&quot;:&quot;Fafnirou3kl&quot;,&quot;email&quot;:&quot;hamman2@mail.com&quot;,&quot;isEmailConfirmed&quot;:false},&quot;__v&quot;:0,&quot;_id&quot;:&quot;63e28411993b5f9a52eb85ae&quot;,&quot;designation&quot;:&quot;Default wallet&quot;,&quot;cumulative_performance_date&quot;:&quot;2023-02-07T09:48:26.239Z&quot;,&quot;user&quot;:{&quot;birth_day&quot;:&quot;2004-12-09T00:00:00.000Z&quot;,&quot;password&quot;:&quot;$2b$10$bTdx0dm\/lrnml2xbOmdCze6oI9POIkS9eWffZWiNGHpy6woaaYVYS&quot;,&quot;role&quot;:[&quot;Admin&quot;],&quot;phone&quot;:&quot;+2378987654346788&quot;,&quot;isCreatedByAdmin&quot;:true,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;BRYAN&quot;,&quot;_id&quot;:&quot;63e28411993b5f9a52eb85ad&quot;,&quot;isActive&quot;:false,&quot;first_name&quot;:&quot;FRANCINE&quot;,&quot;email&quot;:&quot;judith.bryan1@yopmail.com&quot;,&quot;isEmailConfirmed&quot;:true}},{&quot;product&quot;:[],&quot;initial_value&quot;:0,&quot;cumulative_performance&quot;:0,&quot;liquidity_value&quot;:0,&quot;performance_hebdo&quot;:0,&quot;liquidity_frequency&quot;:0,&quot;ytd&quot;:0,&quot;products&quot;:[],&quot;gestionnaire&quot;:{&quot;birth_day&quot;:&quot;1970-01-01T05:28:20.118Z&quot;,&quot;password&quot;:&quot;$2b$10$CmVSy8UmmadypLu7y7d\/eOs4baSNkYk6ja2gsFrI\/4Z74ix0r4PZy&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;696074199&quot;,&quot;isCreatedByAdmin&quot;:false,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;fafnirukihj&quot;,&quot;_id&quot;:&quot;63c80c13e56165ca64b4a6cb&quot;,&quot;isActive&quot;:false,&quot;first_name&quot;:&quot;Fafnirou3kl&quot;,&quot;email&quot;:&quot;hamman2@mail.com&quot;,&quot;isEmailConfirmed&quot;:false},&quot;__v&quot;:0,&quot;_id&quot;:&quot;63e2f211993b5f9a52eb8629&quot;,&quot;designation&quot;:&quot;Default wallet&quot;,&quot;cumulative_performance_date&quot;:&quot;2023-02-07T09:48:26.239Z&quot;,&quot;user&quot;:{&quot;birth_day&quot;:&quot;1970-01-01T05:33:10.501Z&quot;,&quot;password&quot;:&quot;$2b$10$TfsTrWwwwaz5bw65.mCQ5e5\/B3uId2BLVUnfcN0XklujN0ugLCU\/S&quot;,&quot;role&quot;:[&quot;Admin&quot;],&quot;phone&quot;:&quot;696074199&quot;,&quot;isCreatedByAdmin&quot;:false,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;fafniru&quot;,&quot;_id&quot;:&quot;63e2f211993b5f9a52eb8628&quot;,&quot;isActive&quot;:false,&quot;first_name&quot;:&quot;Fan&quot;,&quot;email&quot;:&quot;fafnfni@mail.com&quot;,&quot;isEmailConfirmed&quot;:true}},{&quot;initial_value&quot;:0,&quot;cumulative_performance&quot;:0,&quot;liquidity_value&quot;:0,&quot;performance_hebdo&quot;:0,&quot;liquidity_frequency&quot;:0,&quot;ytd&quot;:0,&quot;products&quot;:[],&quot;gestionnaire&quot;:{&quot;birth_day&quot;:&quot;1970-01-01T05:28:20.118Z&quot;,&quot;password&quot;:&quot;$2b$10$CmVSy8UmmadypLu7y7d\/eOs4baSNkYk6ja2gsFrI\/4Z74ix0r4PZy&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;696074199&quot;,&quot;isCreatedByAdmin&quot;:false,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;fafnirukihj&quot;,&quot;_id&quot;:&quot;63c80c13e56165ca64b4a6cb&quot;,&quot;isActive&quot;:false,&quot;first_name&quot;:&quot;Fafnirou3kl&quot;,&quot;email&quot;:&quot;hamman2@mail.com&quot;,&quot;isEmailConfirmed&quot;:false},&quot;__v&quot;:0,&quot;_id&quot;:&quot;63e3776434feb34417e49c35&quot;,&quot;designation&quot;:&quot;Default wallet&quot;,&quot;cumulative_performance_date&quot;:&quot;2023-02-08T10:18:16.410Z&quot;,&quot;user&quot;:{&quot;birth_day&quot;:&quot;1970-01-01T05:33:10.509Z&quot;,&quot;password&quot;:&quot;$2b$10$i9Ol5msNbjde\/rym8fIXO.wteSdPrQHeA\/qvnyi7fAgH\/fRGktwYG&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;696894199&quot;,&quot;isCreatedByAdmin&quot;:false,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;Lopezou&quot;,&quot;_id&quot;:&quot;63e3776434feb34417e49c31&quot;,&quot;isActive&quot;:false,&quot;first_name&quot;:&quot;Harvery&quot;,&quot;email&quot;:&quot;hambello5@gmail.com&quot;,&quot;isEmailConfirmed&quot;:false}},{&quot;initial_value&quot;:0,&quot;cumulative_performance&quot;:0,&quot;liquidity_value&quot;:0,&quot;performance_hebdo&quot;:0,&quot;liquidity_frequency&quot;:0,&quot;ytd&quot;:0,&quot;products&quot;:[],&quot;gestionnaire&quot;:{&quot;birth_day&quot;:&quot;1970-01-01T05:28:20.118Z&quot;,&quot;password&quot;:&quot;$2b$10$CmVSy8UmmadypLu7y7d\/eOs4baSNkYk6ja2gsFrI\/4Z74ix0r4PZy&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;696074199&quot;,&quot;isCreatedByAdmin&quot;:false,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;fafnirukihj&quot;,&quot;_id&quot;:&quot;63c80c13e56165ca64b4a6cb&quot;,&quot;isActive&quot;:false,&quot;first_name&quot;:&quot;Fafnirou3kl&quot;,&quot;email&quot;:&quot;hamman2@mail.com&quot;,&quot;isEmailConfirmed&quot;:false},&quot;__v&quot;:0,&quot;_id&quot;:&quot;63e3804224786384b87f177e&quot;,&quot;designation&quot;:&quot;Default wallet&quot;,&quot;cumulative_performance_date&quot;:&quot;2023-02-08T10:46:52.500Z&quot;,&quot;user&quot;:{&quot;birth_day&quot;:&quot;2004-12-09T00:00:00.000Z&quot;,&quot;password&quot;:&quot;$2b$10$uq12Jk0e2MbTggvNE8kbIOEbZ2zzNcjeSubFJO2DJpt557SF\/hDba&quot;,&quot;role&quot;:[&quot;Admin&quot;],&quot;phone&quot;:&quot;+330236999380&quot;,&quot;isCreatedByAdmin&quot;:true,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;Vernadeau&quot;,&quot;_id&quot;:&quot;63e3804224786384b87f177a&quot;,&quot;isActive&quot;:true,&quot;first_name&quot;:&quot;Huette&quot;,&quot;email&quot;:&quot;dorothee.thibodeau@yopmail.com&quot;,&quot;isEmailConfirmed&quot;:true}},{&quot;initial_value&quot;:0,&quot;cumulative_performance&quot;:0,&quot;liquidity_value&quot;:0,&quot;performance_hebdo&quot;:0,&quot;liquidity_frequency&quot;:0,&quot;ytd&quot;:0,&quot;products&quot;:[],&quot;gestionnaire&quot;:{&quot;birth_day&quot;:&quot;1970-01-01T05:28:20.118Z&quot;,&quot;password&quot;:&quot;$2b$10$CmVSy8UmmadypLu7y7d\/eOs4baSNkYk6ja2gsFrI\/4Z74ix0r4PZy&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;696074199&quot;,&quot;isCreatedByAdmin&quot;:false,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;fafnirukihj&quot;,&quot;_id&quot;:&quot;63c80c13e56165ca64b4a6cb&quot;,&quot;isActive&quot;:false,&quot;first_name&quot;:&quot;Fafnirou3kl&quot;,&quot;email&quot;:&quot;hamman2@mail.com&quot;,&quot;isEmailConfirmed&quot;:false},&quot;__v&quot;:0,&quot;_id&quot;:&quot;63e3849524786384b87f17f3&quot;,&quot;designation&quot;:&quot;Default wallet&quot;,&quot;cumulative_performance_date&quot;:&quot;2023-02-08T10:46:52.500Z&quot;,&quot;user&quot;:{&quot;birth_day&quot;:&quot;1972-09-14T23:00:00.000Z&quot;,&quot;password&quot;:&quot;$2b$10$Md7H3pl.3TKv7gqfniudM.5yioqTsH0JtvSFNwnuhNGD0iJrG4\/IG&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;123456789&quot;,&quot;isCreatedByAdmin&quot;:true,&quot;__v&quot;:0,&quot;last_name&quot;:&quot; Rochefort&quot;,&quot;_id&quot;:&quot;63e3849524786384b87f17ef&quot;,&quot;isActive&quot;:false,&quot;first_name&quot;:&quot;C&eacute;line &quot;,&quot;email&quot;:&quot;celinerochefort@dayrep.com&quot;,&quot;isEmailConfirmed&quot;:false}},{&quot;initial_value&quot;:0,&quot;cumulative_performance&quot;:0,&quot;liquidity_value&quot;:0,&quot;performance_hebdo&quot;:0,&quot;liquidity_frequency&quot;:0,&quot;ytd&quot;:0,&quot;products&quot;:[],&quot;gestionnaire&quot;:{&quot;birth_day&quot;:&quot;1970-01-01T05:28:20.118Z&quot;,&quot;password&quot;:&quot;$2b$10$CmVSy8UmmadypLu7y7d\/eOs4baSNkYk6ja2gsFrI\/4Z74ix0r4PZy&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;696074199&quot;,&quot;isCreatedByAdmin&quot;:false,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;fafnirukihj&quot;,&quot;_id&quot;:&quot;63c80c13e56165ca64b4a6cb&quot;,&quot;isActive&quot;:false,&quot;first_name&quot;:&quot;Fafnirou3kl&quot;,&quot;email&quot;:&quot;hamman2@mail.com&quot;,&quot;isEmailConfirmed&quot;:false},&quot;__v&quot;:0,&quot;_id&quot;:&quot;63e3b4b2647ddb850f36864c&quot;,&quot;designation&quot;:&quot;Default wallet&quot;,&quot;cumulative_performance_date&quot;:&quot;2023-02-08T13:56:13.779Z&quot;,&quot;user&quot;:{&quot;birth_day&quot;:&quot;2004-12-09T00:00:00.000Z&quot;,&quot;password&quot;:&quot;$2b$10$OcMY0rWHoK3TVkcxWSREMeRhuTtzuZCnQxfbCjnowytBkpgUORcZO&quot;,&quot;role&quot;:[&quot;Admin&quot;],&quot;phone&quot;:&quot;+3376787677767&quot;,&quot;isCreatedByAdmin&quot;:true,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;Bonnet&quot;,&quot;_id&quot;:&quot;63e3b4b1647ddb850f368648&quot;,&quot;isActive&quot;:false,&quot;first_name&quot;:&quot;POULETte&quot;,&quot;email&quot;:&quot;francebonnet@rhyta.com&quot;,&quot;isEmailConfirmed&quot;:true}},{&quot;initial_value&quot;:0,&quot;cumulative_performance&quot;:0,&quot;liquidity_value&quot;:0,&quot;performance_hebdo&quot;:0,&quot;liquidity_frequency&quot;:0,&quot;ytd&quot;:0,&quot;products&quot;:[],&quot;gestionnaire&quot;:{&quot;birth_day&quot;:&quot;1970-01-01T05:28:20.118Z&quot;,&quot;password&quot;:&quot;$2b$10$CmVSy8UmmadypLu7y7d\/eOs4baSNkYk6ja2gsFrI\/4Z74ix0r4PZy&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;696074199&quot;,&quot;isCreatedByAdmin&quot;:false,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;fafnirukihj&quot;,&quot;_id&quot;:&quot;63c80c13e56165ca64b4a6cb&quot;,&quot;isActive&quot;:false,&quot;first_name&quot;:&quot;Fafnirou3kl&quot;,&quot;email&quot;:&quot;hamman2@mail.com&quot;,&quot;isEmailConfirmed&quot;:false},&quot;__v&quot;:0,&quot;_id&quot;:&quot;63e3cb613deb13cdd23e501c&quot;,&quot;designation&quot;:&quot;Default wallet&quot;,&quot;cumulative_performance_date&quot;:&quot;2023-02-08T14:53:36.170Z&quot;,&quot;user&quot;:{&quot;birth_day&quot;:&quot;2004-12-09T00:00:00.000Z&quot;,&quot;password&quot;:&quot;$2b$10$PEbLrRoNOIfyZSHMWXMA5eRmFQ78uWlBTilebY0qIyRdEZtqtYYKW&quot;,&quot;role&quot;:[&quot;Admin&quot;],&quot;phone&quot;:&quot;+23789876543&quot;,&quot;isCreatedByAdmin&quot;:true,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;RouleauX&quot;,&quot;_id&quot;:&quot;63e3cb603deb13cdd23e5018&quot;,&quot;isActive&quot;:false,&quot;first_name&quot;:&quot;TEDDY&quot;,&quot;email&quot;:&quot;telfordrouleau@jourrapide.com&quot;,&quot;isEmailConfirmed&quot;:true}},{&quot;initial_value&quot;:0,&quot;cumulative_performance&quot;:0,&quot;liquidity_value&quot;:0,&quot;performance_hebdo&quot;:0,&quot;liquidity_frequency&quot;:0,&quot;ytd&quot;:0,&quot;products&quot;:[],&quot;gestionnaire&quot;:{&quot;birth_day&quot;:&quot;1970-01-01T05:28:20.118Z&quot;,&quot;password&quot;:&quot;$2b$10$CmVSy8UmmadypLu7y7d\/eOs4baSNkYk6ja2gsFrI\/4Z74ix0r4PZy&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;696074199&quot;,&quot;isCreatedByAdmin&quot;:false,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;fafnirukihj&quot;,&quot;_id&quot;:&quot;63c80c13e56165ca64b4a6cb&quot;,&quot;isActive&quot;:false,&quot;first_name&quot;:&quot;Fafnirou3kl&quot;,&quot;email&quot;:&quot;hamman2@mail.com&quot;,&quot;isEmailConfirmed&quot;:false},&quot;__v&quot;:0,&quot;_id&quot;:&quot;63e4faf0e1cbdc16bbbe9e01&quot;,&quot;designation&quot;:&quot;Default wallet&quot;,&quot;cumulative_performance_date&quot;:&quot;2023-02-09T13:13:06.847Z&quot;,&quot;user&quot;:{&quot;birth_day&quot;:&quot;1958-07-11T23:00:00.000Z&quot;,&quot;password&quot;:&quot;123456&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;+330151197981&quot;,&quot;isCreatedByAdmin&quot;:true,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;Boileau&quot;,&quot;_id&quot;:&quot;63e4faf0e1cbdc16bbbe9dfd&quot;,&quot;isActive&quot;:false,&quot;first_name&quot;:&quot;Susanne &quot;,&quot;email&quot;:&quot;suzanne.thibodeau@yopmail.com&quot;,&quot;isEmailConfirmed&quot;:true}},{&quot;initial_value&quot;:0,&quot;cumulative_performance&quot;:0,&quot;liquidity_value&quot;:0,&quot;performance_hebdo&quot;:0,&quot;liquidity_frequency&quot;:0,&quot;ytd&quot;:0,&quot;products&quot;:[],&quot;gestionnaire&quot;:{&quot;birth_day&quot;:&quot;1970-01-01T05:28:20.118Z&quot;,&quot;password&quot;:&quot;$2b$10$CmVSy8UmmadypLu7y7d\/eOs4baSNkYk6ja2gsFrI\/4Z74ix0r4PZy&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;696074199&quot;,&quot;isCreatedByAdmin&quot;:false,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;fafnirukihj&quot;,&quot;_id&quot;:&quot;63c80c13e56165ca64b4a6cb&quot;,&quot;isActive&quot;:false,&quot;first_name&quot;:&quot;Fafnirou3kl&quot;,&quot;email&quot;:&quot;hamman2@mail.com&quot;,&quot;isEmailConfirmed&quot;:false},&quot;__v&quot;:0,&quot;_id&quot;:&quot;63e523ade1cbdc16bbbea202&quot;,&quot;designation&quot;:&quot;Default wallet&quot;,&quot;cumulative_performance_date&quot;:&quot;2023-02-09T13:13:06.847Z&quot;,&quot;user&quot;:{&quot;birth_day&quot;:&quot;2004-12-09T00:00:00.000Z&quot;,&quot;password&quot;:&quot;$2b$10$1q6UFCHlYHm1g\/o.3G0cSegtBCVXg8KB0E0lVWTF7lkqTJkJslJfa&quot;,&quot;role&quot;:[&quot;Admin&quot;],&quot;phone&quot;:&quot;+335678987654&quot;,&quot;isCreatedByAdmin&quot;:true,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;BOSS&quot;,&quot;_id&quot;:&quot;63e523ade1cbdc16bbbea1fc&quot;,&quot;isActive&quot;:true,&quot;first_name&quot;:&quot;Eric Jacques&quot;,&quot;email&quot;:&quot;eric.boss@yopmail.com&quot;,&quot;isEmailConfirmed&quot;:true}},{&quot;initial_value&quot;:0,&quot;cumulative_performance&quot;:0,&quot;liquidity_value&quot;:0,&quot;performance_hebdo&quot;:0,&quot;liquidity_frequency&quot;:0,&quot;ytd&quot;:0,&quot;products&quot;:[],&quot;gestionnaire&quot;:{&quot;birth_day&quot;:&quot;1970-01-01T05:28:20.118Z&quot;,&quot;password&quot;:&quot;$2b$10$CmVSy8UmmadypLu7y7d\/eOs4baSNkYk6ja2gsFrI\/4Z74ix0r4PZy&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;696074199&quot;,&quot;isCreatedByAdmin&quot;:false,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;fafnirukihj&quot;,&quot;_id&quot;:&quot;63c80c13e56165ca64b4a6cb&quot;,&quot;isActive&quot;:false,&quot;first_name&quot;:&quot;Fafnirou3kl&quot;,&quot;email&quot;:&quot;hamman2@mail.com&quot;,&quot;isEmailConfirmed&quot;:false},&quot;__v&quot;:0,&quot;_id&quot;:&quot;63e61c07e1cbdc16bbbea4d4&quot;,&quot;designation&quot;:&quot;Default wallet&quot;,&quot;cumulative_performance_date&quot;:&quot;2023-02-09T13:13:06.847Z&quot;,&quot;user&quot;:{&quot;birth_day&quot;:&quot;1977-01-01T00:00:00.000Z&quot;,&quot;password&quot;:&quot;$2b$10$DStxZyt9VleX6Cxdud\/z0OiUecKiRDmiSdIUKdjSpJTqakzZecjJW&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;987654321&quot;,&quot;isCreatedByAdmin&quot;:false,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;Francine&quot;,&quot;_id&quot;:&quot;63e61c06e1cbdc16bbbea4d0&quot;,&quot;isActive&quot;:false,&quot;first_name&quot;:&quot;POISSONNIER&quot;,&quot;email&quot;:&quot;francine.moi123@yopmail.com&quot;,&quot;isEmailConfirmed&quot;:true}},{&quot;initial_value&quot;:0,&quot;cumulative_performance&quot;:0,&quot;liquidity_value&quot;:0,&quot;performance_hebdo&quot;:0,&quot;liquidity_frequency&quot;:0,&quot;ytd&quot;:0,&quot;products&quot;:[],&quot;gestionnaire&quot;:{&quot;birth_day&quot;:&quot;1970-01-01T05:28:20.118Z&quot;,&quot;password&quot;:&quot;$2b$10$CmVSy8UmmadypLu7y7d\/eOs4baSNkYk6ja2gsFrI\/4Z74ix0r4PZy&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;696074199&quot;,&quot;isCreatedByAdmin&quot;:false,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;fafnirukihj&quot;,&quot;_id&quot;:&quot;63c80c13e56165ca64b4a6cb&quot;,&quot;isActive&quot;:false,&quot;first_name&quot;:&quot;Fafnirou3kl&quot;,&quot;email&quot;:&quot;hamman2@mail.com&quot;,&quot;isEmailConfirmed&quot;:false},&quot;__v&quot;:0,&quot;_id&quot;:&quot;63e6256de1cbdc16bbbea50f&quot;,&quot;designation&quot;:&quot;Default wallet&quot;,&quot;cumulative_performance_date&quot;:&quot;2023-02-09T13:13:06.847Z&quot;,&quot;user&quot;:{&quot;birth_day&quot;:&quot;1987-10-13T23:00:00.000Z&quot;,&quot;password&quot;:&quot;123456&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;0987654321&quot;,&quot;isCreatedByAdmin&quot;:true,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;POISSONNIER&quot;,&quot;_id&quot;:&quot;63e6256de1cbdc16bbbea50b&quot;,&quot;isActive&quot;:false,&quot;first_name&quot;:&quot;Alfred&quot;,&quot;email&quot;:&quot;alfred.poisson@yopmail.com&quot;,&quot;isEmailConfirmed&quot;:true}},{&quot;initial_value&quot;:0,&quot;cumulative_performance&quot;:0,&quot;liquidity_value&quot;:0,&quot;performance_hebdo&quot;:0,&quot;liquidity_frequency&quot;:0,&quot;ytd&quot;:0,&quot;products&quot;:[],&quot;gestionnaire&quot;:{&quot;birth_day&quot;:&quot;1970-01-01T05:28:20.118Z&quot;,&quot;password&quot;:&quot;$2b$10$CmVSy8UmmadypLu7y7d\/eOs4baSNkYk6ja2gsFrI\/4Z74ix0r4PZy&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;696074199&quot;,&quot;isCreatedByAdmin&quot;:false,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;fafnirukihj&quot;,&quot;_id&quot;:&quot;63c80c13e56165ca64b4a6cb&quot;,&quot;isActive&quot;:false,&quot;first_name&quot;:&quot;Fafnirou3kl&quot;,&quot;email&quot;:&quot;hamman2@mail.com&quot;,&quot;isEmailConfirmed&quot;:false},&quot;__v&quot;:0,&quot;_id&quot;:&quot;63e62ab0e1cbdc16bbbea526&quot;,&quot;designation&quot;:&quot;Default wallet&quot;,&quot;cumulative_performance_date&quot;:&quot;2023-02-09T13:13:06.847Z&quot;,&quot;user&quot;:{&quot;birth_day&quot;:&quot;2016-12-31T23:00:00.000Z&quot;,&quot;password&quot;:&quot;123456&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;123456789&quot;,&quot;isCreatedByAdmin&quot;:true,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;POISSON&quot;,&quot;_id&quot;:&quot;63e62ab0e1cbdc16bbbea522&quot;,&quot;isActive&quot;:false,&quot;first_name&quot;:&quot;TRUITE&quot;,&quot;email&quot;:&quot;truite.poisson@yopmail.com&quot;,&quot;isEmailConfirmed&quot;:true}},{&quot;initial_value&quot;:0,&quot;cumulative_performance&quot;:0,&quot;liquidity_value&quot;:0,&quot;performance_hebdo&quot;:0,&quot;liquidity_frequency&quot;:0,&quot;ytd&quot;:0,&quot;products&quot;:[],&quot;gestionnaire&quot;:{&quot;birth_day&quot;:&quot;1970-01-01T05:28:20.118Z&quot;,&quot;password&quot;:&quot;$2b$10$CmVSy8UmmadypLu7y7d\/eOs4baSNkYk6ja2gsFrI\/4Z74ix0r4PZy&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;696074199&quot;,&quot;isCreatedByAdmin&quot;:false,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;fafnirukihj&quot;,&quot;_id&quot;:&quot;63c80c13e56165ca64b4a6cb&quot;,&quot;isActive&quot;:false,&quot;first_name&quot;:&quot;Fafnirou3kl&quot;,&quot;email&quot;:&quot;hamman2@mail.com&quot;,&quot;isEmailConfirmed&quot;:false},&quot;__v&quot;:0,&quot;_id&quot;:&quot;63e6514a70d0d17c6ca50caf&quot;,&quot;designation&quot;:&quot;Default wallet&quot;,&quot;cumulative_performance_date&quot;:&quot;2023-02-10T13:59:24.823Z&quot;,&quot;user&quot;:{&quot;birth_day&quot;:&quot;1970-01-01T05:33:10.509Z&quot;,&quot;password&quot;:&quot;$2b$10$9zr0aZjrY.Hbgd1SA6tQGe74WyLIjloVRy4EUyNFgVPKbRm6hZHFO&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;696894199&quot;,&quot;isCreatedByAdmin&quot;:true,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;Doris&quot;,&quot;_id&quot;:&quot;63e6514970d0d17c6ca50cab&quot;,&quot;isActive&quot;:false,&quot;first_name&quot;:&quot;Swiger&quot;,&quot;email&quot;:&quot;doriskswiger@dayrep.com&quot;,&quot;isEmailConfirmed&quot;:true}},{&quot;initial_value&quot;:0,&quot;cumulative_performance&quot;:0,&quot;liquidity_value&quot;:0,&quot;performance_hebdo&quot;:0,&quot;liquidity_frequency&quot;:0,&quot;ytd&quot;:0,&quot;products&quot;:[],&quot;gestionnaire&quot;:{&quot;birth_day&quot;:&quot;1970-01-01T05:28:20.118Z&quot;,&quot;password&quot;:&quot;$2b$10$CmVSy8UmmadypLu7y7d\/eOs4baSNkYk6ja2gsFrI\/4Z74ix0r4PZy&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;696074199&quot;,&quot;isCreatedByAdmin&quot;:false,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;fafnirukihj&quot;,&quot;_id&quot;:&quot;63c80c13e56165ca64b4a6cb&quot;,&quot;isActive&quot;:false,&quot;first_name&quot;:&quot;Fafnirou3kl&quot;,&quot;email&quot;:&quot;hamman2@mail.com&quot;,&quot;isEmailConfirmed&quot;:false},&quot;__v&quot;:0,&quot;_id&quot;:&quot;63ea05cb584efc6316540e8b&quot;,&quot;designation&quot;:&quot;Default wallet&quot;,&quot;cumulative_performance_date&quot;:&quot;2023-02-10T16:31:49.155Z&quot;,&quot;user&quot;:null},{&quot;initial_value&quot;:0,&quot;cumulative_performance&quot;:0,&quot;liquidity_value&quot;:0,&quot;performance_hebdo&quot;:0,&quot;liquidity_frequency&quot;:0,&quot;ytd&quot;:0,&quot;products&quot;:[],&quot;gestionnaire&quot;:{&quot;birth_day&quot;:&quot;1970-01-01T05:28:20.118Z&quot;,&quot;password&quot;:&quot;$2b$10$CmVSy8UmmadypLu7y7d\/eOs4baSNkYk6ja2gsFrI\/4Z74ix0r4PZy&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;696074199&quot;,&quot;isCreatedByAdmin&quot;:false,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;fafnirukihj&quot;,&quot;_id&quot;:&quot;63c80c13e56165ca64b4a6cb&quot;,&quot;isActive&quot;:false,&quot;first_name&quot;:&quot;Fafnirou3kl&quot;,&quot;email&quot;:&quot;hamman2@mail.com&quot;,&quot;isEmailConfirmed&quot;:false},&quot;__v&quot;:0,&quot;_id&quot;:&quot;63eb9ddc475413c1984e04cc&quot;,&quot;designation&quot;:&quot;Default wallet&quot;,&quot;cumulative_performance_date&quot;:&quot;2023-02-14T07:44:47.497Z&quot;,&quot;user&quot;:{&quot;birth_day&quot;:&quot;2004-12-09T00:00:00.000Z&quot;,&quot;password&quot;:&quot;$2b$10$yv06XX7izet8dxzpc8l2iOvPg409Wkd.WWu4TRz2QXPYedGZfvNaa&quot;,&quot;role&quot;:[&quot;Admin&quot;],&quot;phone&quot;:&quot;0274597637&quot;,&quot;isCreatedByAdmin&quot;:true,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;Fluet&quot;,&quot;_id&quot;:&quot;63eb9ddc475413c1984e04c8&quot;,&quot;isActive&quot;:true,&quot;first_name&quot;:&quot;mariette&quot;,&quot;email&quot;:&quot;fluet.mariette@yopmail.com&quot;,&quot;isEmailConfirmed&quot;:true}},{&quot;initial_value&quot;:0,&quot;cumulative_performance&quot;:0,&quot;liquidity_value&quot;:0,&quot;performance_hebdo&quot;:0,&quot;liquidity_frequency&quot;:0,&quot;ytd&quot;:0,&quot;products&quot;:[],&quot;gestionnaire&quot;:{&quot;birth_day&quot;:&quot;1970-01-01T05:28:20.118Z&quot;,&quot;password&quot;:&quot;$2b$10$CmVSy8UmmadypLu7y7d\/eOs4baSNkYk6ja2gsFrI\/4Z74ix0r4PZy&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;696074199&quot;,&quot;isCreatedByAdmin&quot;:false,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;fafnirukihj&quot;,&quot;_id&quot;:&quot;63c80c13e56165ca64b4a6cb&quot;,&quot;isActive&quot;:false,&quot;first_name&quot;:&quot;Fafnirou3kl&quot;,&quot;email&quot;:&quot;hamman2@mail.com&quot;,&quot;isEmailConfirmed&quot;:false},&quot;__v&quot;:0,&quot;_id&quot;:&quot;63eba2a8fcce97226f762a4e&quot;,&quot;designation&quot;:&quot;Default wallet&quot;,&quot;cumulative_performance_date&quot;:&quot;2023-02-14T15:00:03.307Z&quot;,&quot;user&quot;:{&quot;birth_day&quot;:&quot;2004-12-09T00:00:00.000Z&quot;,&quot;password&quot;:&quot;$2b$10$nBA5IugESftbSIcdr9oOYujN0VP77FDCbYxAit0qfgLz9feKy5HvW&quot;,&quot;role&quot;:[&quot;Admin&quot;],&quot;phone&quot;:&quot;0261566377&quot;,&quot;isCreatedByAdmin&quot;:true,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;Leverett &quot;,&quot;_id&quot;:&quot;63eba2a7fcce97226f762a4a&quot;,&quot;isActive&quot;:true,&quot;first_name&quot;:&quot;pirouet&quot;,&quot;email&quot;:&quot;pirouet.leverett@yopmail.com&quot;,&quot;isEmailConfirmed&quot;:true}},{&quot;initial_value&quot;:0,&quot;cumulative_performance&quot;:0,&quot;liquidity_value&quot;:0,&quot;performance_hebdo&quot;:0,&quot;liquidity_frequency&quot;:0,&quot;ytd&quot;:0,&quot;products&quot;:[],&quot;gestionnaire&quot;:{&quot;birth_day&quot;:&quot;1970-01-01T05:28:20.118Z&quot;,&quot;password&quot;:&quot;$2b$10$CmVSy8UmmadypLu7y7d\/eOs4baSNkYk6ja2gsFrI\/4Z74ix0r4PZy&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;696074199&quot;,&quot;isCreatedByAdmin&quot;:false,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;fafnirukihj&quot;,&quot;_id&quot;:&quot;63c80c13e56165ca64b4a6cb&quot;,&quot;isActive&quot;:false,&quot;first_name&quot;:&quot;Fafnirou3kl&quot;,&quot;email&quot;:&quot;hamman2@mail.com&quot;,&quot;isEmailConfirmed&quot;:false},&quot;__v&quot;:0,&quot;_id&quot;:&quot;63eba3a5fcce97226f762a5b&quot;,&quot;designation&quot;:&quot;Default wallet&quot;,&quot;cumulative_performance_date&quot;:&quot;2023-02-14T15:00:03.307Z&quot;,&quot;user&quot;:{&quot;birth_day&quot;:&quot;1970-01-01T05:33:10.509Z&quot;,&quot;password&quot;:&quot;$2b$10$Cz7ln1EmQGbmw7iHOBkfNuK548MqmMH1uGVSmlma.DED3FQuc9ZYq&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;696894199&quot;,&quot;isCreatedByAdmin&quot;:true,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;Dayrep&quot;,&quot;_id&quot;:&quot;63eba3a4fcce97226f762a57&quot;,&quot;isActive&quot;:false,&quot;first_name&quot;:&quot;Bired&quot;,&quot;email&quot;:&quot;bired1978@dayrep.com&quot;,&quot;isEmailConfirmed&quot;:true}},{&quot;initial_value&quot;:0,&quot;cumulative_performance&quot;:0,&quot;liquidity_value&quot;:0,&quot;performance_hebdo&quot;:0,&quot;liquidity_frequency&quot;:0,&quot;ytd&quot;:0,&quot;products&quot;:[],&quot;gestionnaire&quot;:{&quot;birth_day&quot;:&quot;1970-01-01T05:28:20.118Z&quot;,&quot;password&quot;:&quot;$2b$10$CmVSy8UmmadypLu7y7d\/eOs4baSNkYk6ja2gsFrI\/4Z74ix0r4PZy&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;696074199&quot;,&quot;isCreatedByAdmin&quot;:false,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;fafnirukihj&quot;,&quot;_id&quot;:&quot;63c80c13e56165ca64b4a6cb&quot;,&quot;isActive&quot;:false,&quot;first_name&quot;:&quot;Fafnirou3kl&quot;,&quot;email&quot;:&quot;hamman2@mail.com&quot;,&quot;isEmailConfirmed&quot;:false},&quot;__v&quot;:0,&quot;_id&quot;:&quot;63eba437ced4433df65d5490&quot;,&quot;designation&quot;:&quot;Default wallet&quot;,&quot;cumulative_performance_date&quot;:&quot;2023-02-14T15:07:08.843Z&quot;,&quot;user&quot;:{&quot;birth_day&quot;:&quot;2004-12-09T00:00:00.000Z&quot;,&quot;password&quot;:&quot;$2b$10$OcquP3sxJqDaP6bUQFVD1.x3FPtemMLv9sW.BufHd0LJ.3ge5lJ9u&quot;,&quot;role&quot;:[&quot;Admin&quot;],&quot;phone&quot;:&quot;44555566666&quot;,&quot;isCreatedByAdmin&quot;:true,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;ffff&quot;,&quot;_id&quot;:&quot;63eba437ced4433df65d548b&quot;,&quot;isActive&quot;:false,&quot;first_name&quot;:&quot;fffff bghhhh&quot;,&quot;email&quot;:&quot;dd@yopmail.com&quot;,&quot;isEmailConfirmed&quot;:true}},{&quot;initial_value&quot;:0,&quot;cumulative_performance&quot;:0,&quot;liquidity_value&quot;:0,&quot;performance_hebdo&quot;:0,&quot;liquidity_frequency&quot;:0,&quot;ytd&quot;:0,&quot;products&quot;:[],&quot;gestionnaire&quot;:{&quot;birth_day&quot;:&quot;1970-01-01T05:28:20.118Z&quot;,&quot;password&quot;:&quot;$2b$10$CmVSy8UmmadypLu7y7d\/eOs4baSNkYk6ja2gsFrI\/4Z74ix0r4PZy&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;696074199&quot;,&quot;isCreatedByAdmin&quot;:false,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;fafnirukihj&quot;,&quot;_id&quot;:&quot;63c80c13e56165ca64b4a6cb&quot;,&quot;isActive&quot;:false,&quot;first_name&quot;:&quot;Fafnirou3kl&quot;,&quot;email&quot;:&quot;hamman2@mail.com&quot;,&quot;isEmailConfirmed&quot;:false},&quot;__v&quot;:0,&quot;_id&quot;:&quot;63eba4b8ced4433df65d549e&quot;,&quot;designation&quot;:&quot;Default wallet&quot;,&quot;cumulative_performance_date&quot;:&quot;2023-02-14T15:07:08.843Z&quot;,&quot;user&quot;:{&quot;birth_day&quot;:&quot;2004-12-09T00:00:00.000Z&quot;,&quot;password&quot;:&quot;$2b$10$eWBezgi3zwGOu.mLxc7AEOfV1BRIwTwb7bnai0vcIUCVVLWYQq8A.&quot;,&quot;role&quot;:[&quot;Admin&quot;],&quot;phone&quot;:&quot;123456789&quot;,&quot;isCreatedByAdmin&quot;:true,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;Gabriaux&quot;,&quot;_id&quot;:&quot;63eba4b8ced4433df65d549a&quot;,&quot;isActive&quot;:false,&quot;first_name&quot;:&quot;Gifford &quot;,&quot;email&quot;:&quot;gifford.leverett@yopmail.com&quot;,&quot;isEmailConfirmed&quot;:true}},{&quot;initial_value&quot;:0,&quot;cumulative_performance&quot;:0,&quot;liquidity_value&quot;:0,&quot;performance_hebdo&quot;:0,&quot;liquidity_frequency&quot;:0,&quot;ytd&quot;:0,&quot;products&quot;:[],&quot;gestionnaire&quot;:{&quot;birth_day&quot;:&quot;1970-01-01T05:28:20.118Z&quot;,&quot;password&quot;:&quot;$2b$10$CmVSy8UmmadypLu7y7d\/eOs4baSNkYk6ja2gsFrI\/4Z74ix0r4PZy&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;696074199&quot;,&quot;isCreatedByAdmin&quot;:false,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;fafnirukihj&quot;,&quot;_id&quot;:&quot;63c80c13e56165ca64b4a6cb&quot;,&quot;isActive&quot;:false,&quot;first_name&quot;:&quot;Fafnirou3kl&quot;,&quot;email&quot;:&quot;hamman2@mail.com&quot;,&quot;isEmailConfirmed&quot;:false},&quot;__v&quot;:0,&quot;_id&quot;:&quot;63eba61eced4433df65d54b0&quot;,&quot;designation&quot;:&quot;Default wallet&quot;,&quot;cumulative_performance_date&quot;:&quot;2023-02-14T15:07:08.843Z&quot;,&quot;user&quot;:{&quot;birth_day&quot;:&quot;1970-01-01T05:33:10.509Z&quot;,&quot;password&quot;:&quot;$2b$10$IVEppXxuipoFaZJ.nnMW5OQ.M.0i32Jb1KX.b65ykbTg0F3ZY0txe&quot;,&quot;role&quot;:[&quot;Admin&quot;],&quot;phone&quot;:&quot;696894199&quot;,&quot;isCreatedByAdmin&quot;:true,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;mappuye&quot;,&quot;_id&quot;:&quot;63eba61dced4433df65d54ac&quot;,&quot;isActive&quot;:true,&quot;first_name&quot;:&quot;praufe&quot;,&quot;email&quot;:&quot;praufeimmappuye-6059@yopmail.com&quot;,&quot;isEmailConfirmed&quot;:true}},{&quot;initial_value&quot;:0,&quot;cumulative_performance&quot;:0,&quot;liquidity_value&quot;:0,&quot;performance_hebdo&quot;:0,&quot;liquidity_frequency&quot;:0,&quot;ytd&quot;:0,&quot;products&quot;:[],&quot;gestionnaire&quot;:{&quot;birth_day&quot;:&quot;1970-01-01T05:28:20.118Z&quot;,&quot;password&quot;:&quot;$2b$10$CmVSy8UmmadypLu7y7d\/eOs4baSNkYk6ja2gsFrI\/4Z74ix0r4PZy&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;696074199&quot;,&quot;isCreatedByAdmin&quot;:false,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;fafnirukihj&quot;,&quot;_id&quot;:&quot;63c80c13e56165ca64b4a6cb&quot;,&quot;isActive&quot;:false,&quot;first_name&quot;:&quot;Fafnirou3kl&quot;,&quot;email&quot;:&quot;hamman2@mail.com&quot;,&quot;isEmailConfirmed&quot;:false},&quot;__v&quot;:0,&quot;_id&quot;:&quot;63eba64bced4433df65d54b7&quot;,&quot;designation&quot;:&quot;Default wallet&quot;,&quot;cumulative_performance_date&quot;:&quot;2023-02-14T15:07:08.843Z&quot;,&quot;user&quot;:{&quot;birth_day&quot;:&quot;1976-02-12T23:00:00.000Z&quot;,&quot;password&quot;:&quot;$2b$10$l7tdbMjE3Hr0r7JEBpJS1uEBNgPiC5lCMr.PPu8fn9figqVgC7YFi&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;0130804537&quot;,&quot;isCreatedByAdmin&quot;:true,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;Brochu&quot;,&quot;_id&quot;:&quot;63eba64aced4433df65d54b3&quot;,&quot;isActive&quot;:true,&quot;first_name&quot;:&quot; Marie Christiane &quot;,&quot;email&quot;:&quot;marie.brochu@yopmail.com&quot;,&quot;isEmailConfirmed&quot;:true}},{&quot;initial_value&quot;:0,&quot;cumulative_performance&quot;:0,&quot;liquidity_value&quot;:0,&quot;performance_hebdo&quot;:0,&quot;liquidity_frequency&quot;:0,&quot;ytd&quot;:0,&quot;products&quot;:[],&quot;gestionnaire&quot;:{&quot;birth_day&quot;:&quot;1970-01-01T05:28:20.118Z&quot;,&quot;password&quot;:&quot;$2b$10$CmVSy8UmmadypLu7y7d\/eOs4baSNkYk6ja2gsFrI\/4Z74ix0r4PZy&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;696074199&quot;,&quot;isCreatedByAdmin&quot;:false,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;fafnirukihj&quot;,&quot;_id&quot;:&quot;63c80c13e56165ca64b4a6cb&quot;,&quot;isActive&quot;:false,&quot;first_name&quot;:&quot;Fafnirou3kl&quot;,&quot;email&quot;:&quot;hamman2@mail.com&quot;,&quot;isEmailConfirmed&quot;:false},&quot;__v&quot;:0,&quot;_id&quot;:&quot;63eba7e3ced4433df65d54d2&quot;,&quot;designation&quot;:&quot;Default wallet&quot;,&quot;cumulative_performance_date&quot;:&quot;2023-02-14T15:07:08.843Z&quot;,&quot;user&quot;:{&quot;birth_day&quot;:&quot;2004-12-09T00:00:00.000Z&quot;,&quot;password&quot;:&quot;$2b$10$.mqVfGrCpAJv2TXsmwYCTO.F7JRBlTHqFlFQo8RB\/yrFNfkHZEsmW&quot;,&quot;role&quot;:[&quot;Admin&quot;],&quot;phone&quot;:&quot;123456789&quot;,&quot;isCreatedByAdmin&quot;:true,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;Rossignol&quot;,&quot;_id&quot;:&quot;63eba7e3ced4433df65d54ce&quot;,&quot;isActive&quot;:true,&quot;first_name&quot;:&quot;St&eacute;phane &quot;,&quot;email&quot;:&quot;stephane.ross@yopmail.com&quot;,&quot;isEmailConfirmed&quot;:true}},{&quot;initial_value&quot;:0,&quot;cumulative_performance&quot;:0,&quot;liquidity_value&quot;:0,&quot;performance_hebdo&quot;:0,&quot;liquidity_frequency&quot;:0,&quot;ytd&quot;:0,&quot;products&quot;:[],&quot;gestionnaire&quot;:{&quot;birth_day&quot;:&quot;1970-01-01T05:28:20.118Z&quot;,&quot;password&quot;:&quot;$2b$10$CmVSy8UmmadypLu7y7d\/eOs4baSNkYk6ja2gsFrI\/4Z74ix0r4PZy&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;696074199&quot;,&quot;isCreatedByAdmin&quot;:false,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;fafnirukihj&quot;,&quot;_id&quot;:&quot;63c80c13e56165ca64b4a6cb&quot;,&quot;isActive&quot;:false,&quot;first_name&quot;:&quot;Fafnirou3kl&quot;,&quot;email&quot;:&quot;hamman2@mail.com&quot;,&quot;isEmailConfirmed&quot;:false},&quot;__v&quot;:0,&quot;_id&quot;:&quot;63ebabf3ced4433df65d54e5&quot;,&quot;designation&quot;:&quot;Default wallet&quot;,&quot;cumulative_performance_date&quot;:&quot;2023-02-14T15:07:08.843Z&quot;,&quot;user&quot;:{&quot;birth_day&quot;:&quot;2016-12-31T23:00:00.000Z&quot;,&quot;password&quot;:&quot;$2b$10$AJCOW02oFEeklV14KLLIf.e.m35sisNyVg2K32218Hqnj9Q6Tatbe&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;0127376454&quot;,&quot;isCreatedByAdmin&quot;:true,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;Chr&eacute;tien&quot;,&quot;_id&quot;:&quot;63ebabf2ced4433df65d54e1&quot;,&quot;isActive&quot;:true,&quot;first_name&quot;:&quot;Gaston &quot;,&quot;email&quot;:&quot;gaston.chretien@yopmail.com&quot;,&quot;isEmailConfirmed&quot;:false}},{&quot;initial_value&quot;:0,&quot;cumulative_performance&quot;:0,&quot;liquidity_value&quot;:0,&quot;performance_hebdo&quot;:0,&quot;liquidity_frequency&quot;:0,&quot;ytd&quot;:0,&quot;products&quot;:[],&quot;gestionnaire&quot;:{&quot;birth_day&quot;:&quot;1970-01-01T05:28:20.118Z&quot;,&quot;password&quot;:&quot;$2b$10$CmVSy8UmmadypLu7y7d\/eOs4baSNkYk6ja2gsFrI\/4Z74ix0r4PZy&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;696074199&quot;,&quot;isCreatedByAdmin&quot;:false,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;fafnirukihj&quot;,&quot;_id&quot;:&quot;63c80c13e56165ca64b4a6cb&quot;,&quot;isActive&quot;:false,&quot;first_name&quot;:&quot;Fafnirou3kl&quot;,&quot;email&quot;:&quot;hamman2@mail.com&quot;,&quot;isEmailConfirmed&quot;:false},&quot;__v&quot;:0,&quot;_id&quot;:&quot;63ebac633e256801c0324afe&quot;,&quot;designation&quot;:&quot;Default wallet&quot;,&quot;cumulative_performance_date&quot;:&quot;2023-02-14T15:43:29.931Z&quot;,&quot;user&quot;:{&quot;birth_day&quot;:&quot;1999-02-14T00:00:00.000Z&quot;,&quot;password&quot;:&quot;$2b$10$4S\/tofgIUtJzfuJkv2I6s.GIgB8RvvrB8nvWh4Yiux8G0599tyAMS&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;0665085356&quot;,&quot;isCreatedByAdmin&quot;:false,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;Chretien&quot;,&quot;_id&quot;:&quot;63ebac633e256801c0324afa&quot;,&quot;isActive&quot;:false,&quot;first_name&quot;:&quot;Pierre&quot;,&quot;email&quot;:&quot;pierre.chretien@yopmail.com&quot;,&quot;isEmailConfirmed&quot;:true}},{&quot;initial_value&quot;:0,&quot;cumulative_performance&quot;:0,&quot;liquidity_value&quot;:0,&quot;performance_hebdo&quot;:0,&quot;liquidity_frequency&quot;:0,&quot;ytd&quot;:0,&quot;products&quot;:[],&quot;gestionnaire&quot;:{&quot;birth_day&quot;:&quot;1970-01-01T05:28:20.118Z&quot;,&quot;password&quot;:&quot;$2b$10$CmVSy8UmmadypLu7y7d\/eOs4baSNkYk6ja2gsFrI\/4Z74ix0r4PZy&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;696074199&quot;,&quot;isCreatedByAdmin&quot;:false,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;fafnirukihj&quot;,&quot;_id&quot;:&quot;63c80c13e56165ca64b4a6cb&quot;,&quot;isActive&quot;:false,&quot;first_name&quot;:&quot;Fafnirou3kl&quot;,&quot;email&quot;:&quot;hamman2@mail.com&quot;,&quot;isEmailConfirmed&quot;:false},&quot;__v&quot;:0,&quot;_id&quot;:&quot;63eca75d21e6713f8b9f54c3&quot;,&quot;designation&quot;:&quot;Default wallet&quot;,&quot;cumulative_performance_date&quot;:&quot;2023-02-14T16:10:11.461Z&quot;,&quot;user&quot;:{&quot;birth_day&quot;:&quot;2003-02-15T00:00:00.000Z&quot;,&quot;password&quot;:&quot;$2b$10$P8AGzDh6FQ0R0DYi9sG3VeVJmVsLBVFFg85OUiFmxBbLOtmNBo2ki&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;655757902&quot;,&quot;isCreatedByAdmin&quot;:false,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;Tendong&quot;,&quot;_id&quot;:&quot;63eca75c21e6713f8b9f54bf&quot;,&quot;isActive&quot;:true,&quot;first_name&quot;:&quot;Gabriel&quot;,&quot;email&quot;:&quot;gabitendong@gmail.com&quot;,&quot;isEmailConfirmed&quot;:true}},{&quot;initial_value&quot;:0,&quot;cumulative_performance&quot;:0,&quot;liquidity_value&quot;:0,&quot;performance_hebdo&quot;:0,&quot;liquidity_frequency&quot;:0,&quot;ytd&quot;:0,&quot;products&quot;:[],&quot;gestionnaire&quot;:{&quot;birth_day&quot;:&quot;1970-01-01T05:28:20.118Z&quot;,&quot;password&quot;:&quot;$2b$10$CmVSy8UmmadypLu7y7d\/eOs4baSNkYk6ja2gsFrI\/4Z74ix0r4PZy&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;696074199&quot;,&quot;isCreatedByAdmin&quot;:false,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;fafnirukihj&quot;,&quot;_id&quot;:&quot;63c80c13e56165ca64b4a6cb&quot;,&quot;isActive&quot;:false,&quot;first_name&quot;:&quot;Fafnirou3kl&quot;,&quot;email&quot;:&quot;hamman2@mail.com&quot;,&quot;isEmailConfirmed&quot;:false},&quot;__v&quot;:0,&quot;_id&quot;:&quot;63eca87e265224556e412672&quot;,&quot;designation&quot;:&quot;Default wallet&quot;,&quot;cumulative_performance_date&quot;:&quot;2023-02-15T09:39:15.654Z&quot;,&quot;user&quot;:{&quot;birth_day&quot;:&quot;2000-12-12T00:00:00.000Z&quot;,&quot;password&quot;:&quot;$2b$10$vjCSrc3bqwG0QCcEVlUB1.J6mm2nZl33vRdd2Bp1onct3XEXRm4Ra&quot;,&quot;role&quot;:[&quot;SuperAdmin&quot;],&quot;phone&quot;:&quot;655797902&quot;,&quot;isCreatedByAdmin&quot;:false,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;Okourou&quot;,&quot;_id&quot;:&quot;63eca87e265224556e41266e&quot;,&quot;isActive&quot;:true,&quot;first_name&quot;:&quot;Francine&quot;,&quot;email&quot;:&quot;francine.okourou@gmail.com&quot;,&quot;isEmailConfirmed&quot;:true}},{&quot;initial_value&quot;:0,&quot;cumulative_performance&quot;:0,&quot;liquidity_value&quot;:0,&quot;performance_hebdo&quot;:0,&quot;liquidity_frequency&quot;:0,&quot;ytd&quot;:0,&quot;products&quot;:[],&quot;gestionnaire&quot;:{&quot;birth_day&quot;:&quot;1970-01-01T05:28:20.118Z&quot;,&quot;password&quot;:&quot;$2b$10$CmVSy8UmmadypLu7y7d\/eOs4baSNkYk6ja2gsFrI\/4Z74ix0r4PZy&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;696074199&quot;,&quot;isCreatedByAdmin&quot;:false,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;fafnirukihj&quot;,&quot;_id&quot;:&quot;63c80c13e56165ca64b4a6cb&quot;,&quot;isActive&quot;:false,&quot;first_name&quot;:&quot;Fafnirou3kl&quot;,&quot;email&quot;:&quot;hamman2@mail.com&quot;,&quot;isEmailConfirmed&quot;:false},&quot;__v&quot;:0,&quot;_id&quot;:&quot;63ecaaf36cb610809cab441c&quot;,&quot;designation&quot;:&quot;Default wallet&quot;,&quot;cumulative_performance_date&quot;:&quot;2023-02-15T09:35:17.690Z&quot;,&quot;user&quot;:{&quot;birth_day&quot;:&quot;1987-02-14T23:00:00.000Z&quot;,&quot;password&quot;:&quot;$2b$10$AIoTBL558nxMzLxy8vMT4uB630G8PbYnuRYTwvqaXir3PmAbK\/iTi&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;0825632699&quot;,&quot;isCreatedByAdmin&quot;:true,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;Akabueze&quot;,&quot;_id&quot;:&quot;63ecaaf26cb610809cab4418&quot;,&quot;isActive&quot;:false,&quot;first_name&quot;:&quot;Chisom&quot;,&quot;email&quot;:&quot;chisom.aka@yopmail.com&quot;,&quot;isEmailConfirmed&quot;:true}},{&quot;initial_value&quot;:0,&quot;cumulative_performance&quot;:0,&quot;liquidity_value&quot;:0,&quot;performance_hebdo&quot;:0,&quot;liquidity_frequency&quot;:0,&quot;ytd&quot;:0,&quot;products&quot;:[],&quot;gestionnaire&quot;:{&quot;birth_day&quot;:&quot;1970-01-01T05:28:20.118Z&quot;,&quot;password&quot;:&quot;$2b$10$CmVSy8UmmadypLu7y7d\/eOs4baSNkYk6ja2gsFrI\/4Z74ix0r4PZy&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;696074199&quot;,&quot;isCreatedByAdmin&quot;:false,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;fafnirukihj&quot;,&quot;_id&quot;:&quot;63c80c13e56165ca64b4a6cb&quot;,&quot;isActive&quot;:false,&quot;first_name&quot;:&quot;Fafnirou3kl&quot;,&quot;email&quot;:&quot;hamman2@mail.com&quot;,&quot;isEmailConfirmed&quot;:false},&quot;__v&quot;:0,&quot;_id&quot;:&quot;63ecaca56cb610809cab444a&quot;,&quot;designation&quot;:&quot;Default wallet&quot;,&quot;cumulative_performance_date&quot;:&quot;2023-02-15T09:35:17.690Z&quot;,&quot;user&quot;:{&quot;birth_day&quot;:&quot;2016-12-31T23:00:00.000Z&quot;,&quot;password&quot;:&quot;$2b$10$6v6lFJBUL0A02xcfIVjI9unqB6llbYvTB0NEsHx8vchEG1nfPs4FS&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;07678765656&quot;,&quot;isCreatedByAdmin&quot;:true,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;Ebelechukwu&quot;,&quot;_id&quot;:&quot;63ecaca56cb610809cab4446&quot;,&quot;isActive&quot;:false,&quot;first_name&quot;:&quot;Chimezie &quot;,&quot;email&quot;:&quot;chimezie.aka@yopmail.com&quot;,&quot;isEmailConfirmed&quot;:true}},{&quot;initial_value&quot;:0,&quot;cumulative_performance&quot;:0,&quot;liquidity_value&quot;:0,&quot;performance_hebdo&quot;:0,&quot;liquidity_frequency&quot;:0,&quot;ytd&quot;:0,&quot;products&quot;:[],&quot;gestionnaire&quot;:{&quot;birth_day&quot;:&quot;1970-01-01T05:28:20.118Z&quot;,&quot;password&quot;:&quot;$2b$10$CmVSy8UmmadypLu7y7d\/eOs4baSNkYk6ja2gsFrI\/4Z74ix0r4PZy&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;696074199&quot;,&quot;isCreatedByAdmin&quot;:false,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;fafnirukihj&quot;,&quot;_id&quot;:&quot;63c80c13e56165ca64b4a6cb&quot;,&quot;isActive&quot;:false,&quot;first_name&quot;:&quot;Fafnirou3kl&quot;,&quot;email&quot;:&quot;hamman2@mail.com&quot;,&quot;isEmailConfirmed&quot;:false},&quot;__v&quot;:0,&quot;_id&quot;:&quot;63ecae586cb610809cab4460&quot;,&quot;designation&quot;:&quot;Default wallet&quot;,&quot;cumulative_performance_date&quot;:&quot;2023-02-15T09:35:17.690Z&quot;,&quot;user&quot;:{&quot;birth_day&quot;:&quot;2016-12-31T23:00:00.000Z&quot;,&quot;password&quot;:&quot;$2b$10$DJJedtFoORIMJ6Rr\/xq\/eez8pZH3KoOwnSL6xB2.u4P303r4ixPFG&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;06789876765&quot;,&quot;isCreatedByAdmin&quot;:true,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;Elechi&quot;,&quot;_id&quot;:&quot;63ecae576cb610809cab445c&quot;,&quot;isActive&quot;:true,&quot;first_name&quot;:&quot;Okoli &quot;,&quot;email&quot;:&quot;rolland.aka@yopmail.com&quot;,&quot;isEmailConfirmed&quot;:true}},{&quot;initial_value&quot;:0,&quot;cumulative_performance&quot;:0,&quot;liquidity_value&quot;:0,&quot;performance_hebdo&quot;:0,&quot;liquidity_frequency&quot;:0,&quot;ytd&quot;:0,&quot;products&quot;:[],&quot;gestionnaire&quot;:{&quot;birth_day&quot;:&quot;1970-01-01T05:28:20.118Z&quot;,&quot;password&quot;:&quot;$2b$10$CmVSy8UmmadypLu7y7d\/eOs4baSNkYk6ja2gsFrI\/4Z74ix0r4PZy&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;696074199&quot;,&quot;isCreatedByAdmin&quot;:false,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;fafnirukihj&quot;,&quot;_id&quot;:&quot;63c80c13e56165ca64b4a6cb&quot;,&quot;isActive&quot;:false,&quot;first_name&quot;:&quot;Fafnirou3kl&quot;,&quot;email&quot;:&quot;hamman2@mail.com&quot;,&quot;isEmailConfirmed&quot;:false},&quot;__v&quot;:0,&quot;_id&quot;:&quot;63ecaf676cb610809cab4477&quot;,&quot;designation&quot;:&quot;Default wallet&quot;,&quot;cumulative_performance_date&quot;:&quot;2023-02-15T09:35:17.690Z&quot;,&quot;user&quot;:{&quot;birth_day&quot;:&quot;2016-12-31T23:00:00.000Z&quot;,&quot;password&quot;:&quot;$2b$10$x68m6VfAPXk2eCh9O6\/7FufhvJ9v2Z0MHWniDUpfhP4X6Uu8VAoIa&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;0987654321&quot;,&quot;isCreatedByAdmin&quot;:true,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;Zinachidi&quot;,&quot;_id&quot;:&quot;63ecaf666cb610809cab4473&quot;,&quot;isActive&quot;:true,&quot;first_name&quot;:&quot;Chinemeremma &quot;,&quot;email&quot;:&quot;zina.aka@yopmail.com&quot;,&quot;isEmailConfirmed&quot;:true}},{&quot;initial_value&quot;:0,&quot;cumulative_performance&quot;:0,&quot;liquidity_value&quot;:0,&quot;performance_hebdo&quot;:0,&quot;liquidity_frequency&quot;:0,&quot;ytd&quot;:0,&quot;products&quot;:[],&quot;gestionnaire&quot;:{&quot;birth_day&quot;:&quot;1970-01-01T05:28:20.118Z&quot;,&quot;password&quot;:&quot;$2b$10$CmVSy8UmmadypLu7y7d\/eOs4baSNkYk6ja2gsFrI\/4Z74ix0r4PZy&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;696074199&quot;,&quot;isCreatedByAdmin&quot;:false,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;fafnirukihj&quot;,&quot;_id&quot;:&quot;63c80c13e56165ca64b4a6cb&quot;,&quot;isActive&quot;:false,&quot;first_name&quot;:&quot;Fafnirou3kl&quot;,&quot;email&quot;:&quot;hamman2@mail.com&quot;,&quot;isEmailConfirmed&quot;:false},&quot;__v&quot;:0,&quot;_id&quot;:&quot;63ecb02d6cb610809cab4489&quot;,&quot;designation&quot;:&quot;Default wallet&quot;,&quot;cumulative_performance_date&quot;:&quot;2023-02-15T09:35:17.690Z&quot;,&quot;user&quot;:{&quot;birth_day&quot;:&quot;2005-02-07T23:00:00.000Z&quot;,&quot;password&quot;:&quot;$2b$10$eF9hDrRyEGVXUK9ZVE3b\/uh4e80zEQTZ9JK5zIJG3BvmFeXP9nH4i&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;0987654321&quot;,&quot;isCreatedByAdmin&quot;:true,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;Iweobiegbulam&quot;,&quot;_id&quot;:&quot;63ecb02c6cb610809cab4485&quot;,&quot;isActive&quot;:true,&quot;first_name&quot;:&quot;Dike &quot;,&quot;email&quot;:&quot;dike.aka@yopmail.com&quot;,&quot;isEmailConfirmed&quot;:true}},{&quot;initial_value&quot;:0,&quot;cumulative_performance&quot;:0,&quot;liquidity_value&quot;:0,&quot;performance_hebdo&quot;:0,&quot;liquidity_frequency&quot;:0,&quot;ytd&quot;:0,&quot;products&quot;:[],&quot;gestionnaire&quot;:{&quot;birth_day&quot;:&quot;1970-01-01T05:28:20.118Z&quot;,&quot;password&quot;:&quot;$2b$10$CmVSy8UmmadypLu7y7d\/eOs4baSNkYk6ja2gsFrI\/4Z74ix0r4PZy&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;696074199&quot;,&quot;isCreatedByAdmin&quot;:false,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;fafnirukihj&quot;,&quot;_id&quot;:&quot;63c80c13e56165ca64b4a6cb&quot;,&quot;isActive&quot;:false,&quot;first_name&quot;:&quot;Fafnirou3kl&quot;,&quot;email&quot;:&quot;hamman2@mail.com&quot;,&quot;isEmailConfirmed&quot;:false},&quot;__v&quot;:0,&quot;_id&quot;:&quot;63ecdfd56cb610809cab45c9&quot;,&quot;designation&quot;:&quot;Default wallet&quot;,&quot;cumulative_performance_date&quot;:&quot;2023-02-15T09:35:17.690Z&quot;,&quot;user&quot;:{&quot;birth_day&quot;:&quot;1970-01-01T05:33:10.509Z&quot;,&quot;password&quot;:&quot;$2b$10$YpLDon1zoWxoGFnPzOzmfuPdELs.QO68EuOIz7eZrp\/PwRIctmytG&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;696894199&quot;,&quot;isCreatedByAdmin&quot;:true,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;Zara&quot;,&quot;_id&quot;:&quot;63ecdfd46cb610809cab45c5&quot;,&quot;isActive&quot;:true,&quot;first_name&quot;:&quot;Tesfaye7&quot;,&quot;email&quot;:&quot;tesf5@gmail.com&quot;,&quot;isEmailConfirmed&quot;:false}},{&quot;initial_value&quot;:0,&quot;cumulative_performance&quot;:0,&quot;liquidity_value&quot;:0,&quot;performance_hebdo&quot;:0,&quot;liquidity_frequency&quot;:0,&quot;ytd&quot;:0,&quot;products&quot;:[],&quot;gestionnaire&quot;:{&quot;birth_day&quot;:&quot;1970-01-01T05:28:20.118Z&quot;,&quot;password&quot;:&quot;$2b$10$CmVSy8UmmadypLu7y7d\/eOs4baSNkYk6ja2gsFrI\/4Z74ix0r4PZy&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;696074199&quot;,&quot;isCreatedByAdmin&quot;:false,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;fafnirukihj&quot;,&quot;_id&quot;:&quot;63c80c13e56165ca64b4a6cb&quot;,&quot;isActive&quot;:false,&quot;first_name&quot;:&quot;Fafnirou3kl&quot;,&quot;email&quot;:&quot;hamman2@mail.com&quot;,&quot;isEmailConfirmed&quot;:false},&quot;__v&quot;:0,&quot;_id&quot;:&quot;63ecdfd86cb610809cab45cc&quot;,&quot;designation&quot;:&quot;string&quot;,&quot;cumulative_performance_date&quot;:&quot;2023-02-15T00:00:00.000Z&quot;,&quot;user&quot;:{&quot;birth_day&quot;:&quot;1970-01-01T05:28:20.118Z&quot;,&quot;password&quot;:&quot;$2b$10$CmVSy8UmmadypLu7y7d\/eOs4baSNkYk6ja2gsFrI\/4Z74ix0r4PZy&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;696074199&quot;,&quot;isCreatedByAdmin&quot;:false,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;fafnirukihj&quot;,&quot;_id&quot;:&quot;63c80c13e56165ca64b4a6cb&quot;,&quot;isActive&quot;:false,&quot;first_name&quot;:&quot;Fafnirou3kl&quot;,&quot;email&quot;:&quot;hamman2@mail.com&quot;,&quot;isEmailConfirmed&quot;:false}},{&quot;initial_value&quot;:0,&quot;cumulative_performance&quot;:0,&quot;liquidity_value&quot;:0,&quot;performance_hebdo&quot;:0,&quot;liquidity_frequency&quot;:0,&quot;ytd&quot;:0,&quot;products&quot;:[],&quot;gestionnaire&quot;:{&quot;birth_day&quot;:&quot;1970-01-01T05:28:20.118Z&quot;,&quot;password&quot;:&quot;$2b$10$CmVSy8UmmadypLu7y7d\/eOs4baSNkYk6ja2gsFrI\/4Z74ix0r4PZy&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;696074199&quot;,&quot;isCreatedByAdmin&quot;:false,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;fafnirukihj&quot;,&quot;_id&quot;:&quot;63c80c13e56165ca64b4a6cb&quot;,&quot;isActive&quot;:false,&quot;first_name&quot;:&quot;Fafnirou3kl&quot;,&quot;email&quot;:&quot;hamman2@mail.com&quot;,&quot;isEmailConfirmed&quot;:false},&quot;__v&quot;:0,&quot;_id&quot;:&quot;63ecfb79da9e7ea1ed36f529&quot;,&quot;designation&quot;:&quot;string&quot;,&quot;cumulative_performance_date&quot;:&quot;2023-02-15T00:00:00.000Z&quot;,&quot;user&quot;:{&quot;birth_day&quot;:&quot;1970-01-01T05:28:20.118Z&quot;,&quot;password&quot;:&quot;$2b$10$CmVSy8UmmadypLu7y7d\/eOs4baSNkYk6ja2gsFrI\/4Z74ix0r4PZy&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;696074199&quot;,&quot;isCreatedByAdmin&quot;:false,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;fafnirukihj&quot;,&quot;_id&quot;:&quot;63c80c13e56165ca64b4a6cb&quot;,&quot;isActive&quot;:false,&quot;first_name&quot;:&quot;Fafnirou3kl&quot;,&quot;email&quot;:&quot;hamman2@mail.com&quot;,&quot;isEmailConfirmed&quot;:false}},{&quot;initial_value&quot;:0,&quot;cumulative_performance&quot;:0,&quot;liquidity_value&quot;:0,&quot;performance_hebdo&quot;:0,&quot;liquidity_frequency&quot;:0,&quot;ytd&quot;:0,&quot;products&quot;:[],&quot;gestionnaire&quot;:{&quot;birth_day&quot;:&quot;1970-01-01T05:28:20.118Z&quot;,&quot;password&quot;:&quot;$2b$10$CmVSy8UmmadypLu7y7d\/eOs4baSNkYk6ja2gsFrI\/4Z74ix0r4PZy&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;696074199&quot;,&quot;isCreatedByAdmin&quot;:false,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;fafnirukihj&quot;,&quot;_id&quot;:&quot;63c80c13e56165ca64b4a6cb&quot;,&quot;isActive&quot;:false,&quot;first_name&quot;:&quot;Fafnirou3kl&quot;,&quot;email&quot;:&quot;hamman2@mail.com&quot;,&quot;isEmailConfirmed&quot;:false},&quot;__v&quot;:0,&quot;_id&quot;:&quot;63ecfeffda9e7ea1ed36f557&quot;,&quot;designation&quot;:&quot;string&quot;,&quot;cumulative_performance_date&quot;:&quot;2023-02-15T00:00:00.000Z&quot;,&quot;user&quot;:{&quot;birth_day&quot;:&quot;1970-01-01T05:28:20.118Z&quot;,&quot;password&quot;:&quot;$2b$10$CmVSy8UmmadypLu7y7d\/eOs4baSNkYk6ja2gsFrI\/4Z74ix0r4PZy&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;696074199&quot;,&quot;isCreatedByAdmin&quot;:false,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;fafnirukihj&quot;,&quot;_id&quot;:&quot;63c80c13e56165ca64b4a6cb&quot;,&quot;isActive&quot;:false,&quot;first_name&quot;:&quot;Fafnirou3kl&quot;,&quot;email&quot;:&quot;hamman2@mail.com&quot;,&quot;isEmailConfirmed&quot;:false}}]
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">print response</span>
+
+  <span class="lead-duration duration">0.017</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-4">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-4" class="collapse collapsable-details">
+        <pre>17:17:29.889 [print] [
+  {
+    &quot;initial_value&quot;: 0,
+    &quot;cumulative_performance&quot;: 0,
+    &quot;liquidity_value&quot;: 0,
+    &quot;performance_hebdo&quot;: 0,
+    &quot;liquidity_frequency&quot;: 0,
+    &quot;ytd&quot;: 0,
+    &quot;products&quot;: [
+    ],
+    &quot;gestionnaire&quot;: {
+      &quot;birth_day&quot;: &quot;1970-01-01T05:28:20.118Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$CmVSy8UmmadypLu7y7d/eOs4baSNkYk6ja2gsFrI/4Z74ix0r4PZy&quot;,
+      &quot;role&quot;: [
+        &quot;User&quot;
+      ],
+      &quot;phone&quot;: &quot;696074199&quot;,
+      &quot;isCreatedByAdmin&quot;: false,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;fafnirukihj&quot;,
+      &quot;_id&quot;: &quot;63c80c13e56165ca64b4a6cb&quot;,
+      &quot;isActive&quot;: false,
+      &quot;first_name&quot;: &quot;Fafnirou3kl&quot;,
+      &quot;email&quot;: &quot;hamman2@mail.com&quot;,
+      &quot;isEmailConfirmed&quot;: false
+    },
+    &quot;__v&quot;: 0,
+    &quot;_id&quot;: &quot;63df5c36ad437ea9f60e8034&quot;,
+    &quot;designation&quot;: &quot;Default wallet&quot;,
+    &quot;cumulative_performance_date&quot;: &quot;2023-02-05T07:35:01.012Z&quot;,
+    &quot;user&quot;: {
+      &quot;birth_day&quot;: &quot;2000-12-12T00:00:00.000Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$1DVBH2HY8R4WMBDSkdCaEOTLIe//6tXF9BbrxEmYz5atQYQbf7iK.&quot;,
+      &quot;role&quot;: [
+        &quot;User&quot;
+      ],
+      &quot;phone&quot;: &quot;655757902&quot;,
+      &quot;isCreatedByAdmin&quot;: false,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;Gabriel&quot;,
+      &quot;_id&quot;: &quot;63df5c36ad437ea9f60e8033&quot;,
+      &quot;isActive&quot;: false,
+      &quot;first_name&quot;: &quot;Tendong&quot;,
+      &quot;email&quot;: &quot;gabitendong1@gmail.com&quot;,
+      &quot;isEmailConfirmed&quot;: false
+    }
+  },
+  {
+    &quot;product&quot;: [
+    ],
+    &quot;initial_value&quot;: 0,
+    &quot;cumulative_performance&quot;: 0,
+    &quot;liquidity_value&quot;: 0,
+    &quot;performance_hebdo&quot;: 0,
+    &quot;liquidity_frequency&quot;: 0,
+    &quot;ytd&quot;: 0,
+    &quot;products&quot;: [
+    ],
+    &quot;gestionnaire&quot;: {
+      &quot;birth_day&quot;: &quot;1970-01-01T05:28:20.118Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$CmVSy8UmmadypLu7y7d/eOs4baSNkYk6ja2gsFrI/4Z74ix0r4PZy&quot;,
+      &quot;role&quot;: [
+        &quot;User&quot;
+      ],
+      &quot;phone&quot;: &quot;696074199&quot;,
+      &quot;isCreatedByAdmin&quot;: false,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;fafnirukihj&quot;,
+      &quot;_id&quot;: &quot;63c80c13e56165ca64b4a6cb&quot;,
+      &quot;isActive&quot;: false,
+      &quot;first_name&quot;: &quot;Fafnirou3kl&quot;,
+      &quot;email&quot;: &quot;hamman2@mail.com&quot;,
+      &quot;isEmailConfirmed&quot;: false
+    },
+    &quot;__v&quot;: 0,
+    &quot;_id&quot;: &quot;63e250f6993b5f9a52eb8009&quot;,
+    &quot;designation&quot;: &quot;Default wallet&quot;,
+    &quot;cumulative_performance_date&quot;: &quot;2023-02-07T09:48:26.239Z&quot;,
+    &quot;user&quot;: {
+      &quot;birth_day&quot;: &quot;1999-02-06T00:00:00.000Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$PbKmpsh7.ZPP40kT56FYAub5.p6NWrIJrI8D5sMWmvbQaJ8ybjMMi&quot;,
+      &quot;role&quot;: [
+        &quot;Admin&quot;
+      ],
+      &quot;phone&quot;: &quot;696074199'#string'&quot;,
+      &quot;isCreatedByAdmin&quot;: false,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;fafniruER&quot;,
+      &quot;_id&quot;: &quot;63e250f6993b5f9a52eb8008&quot;,
+      &quot;isActive&quot;: false,
+      &quot;first_name&quot;: &quot;Tcheuguen&quot;,
+      &quot;email&quot;: &quot;fredy@mail.com&quot;,
+      &quot;isEmailConfirmed&quot;: true
+    }
+  },
+  {
+    &quot;product&quot;: [
+    ],
+    &quot;initial_value&quot;: 0,
+    &quot;cumulative_performance&quot;: 0,
+    &quot;liquidity_value&quot;: 0,
+    &quot;performance_hebdo&quot;: 0,
+    &quot;liquidity_frequency&quot;: 0,
+    &quot;ytd&quot;: 0,
+    &quot;products&quot;: [
+    ],
+    &quot;gestionnaire&quot;: {
+      &quot;birth_day&quot;: &quot;1970-01-01T05:28:20.118Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$CmVSy8UmmadypLu7y7d/eOs4baSNkYk6ja2gsFrI/4Z74ix0r4PZy&quot;,
+      &quot;role&quot;: [
+        &quot;User&quot;
+      ],
+      &quot;phone&quot;: &quot;696074199&quot;,
+      &quot;isCreatedByAdmin&quot;: false,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;fafnirukihj&quot;,
+      &quot;_id&quot;: &quot;63c80c13e56165ca64b4a6cb&quot;,
+      &quot;isActive&quot;: false,
+      &quot;first_name&quot;: &quot;Fafnirou3kl&quot;,
+      &quot;email&quot;: &quot;hamman2@mail.com&quot;,
+      &quot;isEmailConfirmed&quot;: false
+    },
+    &quot;__v&quot;: 0,
+    &quot;_id&quot;: &quot;63e26e62993b5f9a52eb825a&quot;,
+    &quot;designation&quot;: &quot;Default wallet&quot;,
+    &quot;cumulative_performance_date&quot;: &quot;2023-02-07T09:48:26.239Z&quot;,
+    &quot;user&quot;: {
+      &quot;birth_day&quot;: &quot;2004-12-09T00:00:00.000Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$XhZiWjmSyJod8dFtueiKP.52OoaJsSiucn6RM7kapHMV3yzPPbtiC&quot;,
+      &quot;role&quot;: [
+        &quot;Admin&quot;
+      ],
+      &quot;phone&quot;: &quot;+33607703069&quot;,
+      &quot;isCreatedByAdmin&quot;: true,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;Luttrell.L&quot;,
+      &quot;_id&quot;: &quot;63e26e62993b5f9a52eb8259&quot;,
+      &quot;isActive&quot;: false,
+      &quot;first_name&quot;: &quot;Daniel &quot;,
+      &quot;email&quot;: &quot;daniel.luttrell@yopmail.com&quot;,
+      &quot;isEmailConfirmed&quot;: true
+    }
+  },
+  {
+    &quot;product&quot;: [
+    ],
+    &quot;initial_value&quot;: 0,
+    &quot;cumulative_performance&quot;: 0,
+    &quot;liquidity_value&quot;: 0,
+    &quot;performance_hebdo&quot;: 0,
+    &quot;liquidity_frequency&quot;: 0,
+    &quot;ytd&quot;: 0,
+    &quot;products&quot;: [
+    ],
+    &quot;gestionnaire&quot;: {
+      &quot;birth_day&quot;: &quot;1970-01-01T05:28:20.118Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$CmVSy8UmmadypLu7y7d/eOs4baSNkYk6ja2gsFrI/4Z74ix0r4PZy&quot;,
+      &quot;role&quot;: [
+        &quot;User&quot;
+      ],
+      &quot;phone&quot;: &quot;696074199&quot;,
+      &quot;isCreatedByAdmin&quot;: false,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;fafnirukihj&quot;,
+      &quot;_id&quot;: &quot;63c80c13e56165ca64b4a6cb&quot;,
+      &quot;isActive&quot;: false,
+      &quot;first_name&quot;: &quot;Fafnirou3kl&quot;,
+      &quot;email&quot;: &quot;hamman2@mail.com&quot;,
+      &quot;isEmailConfirmed&quot;: false
+    },
+    &quot;__v&quot;: 0,
+    &quot;_id&quot;: &quot;63e27048993b5f9a52eb82ad&quot;,
+    &quot;designation&quot;: &quot;Default wallet&quot;,
+    &quot;cumulative_performance_date&quot;: &quot;2023-02-07T09:48:26.239Z&quot;,
+    &quot;user&quot;: {
+      &quot;birth_day&quot;: &quot;2004-12-09T00:00:00.000Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$rhqmsRb9dt9lejVLe8UDwewqIN7R/Xkojf5LAwlZ.RdFWr5pw880W&quot;,
+      &quot;role&quot;: [
+        &quot;Admin&quot;
+      ],
+      &quot;phone&quot;: &quot;+334567898765&quot;,
+      &quot;isCreatedByAdmin&quot;: true,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;L. Luttrell&quot;,
+      &quot;_id&quot;: &quot;63e27048993b5f9a52eb82ac&quot;,
+      &quot;isActive&quot;: true,
+      &quot;first_name&quot;: &quot;Daniel &quot;,
+      &quot;email&quot;: &quot;dankiel.luttrell@yopmail.com&quot;,
+      &quot;isEmailConfirmed&quot;: true
+    }
+  },
+  {
+    &quot;product&quot;: [
+    ],
+    &quot;initial_value&quot;: 0,
+    &quot;cumulative_performance&quot;: 0,
+    &quot;liquidity_value&quot;: 0,
+    &quot;performance_hebdo&quot;: 0,
+    &quot;liquidity_frequency&quot;: 0,
+    &quot;ytd&quot;: 0,
+    &quot;products&quot;: [
+    ],
+    &quot;gestionnaire&quot;: {
+      &quot;birth_day&quot;: &quot;1970-01-01T05:28:20.118Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$CmVSy8UmmadypLu7y7d/eOs4baSNkYk6ja2gsFrI/4Z74ix0r4PZy&quot;,
+      &quot;role&quot;: [
+        &quot;User&quot;
+      ],
+      &quot;phone&quot;: &quot;696074199&quot;,
+      &quot;isCreatedByAdmin&quot;: false,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;fafnirukihj&quot;,
+      &quot;_id&quot;: &quot;63c80c13e56165ca64b4a6cb&quot;,
+      &quot;isActive&quot;: false,
+      &quot;first_name&quot;: &quot;Fafnirou3kl&quot;,
+      &quot;email&quot;: &quot;hamman2@mail.com&quot;,
+      &quot;isEmailConfirmed&quot;: false
+    },
+    &quot;__v&quot;: 0,
+    &quot;_id&quot;: &quot;63e271d6993b5f9a52eb8306&quot;,
+    &quot;designation&quot;: &quot;Default wallet&quot;,
+    &quot;cumulative_performance_date&quot;: &quot;2023-02-07T09:48:26.239Z&quot;,
+    &quot;user&quot;: {
+      &quot;birth_day&quot;: &quot;2004-12-09T00:00:00.000Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$YWQxjT7rTY4mTrMzqWP/r.iE9jSPk/g68Z1FoTJOOOM77CnCt3XiC&quot;,
+      &quot;role&quot;: [
+        &quot;Admin&quot;
+      ],
+      &quot;phone&quot;: &quot;333333333&quot;,
+      &quot;isCreatedByAdmin&quot;: true,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;ffffffffffffffff&quot;,
+      &quot;_id&quot;: &quot;63e271d6993b5f9a52eb8305&quot;,
+      &quot;isActive&quot;: false,
+      &quot;first_name&quot;: &quot;fffffffffff&quot;,
+      &quot;email&quot;: &quot;ffffffffff@fff.fff&quot;,
+      &quot;isEmailConfirmed&quot;: true
+    }
+  },
+  {
+    &quot;product&quot;: [
+    ],
+    &quot;initial_value&quot;: 0,
+    &quot;cumulative_performance&quot;: 0,
+    &quot;liquidity_value&quot;: 0,
+    &quot;performance_hebdo&quot;: 0,
+    &quot;liquidity_frequency&quot;: 0,
+    &quot;ytd&quot;: 0,
+    &quot;products&quot;: [
+    ],
+    &quot;gestionnaire&quot;: {
+      &quot;birth_day&quot;: &quot;1970-01-01T05:28:20.118Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$CmVSy8UmmadypLu7y7d/eOs4baSNkYk6ja2gsFrI/4Z74ix0r4PZy&quot;,
+      &quot;role&quot;: [
+        &quot;User&quot;
+      ],
+      &quot;phone&quot;: &quot;696074199&quot;,
+      &quot;isCreatedByAdmin&quot;: false,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;fafnirukihj&quot;,
+      &quot;_id&quot;: &quot;63c80c13e56165ca64b4a6cb&quot;,
+      &quot;isActive&quot;: false,
+      &quot;first_name&quot;: &quot;Fafnirou3kl&quot;,
+      &quot;email&quot;: &quot;hamman2@mail.com&quot;,
+      &quot;isEmailConfirmed&quot;: false
+    },
+    &quot;__v&quot;: 0,
+    &quot;_id&quot;: &quot;63e27913993b5f9a52eb83d4&quot;,
+    &quot;designation&quot;: &quot;Default wallet&quot;,
+    &quot;cumulative_performance_date&quot;: &quot;2023-02-07T09:48:26.239Z&quot;,
+    &quot;user&quot;: {
+      &quot;birth_day&quot;: &quot;2004-12-09T00:00:00.000Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$sP.A0rPhSmxKb0cHZeYkAeAOpC.VeBhwSU/.H.yAtCxvWYnDvKePq&quot;,
+      &quot;role&quot;: [
+        &quot;Admin&quot;
+      ],
+      &quot;phone&quot;: &quot;+237696074190&quot;,
+      &quot;isCreatedByAdmin&quot;: true,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;POLA&quot;,
+      &quot;_id&quot;: &quot;63e27913993b5f9a52eb83d3&quot;,
+      &quot;isActive&quot;: true,
+      &quot;first_name&quot;: &quot;AHMADOU&quot;,
+      &quot;email&quot;: &quot;dankiel.luttrfell@yopmail.com&quot;,
+      &quot;isEmailConfirmed&quot;: true
+    }
+  },
+  {
+    &quot;product&quot;: [
+    ],
+    &quot;initial_value&quot;: 0,
+    &quot;cumulative_performance&quot;: 0,
+    &quot;liquidity_value&quot;: 0,
+    &quot;performance_hebdo&quot;: 0,
+    &quot;liquidity_frequency&quot;: 0,
+    &quot;ytd&quot;: 0,
+    &quot;products&quot;: [
+    ],
+    &quot;gestionnaire&quot;: {
+      &quot;birth_day&quot;: &quot;1970-01-01T05:28:20.118Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$CmVSy8UmmadypLu7y7d/eOs4baSNkYk6ja2gsFrI/4Z74ix0r4PZy&quot;,
+      &quot;role&quot;: [
+        &quot;User&quot;
+      ],
+      &quot;phone&quot;: &quot;696074199&quot;,
+      &quot;isCreatedByAdmin&quot;: false,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;fafnirukihj&quot;,
+      &quot;_id&quot;: &quot;63c80c13e56165ca64b4a6cb&quot;,
+      &quot;isActive&quot;: false,
+      &quot;first_name&quot;: &quot;Fafnirou3kl&quot;,
+      &quot;email&quot;: &quot;hamman2@mail.com&quot;,
+      &quot;isEmailConfirmed&quot;: false
+    },
+    &quot;__v&quot;: 0,
+    &quot;_id&quot;: &quot;63e283ad993b5f9a52eb859e&quot;,
+    &quot;designation&quot;: &quot;Default wallet&quot;,
+    &quot;cumulative_performance_date&quot;: &quot;2023-02-07T09:48:26.239Z&quot;,
+    &quot;user&quot;: {
+      &quot;birth_day&quot;: &quot;2004-12-09T00:00:00.000Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$KkZCbA3Uply7zeFH7i5oq.NiBqeSsSSysvv4JxNJ27vNQkSPdxla.&quot;,
+      &quot;role&quot;: [
+        &quot;Admin&quot;
+      ],
+      &quot;phone&quot;: &quot;+336767898765&quot;,
+      &quot;isCreatedByAdmin&quot;: true,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;E. Bryan&quot;,
+      &quot;_id&quot;: &quot;63e283ad993b5f9a52eb859d&quot;,
+      &quot;isActive&quot;: true,
+      &quot;first_name&quot;: &quot;judith&quot;,
+      &quot;email&quot;: &quot;judith.bryan@yopmail.com&quot;,
+      &quot;isEmailConfirmed&quot;: true
+    }
+  },
+  {
+    &quot;product&quot;: [
+    ],
+    &quot;initial_value&quot;: 0,
+    &quot;cumulative_performance&quot;: 0,
+    &quot;liquidity_value&quot;: 0,
+    &quot;performance_hebdo&quot;: 0,
+    &quot;liquidity_frequency&quot;: 0,
+    &quot;ytd&quot;: 0,
+    &quot;products&quot;: [
+    ],
+    &quot;gestionnaire&quot;: {
+      &quot;birth_day&quot;: &quot;1970-01-01T05:28:20.118Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$CmVSy8UmmadypLu7y7d/eOs4baSNkYk6ja2gsFrI/4Z74ix0r4PZy&quot;,
+      &quot;role&quot;: [
+        &quot;User&quot;
+      ],
+      &quot;phone&quot;: &quot;696074199&quot;,
+      &quot;isCreatedByAdmin&quot;: false,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;fafnirukihj&quot;,
+      &quot;_id&quot;: &quot;63c80c13e56165ca64b4a6cb&quot;,
+      &quot;isActive&quot;: false,
+      &quot;first_name&quot;: &quot;Fafnirou3kl&quot;,
+      &quot;email&quot;: &quot;hamman2@mail.com&quot;,
+      &quot;isEmailConfirmed&quot;: false
+    },
+    &quot;__v&quot;: 0,
+    &quot;_id&quot;: &quot;63e28411993b5f9a52eb85ae&quot;,
+    &quot;designation&quot;: &quot;Default wallet&quot;,
+    &quot;cumulative_performance_date&quot;: &quot;2023-02-07T09:48:26.239Z&quot;,
+    &quot;user&quot;: {
+      &quot;birth_day&quot;: &quot;2004-12-09T00:00:00.000Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$bTdx0dm/lrnml2xbOmdCze6oI9POIkS9eWffZWiNGHpy6woaaYVYS&quot;,
+      &quot;role&quot;: [
+        &quot;Admin&quot;
+      ],
+      &quot;phone&quot;: &quot;+2378987654346788&quot;,
+      &quot;isCreatedByAdmin&quot;: true,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;BRYAN&quot;,
+      &quot;_id&quot;: &quot;63e28411993b5f9a52eb85ad&quot;,
+      &quot;isActive&quot;: false,
+      &quot;first_name&quot;: &quot;FRANCINE&quot;,
+      &quot;email&quot;: &quot;judith.bryan1@yopmail.com&quot;,
+      &quot;isEmailConfirmed&quot;: true
+    }
+  },
+  {
+    &quot;product&quot;: [
+    ],
+    &quot;initial_value&quot;: 0,
+    &quot;cumulative_performance&quot;: 0,
+    &quot;liquidity_value&quot;: 0,
+    &quot;performance_hebdo&quot;: 0,
+    &quot;liquidity_frequency&quot;: 0,
+    &quot;ytd&quot;: 0,
+    &quot;products&quot;: [
+    ],
+    &quot;gestionnaire&quot;: {
+      &quot;birth_day&quot;: &quot;1970-01-01T05:28:20.118Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$CmVSy8UmmadypLu7y7d/eOs4baSNkYk6ja2gsFrI/4Z74ix0r4PZy&quot;,
+      &quot;role&quot;: [
+        &quot;User&quot;
+      ],
+      &quot;phone&quot;: &quot;696074199&quot;,
+      &quot;isCreatedByAdmin&quot;: false,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;fafnirukihj&quot;,
+      &quot;_id&quot;: &quot;63c80c13e56165ca64b4a6cb&quot;,
+      &quot;isActive&quot;: false,
+      &quot;first_name&quot;: &quot;Fafnirou3kl&quot;,
+      &quot;email&quot;: &quot;hamman2@mail.com&quot;,
+      &quot;isEmailConfirmed&quot;: false
+    },
+    &quot;__v&quot;: 0,
+    &quot;_id&quot;: &quot;63e2f211993b5f9a52eb8629&quot;,
+    &quot;designation&quot;: &quot;Default wallet&quot;,
+    &quot;cumulative_performance_date&quot;: &quot;2023-02-07T09:48:26.239Z&quot;,
+    &quot;user&quot;: {
+      &quot;birth_day&quot;: &quot;1970-01-01T05:33:10.501Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$TfsTrWwwwaz5bw65.mCQ5e5/B3uId2BLVUnfcN0XklujN0ugLCU/S&quot;,
+      &quot;role&quot;: [
+        &quot;Admin&quot;
+      ],
+      &quot;phone&quot;: &quot;696074199&quot;,
+      &quot;isCreatedByAdmin&quot;: false,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;fafniru&quot;,
+      &quot;_id&quot;: &quot;63e2f211993b5f9a52eb8628&quot;,
+      &quot;isActive&quot;: false,
+      &quot;first_name&quot;: &quot;Fan&quot;,
+      &quot;email&quot;: &quot;fafnfni@mail.com&quot;,
+      &quot;isEmailConfirmed&quot;: true
+    }
+  },
+  {
+    &quot;initial_value&quot;: 0,
+    &quot;cumulative_performance&quot;: 0,
+    &quot;liquidity_value&quot;: 0,
+    &quot;performance_hebdo&quot;: 0,
+    &quot;liquidity_frequency&quot;: 0,
+    &quot;ytd&quot;: 0,
+    &quot;products&quot;: [
+    ],
+    &quot;gestionnaire&quot;: {
+      &quot;birth_day&quot;: &quot;1970-01-01T05:28:20.118Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$CmVSy8UmmadypLu7y7d/eOs4baSNkYk6ja2gsFrI/4Z74ix0r4PZy&quot;,
+      &quot;role&quot;: [
+        &quot;User&quot;
+      ],
+      &quot;phone&quot;: &quot;696074199&quot;,
+      &quot;isCreatedByAdmin&quot;: false,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;fafnirukihj&quot;,
+      &quot;_id&quot;: &quot;63c80c13e56165ca64b4a6cb&quot;,
+      &quot;isActive&quot;: false,
+      &quot;first_name&quot;: &quot;Fafnirou3kl&quot;,
+      &quot;email&quot;: &quot;hamman2@mail.com&quot;,
+      &quot;isEmailConfirmed&quot;: false
+    },
+    &quot;__v&quot;: 0,
+    &quot;_id&quot;: &quot;63e3776434feb34417e49c35&quot;,
+    &quot;designation&quot;: &quot;Default wallet&quot;,
+    &quot;cumulative_performance_date&quot;: &quot;2023-02-08T10:18:16.410Z&quot;,
+    &quot;user&quot;: {
+      &quot;birth_day&quot;: &quot;1970-01-01T05:33:10.509Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$i9Ol5msNbjde/rym8fIXO.wteSdPrQHeA/qvnyi7fAgH/fRGktwYG&quot;,
+      &quot;role&quot;: [
+        &quot;User&quot;
+      ],
+      &quot;phone&quot;: &quot;696894199&quot;,
+      &quot;isCreatedByAdmin&quot;: false,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;Lopezou&quot;,
+      &quot;_id&quot;: &quot;63e3776434feb34417e49c31&quot;,
+      &quot;isActive&quot;: false,
+      &quot;first_name&quot;: &quot;Harvery&quot;,
+      &quot;email&quot;: &quot;hambello5@gmail.com&quot;,
+      &quot;isEmailConfirmed&quot;: false
+    }
+  },
+  {
+    &quot;initial_value&quot;: 0,
+    &quot;cumulative_performance&quot;: 0,
+    &quot;liquidity_value&quot;: 0,
+    &quot;performance_hebdo&quot;: 0,
+    &quot;liquidity_frequency&quot;: 0,
+    &quot;ytd&quot;: 0,
+    &quot;products&quot;: [
+    ],
+    &quot;gestionnaire&quot;: {
+      &quot;birth_day&quot;: &quot;1970-01-01T05:28:20.118Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$CmVSy8UmmadypLu7y7d/eOs4baSNkYk6ja2gsFrI/4Z74ix0r4PZy&quot;,
+      &quot;role&quot;: [
+        &quot;User&quot;
+      ],
+      &quot;phone&quot;: &quot;696074199&quot;,
+      &quot;isCreatedByAdmin&quot;: false,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;fafnirukihj&quot;,
+      &quot;_id&quot;: &quot;63c80c13e56165ca64b4a6cb&quot;,
+      &quot;isActive&quot;: false,
+      &quot;first_name&quot;: &quot;Fafnirou3kl&quot;,
+      &quot;email&quot;: &quot;hamman2@mail.com&quot;,
+      &quot;isEmailConfirmed&quot;: false
+    },
+    &quot;__v&quot;: 0,
+    &quot;_id&quot;: &quot;63e3804224786384b87f177e&quot;,
+    &quot;designation&quot;: &quot;Default wallet&quot;,
+    &quot;cumulative_performance_date&quot;: &quot;2023-02-08T10:46:52.500Z&quot;,
+    &quot;user&quot;: {
+      &quot;birth_day&quot;: &quot;2004-12-09T00:00:00.000Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$uq12Jk0e2MbTggvNE8kbIOEbZ2zzNcjeSubFJO2DJpt557SF/hDba&quot;,
+      &quot;role&quot;: [
+        &quot;Admin&quot;
+      ],
+      &quot;phone&quot;: &quot;+330236999380&quot;,
+      &quot;isCreatedByAdmin&quot;: true,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;Vernadeau&quot;,
+      &quot;_id&quot;: &quot;63e3804224786384b87f177a&quot;,
+      &quot;isActive&quot;: true,
+      &quot;first_name&quot;: &quot;Huette&quot;,
+      &quot;email&quot;: &quot;dorothee.thibodeau@yopmail.com&quot;,
+      &quot;isEmailConfirmed&quot;: true
+    }
+  },
+  {
+    &quot;initial_value&quot;: 0,
+    &quot;cumulative_performance&quot;: 0,
+    &quot;liquidity_value&quot;: 0,
+    &quot;performance_hebdo&quot;: 0,
+    &quot;liquidity_frequency&quot;: 0,
+    &quot;ytd&quot;: 0,
+    &quot;products&quot;: [
+    ],
+    &quot;gestionnaire&quot;: {
+      &quot;birth_day&quot;: &quot;1970-01-01T05:28:20.118Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$CmVSy8UmmadypLu7y7d/eOs4baSNkYk6ja2gsFrI/4Z74ix0r4PZy&quot;,
+      &quot;role&quot;: [
+        &quot;User&quot;
+      ],
+      &quot;phone&quot;: &quot;696074199&quot;,
+      &quot;isCreatedByAdmin&quot;: false,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;fafnirukihj&quot;,
+      &quot;_id&quot;: &quot;63c80c13e56165ca64b4a6cb&quot;,
+      &quot;isActive&quot;: false,
+      &quot;first_name&quot;: &quot;Fafnirou3kl&quot;,
+      &quot;email&quot;: &quot;hamman2@mail.com&quot;,
+      &quot;isEmailConfirmed&quot;: false
+    },
+    &quot;__v&quot;: 0,
+    &quot;_id&quot;: &quot;63e3849524786384b87f17f3&quot;,
+    &quot;designation&quot;: &quot;Default wallet&quot;,
+    &quot;cumulative_performance_date&quot;: &quot;2023-02-08T10:46:52.500Z&quot;,
+    &quot;user&quot;: {
+      &quot;birth_day&quot;: &quot;1972-09-14T23:00:00.000Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$Md7H3pl.3TKv7gqfniudM.5yioqTsH0JtvSFNwnuhNGD0iJrG4/IG&quot;,
+      &quot;role&quot;: [
+        &quot;User&quot;
+      ],
+      &quot;phone&quot;: &quot;123456789&quot;,
+      &quot;isCreatedByAdmin&quot;: true,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot; Rochefort&quot;,
+      &quot;_id&quot;: &quot;63e3849524786384b87f17ef&quot;,
+      &quot;isActive&quot;: false,
+      &quot;first_name&quot;: &quot;C&eacute;line &quot;,
+      &quot;email&quot;: &quot;celinerochefort@dayrep.com&quot;,
+      &quot;isEmailConfirmed&quot;: false
+    }
+  },
+  {
+    &quot;initial_value&quot;: 0,
+    &quot;cumulative_performance&quot;: 0,
+    &quot;liquidity_value&quot;: 0,
+    &quot;performance_hebdo&quot;: 0,
+    &quot;liquidity_frequency&quot;: 0,
+    &quot;ytd&quot;: 0,
+    &quot;products&quot;: [
+    ],
+    &quot;gestionnaire&quot;: {
+      &quot;birth_day&quot;: &quot;1970-01-01T05:28:20.118Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$CmVSy8UmmadypLu7y7d/eOs4baSNkYk6ja2gsFrI/4Z74ix0r4PZy&quot;,
+      &quot;role&quot;: [
+        &quot;User&quot;
+      ],
+      &quot;phone&quot;: &quot;696074199&quot;,
+      &quot;isCreatedByAdmin&quot;: false,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;fafnirukihj&quot;,
+      &quot;_id&quot;: &quot;63c80c13e56165ca64b4a6cb&quot;,
+      &quot;isActive&quot;: false,
+      &quot;first_name&quot;: &quot;Fafnirou3kl&quot;,
+      &quot;email&quot;: &quot;hamman2@mail.com&quot;,
+      &quot;isEmailConfirmed&quot;: false
+    },
+    &quot;__v&quot;: 0,
+    &quot;_id&quot;: &quot;63e3b4b2647ddb850f36864c&quot;,
+    &quot;designation&quot;: &quot;Default wallet&quot;,
+    &quot;cumulative_performance_date&quot;: &quot;2023-02-08T13:56:13.779Z&quot;,
+    &quot;user&quot;: {
+      &quot;birth_day&quot;: &quot;2004-12-09T00:00:00.000Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$OcMY0rWHoK3TVkcxWSREMeRhuTtzuZCnQxfbCjnowytBkpgUORcZO&quot;,
+      &quot;role&quot;: [
+        &quot;Admin&quot;
+      ],
+      &quot;phone&quot;: &quot;+3376787677767&quot;,
+      &quot;isCreatedByAdmin&quot;: true,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;Bonnet&quot;,
+      &quot;_id&quot;: &quot;63e3b4b1647ddb850f368648&quot;,
+      &quot;isActive&quot;: false,
+      &quot;first_name&quot;: &quot;POULETte&quot;,
+      &quot;email&quot;: &quot;francebonnet@rhyta.com&quot;,
+      &quot;isEmailConfirmed&quot;: true
+    }
+  },
+  {
+    &quot;initial_value&quot;: 0,
+    &quot;cumulative_performance&quot;: 0,
+    &quot;liquidity_value&quot;: 0,
+    &quot;performance_hebdo&quot;: 0,
+    &quot;liquidity_frequency&quot;: 0,
+    &quot;ytd&quot;: 0,
+    &quot;products&quot;: [
+    ],
+    &quot;gestionnaire&quot;: {
+      &quot;birth_day&quot;: &quot;1970-01-01T05:28:20.118Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$CmVSy8UmmadypLu7y7d/eOs4baSNkYk6ja2gsFrI/4Z74ix0r4PZy&quot;,
+      &quot;role&quot;: [
+        &quot;User&quot;
+      ],
+      &quot;phone&quot;: &quot;696074199&quot;,
+      &quot;isCreatedByAdmin&quot;: false,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;fafnirukihj&quot;,
+      &quot;_id&quot;: &quot;63c80c13e56165ca64b4a6cb&quot;,
+      &quot;isActive&quot;: false,
+      &quot;first_name&quot;: &quot;Fafnirou3kl&quot;,
+      &quot;email&quot;: &quot;hamman2@mail.com&quot;,
+      &quot;isEmailConfirmed&quot;: false
+    },
+    &quot;__v&quot;: 0,
+    &quot;_id&quot;: &quot;63e3cb613deb13cdd23e501c&quot;,
+    &quot;designation&quot;: &quot;Default wallet&quot;,
+    &quot;cumulative_performance_date&quot;: &quot;2023-02-08T14:53:36.170Z&quot;,
+    &quot;user&quot;: {
+      &quot;birth_day&quot;: &quot;2004-12-09T00:00:00.000Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$PEbLrRoNOIfyZSHMWXMA5eRmFQ78uWlBTilebY0qIyRdEZtqtYYKW&quot;,
+      &quot;role&quot;: [
+        &quot;Admin&quot;
+      ],
+      &quot;phone&quot;: &quot;+23789876543&quot;,
+      &quot;isCreatedByAdmin&quot;: true,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;RouleauX&quot;,
+      &quot;_id&quot;: &quot;63e3cb603deb13cdd23e5018&quot;,
+      &quot;isActive&quot;: false,
+      &quot;first_name&quot;: &quot;TEDDY&quot;,
+      &quot;email&quot;: &quot;telfordrouleau@jourrapide.com&quot;,
+      &quot;isEmailConfirmed&quot;: true
+    }
+  },
+  {
+    &quot;initial_value&quot;: 0,
+    &quot;cumulative_performance&quot;: 0,
+    &quot;liquidity_value&quot;: 0,
+    &quot;performance_hebdo&quot;: 0,
+    &quot;liquidity_frequency&quot;: 0,
+    &quot;ytd&quot;: 0,
+    &quot;products&quot;: [
+    ],
+    &quot;gestionnaire&quot;: {
+      &quot;birth_day&quot;: &quot;1970-01-01T05:28:20.118Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$CmVSy8UmmadypLu7y7d/eOs4baSNkYk6ja2gsFrI/4Z74ix0r4PZy&quot;,
+      &quot;role&quot;: [
+        &quot;User&quot;
+      ],
+      &quot;phone&quot;: &quot;696074199&quot;,
+      &quot;isCreatedByAdmin&quot;: false,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;fafnirukihj&quot;,
+      &quot;_id&quot;: &quot;63c80c13e56165ca64b4a6cb&quot;,
+      &quot;isActive&quot;: false,
+      &quot;first_name&quot;: &quot;Fafnirou3kl&quot;,
+      &quot;email&quot;: &quot;hamman2@mail.com&quot;,
+      &quot;isEmailConfirmed&quot;: false
+    },
+    &quot;__v&quot;: 0,
+    &quot;_id&quot;: &quot;63e4faf0e1cbdc16bbbe9e01&quot;,
+    &quot;designation&quot;: &quot;Default wallet&quot;,
+    &quot;cumulative_performance_date&quot;: &quot;2023-02-09T13:13:06.847Z&quot;,
+    &quot;user&quot;: {
+      &quot;birth_day&quot;: &quot;1958-07-11T23:00:00.000Z&quot;,
+      &quot;password&quot;: &quot;123456&quot;,
+      &quot;role&quot;: [
+        &quot;User&quot;
+      ],
+      &quot;phone&quot;: &quot;+330151197981&quot;,
+      &quot;isCreatedByAdmin&quot;: true,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;Boileau&quot;,
+      &quot;_id&quot;: &quot;63e4faf0e1cbdc16bbbe9dfd&quot;,
+      &quot;isActive&quot;: false,
+      &quot;first_name&quot;: &quot;Susanne &quot;,
+      &quot;email&quot;: &quot;suzanne.thibodeau@yopmail.com&quot;,
+      &quot;isEmailConfirmed&quot;: true
+    }
+  },
+  {
+    &quot;initial_value&quot;: 0,
+    &quot;cumulative_performance&quot;: 0,
+    &quot;liquidity_value&quot;: 0,
+    &quot;performance_hebdo&quot;: 0,
+    &quot;liquidity_frequency&quot;: 0,
+    &quot;ytd&quot;: 0,
+    &quot;products&quot;: [
+    ],
+    &quot;gestionnaire&quot;: {
+      &quot;birth_day&quot;: &quot;1970-01-01T05:28:20.118Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$CmVSy8UmmadypLu7y7d/eOs4baSNkYk6ja2gsFrI/4Z74ix0r4PZy&quot;,
+      &quot;role&quot;: [
+        &quot;User&quot;
+      ],
+      &quot;phone&quot;: &quot;696074199&quot;,
+      &quot;isCreatedByAdmin&quot;: false,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;fafnirukihj&quot;,
+      &quot;_id&quot;: &quot;63c80c13e56165ca64b4a6cb&quot;,
+      &quot;isActive&quot;: false,
+      &quot;first_name&quot;: &quot;Fafnirou3kl&quot;,
+      &quot;email&quot;: &quot;hamman2@mail.com&quot;,
+      &quot;isEmailConfirmed&quot;: false
+    },
+    &quot;__v&quot;: 0,
+    &quot;_id&quot;: &quot;63e523ade1cbdc16bbbea202&quot;,
+    &quot;designation&quot;: &quot;Default wallet&quot;,
+    &quot;cumulative_performance_date&quot;: &quot;2023-02-09T13:13:06.847Z&quot;,
+    &quot;user&quot;: {
+      &quot;birth_day&quot;: &quot;2004-12-09T00:00:00.000Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$1q6UFCHlYHm1g/o.3G0cSegtBCVXg8KB0E0lVWTF7lkqTJkJslJfa&quot;,
+      &quot;role&quot;: [
+        &quot;Admin&quot;
+      ],
+      &quot;phone&quot;: &quot;+335678987654&quot;,
+      &quot;isCreatedByAdmin&quot;: true,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;BOSS&quot;,
+      &quot;_id&quot;: &quot;63e523ade1cbdc16bbbea1fc&quot;,
+      &quot;isActive&quot;: true,
+      &quot;first_name&quot;: &quot;Eric Jacques&quot;,
+      &quot;email&quot;: &quot;eric.boss@yopmail.com&quot;,
+      &quot;isEmailConfirmed&quot;: true
+    }
+  },
+  {
+    &quot;initial_value&quot;: 0,
+    &quot;cumulative_performance&quot;: 0,
+    &quot;liquidity_value&quot;: 0,
+    &quot;performance_hebdo&quot;: 0,
+    &quot;liquidity_frequency&quot;: 0,
+    &quot;ytd&quot;: 0,
+    &quot;products&quot;: [
+    ],
+    &quot;gestionnaire&quot;: {
+      &quot;birth_day&quot;: &quot;1970-01-01T05:28:20.118Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$CmVSy8UmmadypLu7y7d/eOs4baSNkYk6ja2gsFrI/4Z74ix0r4PZy&quot;,
+      &quot;role&quot;: [
+        &quot;User&quot;
+      ],
+      &quot;phone&quot;: &quot;696074199&quot;,
+      &quot;isCreatedByAdmin&quot;: false,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;fafnirukihj&quot;,
+      &quot;_id&quot;: &quot;63c80c13e56165ca64b4a6cb&quot;,
+      &quot;isActive&quot;: false,
+      &quot;first_name&quot;: &quot;Fafnirou3kl&quot;,
+      &quot;email&quot;: &quot;hamman2@mail.com&quot;,
+      &quot;isEmailConfirmed&quot;: false
+    },
+    &quot;__v&quot;: 0,
+    &quot;_id&quot;: &quot;63e61c07e1cbdc16bbbea4d4&quot;,
+    &quot;designation&quot;: &quot;Default wallet&quot;,
+    &quot;cumulative_performance_date&quot;: &quot;2023-02-09T13:13:06.847Z&quot;,
+    &quot;user&quot;: {
+      &quot;birth_day&quot;: &quot;1977-01-01T00:00:00.000Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$DStxZyt9VleX6Cxdud/z0OiUecKiRDmiSdIUKdjSpJTqakzZecjJW&quot;,
+      &quot;role&quot;: [
+        &quot;User&quot;
+      ],
+      &quot;phone&quot;: &quot;987654321&quot;,
+      &quot;isCreatedByAdmin&quot;: false,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;Francine&quot;,
+      &quot;_id&quot;: &quot;63e61c06e1cbdc16bbbea4d0&quot;,
+      &quot;isActive&quot;: false,
+      &quot;first_name&quot;: &quot;POISSONNIER&quot;,
+      &quot;email&quot;: &quot;francine.moi123@yopmail.com&quot;,
+      &quot;isEmailConfirmed&quot;: true
+    }
+  },
+  {
+    &quot;initial_value&quot;: 0,
+    &quot;cumulative_performance&quot;: 0,
+    &quot;liquidity_value&quot;: 0,
+    &quot;performance_hebdo&quot;: 0,
+    &quot;liquidity_frequency&quot;: 0,
+    &quot;ytd&quot;: 0,
+    &quot;products&quot;: [
+    ],
+    &quot;gestionnaire&quot;: {
+      &quot;birth_day&quot;: &quot;1970-01-01T05:28:20.118Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$CmVSy8UmmadypLu7y7d/eOs4baSNkYk6ja2gsFrI/4Z74ix0r4PZy&quot;,
+      &quot;role&quot;: [
+        &quot;User&quot;
+      ],
+      &quot;phone&quot;: &quot;696074199&quot;,
+      &quot;isCreatedByAdmin&quot;: false,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;fafnirukihj&quot;,
+      &quot;_id&quot;: &quot;63c80c13e56165ca64b4a6cb&quot;,
+      &quot;isActive&quot;: false,
+      &quot;first_name&quot;: &quot;Fafnirou3kl&quot;,
+      &quot;email&quot;: &quot;hamman2@mail.com&quot;,
+      &quot;isEmailConfirmed&quot;: false
+    },
+    &quot;__v&quot;: 0,
+    &quot;_id&quot;: &quot;63e6256de1cbdc16bbbea50f&quot;,
+    &quot;designation&quot;: &quot;Default wallet&quot;,
+    &quot;cumulative_performance_date&quot;: &quot;2023-02-09T13:13:06.847Z&quot;,
+    &quot;user&quot;: {
+      &quot;birth_day&quot;: &quot;1987-10-13T23:00:00.000Z&quot;,
+      &quot;password&quot;: &quot;123456&quot;,
+      &quot;role&quot;: [
+        &quot;User&quot;
+      ],
+      &quot;phone&quot;: &quot;0987654321&quot;,
+      &quot;isCreatedByAdmin&quot;: true,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;POISSONNIER&quot;,
+      &quot;_id&quot;: &quot;63e6256de1cbdc16bbbea50b&quot;,
+      &quot;isActive&quot;: false,
+      &quot;first_name&quot;: &quot;Alfred&quot;,
+      &quot;email&quot;: &quot;alfred.poisson@yopmail.com&quot;,
+      &quot;isEmailConfirmed&quot;: true
+    }
+  },
+  {
+    &quot;initial_value&quot;: 0,
+    &quot;cumulative_performance&quot;: 0,
+    &quot;liquidity_value&quot;: 0,
+    &quot;performance_hebdo&quot;: 0,
+    &quot;liquidity_frequency&quot;: 0,
+    &quot;ytd&quot;: 0,
+    &quot;products&quot;: [
+    ],
+    &quot;gestionnaire&quot;: {
+      &quot;birth_day&quot;: &quot;1970-01-01T05:28:20.118Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$CmVSy8UmmadypLu7y7d/eOs4baSNkYk6ja2gsFrI/4Z74ix0r4PZy&quot;,
+      &quot;role&quot;: [
+        &quot;User&quot;
+      ],
+      &quot;phone&quot;: &quot;696074199&quot;,
+      &quot;isCreatedByAdmin&quot;: false,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;fafnirukihj&quot;,
+      &quot;_id&quot;: &quot;63c80c13e56165ca64b4a6cb&quot;,
+      &quot;isActive&quot;: false,
+      &quot;first_name&quot;: &quot;Fafnirou3kl&quot;,
+      &quot;email&quot;: &quot;hamman2@mail.com&quot;,
+      &quot;isEmailConfirmed&quot;: false
+    },
+    &quot;__v&quot;: 0,
+    &quot;_id&quot;: &quot;63e62ab0e1cbdc16bbbea526&quot;,
+    &quot;designation&quot;: &quot;Default wallet&quot;,
+    &quot;cumulative_performance_date&quot;: &quot;2023-02-09T13:13:06.847Z&quot;,
+    &quot;user&quot;: {
+      &quot;birth_day&quot;: &quot;2016-12-31T23:00:00.000Z&quot;,
+      &quot;password&quot;: &quot;123456&quot;,
+      &quot;role&quot;: [
+        &quot;User&quot;
+      ],
+      &quot;phone&quot;: &quot;123456789&quot;,
+      &quot;isCreatedByAdmin&quot;: true,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;POISSON&quot;,
+      &quot;_id&quot;: &quot;63e62ab0e1cbdc16bbbea522&quot;,
+      &quot;isActive&quot;: false,
+      &quot;first_name&quot;: &quot;TRUITE&quot;,
+      &quot;email&quot;: &quot;truite.poisson@yopmail.com&quot;,
+      &quot;isEmailConfirmed&quot;: true
+    }
+  },
+  {
+    &quot;initial_value&quot;: 0,
+    &quot;cumulative_performance&quot;: 0,
+    &quot;liquidity_value&quot;: 0,
+    &quot;performance_hebdo&quot;: 0,
+    &quot;liquidity_frequency&quot;: 0,
+    &quot;ytd&quot;: 0,
+    &quot;products&quot;: [
+    ],
+    &quot;gestionnaire&quot;: {
+      &quot;birth_day&quot;: &quot;1970-01-01T05:28:20.118Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$CmVSy8UmmadypLu7y7d/eOs4baSNkYk6ja2gsFrI/4Z74ix0r4PZy&quot;,
+      &quot;role&quot;: [
+        &quot;User&quot;
+      ],
+      &quot;phone&quot;: &quot;696074199&quot;,
+      &quot;isCreatedByAdmin&quot;: false,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;fafnirukihj&quot;,
+      &quot;_id&quot;: &quot;63c80c13e56165ca64b4a6cb&quot;,
+      &quot;isActive&quot;: false,
+      &quot;first_name&quot;: &quot;Fafnirou3kl&quot;,
+      &quot;email&quot;: &quot;hamman2@mail.com&quot;,
+      &quot;isEmailConfirmed&quot;: false
+    },
+    &quot;__v&quot;: 0,
+    &quot;_id&quot;: &quot;63e6514a70d0d17c6ca50caf&quot;,
+    &quot;designation&quot;: &quot;Default wallet&quot;,
+    &quot;cumulative_performance_date&quot;: &quot;2023-02-10T13:59:24.823Z&quot;,
+    &quot;user&quot;: {
+      &quot;birth_day&quot;: &quot;1970-01-01T05:33:10.509Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$9zr0aZjrY.Hbgd1SA6tQGe74WyLIjloVRy4EUyNFgVPKbRm6hZHFO&quot;,
+      &quot;role&quot;: [
+        &quot;User&quot;
+      ],
+      &quot;phone&quot;: &quot;696894199&quot;,
+      &quot;isCreatedByAdmin&quot;: true,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;Doris&quot;,
+      &quot;_id&quot;: &quot;63e6514970d0d17c6ca50cab&quot;,
+      &quot;isActive&quot;: false,
+      &quot;first_name&quot;: &quot;Swiger&quot;,
+      &quot;email&quot;: &quot;doriskswiger@dayrep.com&quot;,
+      &quot;isEmailConfirmed&quot;: true
+    }
+  },
+  {
+    &quot;initial_value&quot;: 0,
+    &quot;cumulative_performance&quot;: 0,
+    &quot;liquidity_value&quot;: 0,
+    &quot;performance_hebdo&quot;: 0,
+    &quot;liquidity_frequency&quot;: 0,
+    &quot;ytd&quot;: 0,
+    &quot;products&quot;: [
+    ],
+    &quot;gestionnaire&quot;: {
+      &quot;birth_day&quot;: &quot;1970-01-01T05:28:20.118Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$CmVSy8UmmadypLu7y7d/eOs4baSNkYk6ja2gsFrI/4Z74ix0r4PZy&quot;,
+      &quot;role&quot;: [
+        &quot;User&quot;
+      ],
+      &quot;phone&quot;: &quot;696074199&quot;,
+      &quot;isCreatedByAdmin&quot;: false,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;fafnirukihj&quot;,
+      &quot;_id&quot;: &quot;63c80c13e56165ca64b4a6cb&quot;,
+      &quot;isActive&quot;: false,
+      &quot;first_name&quot;: &quot;Fafnirou3kl&quot;,
+      &quot;email&quot;: &quot;hamman2@mail.com&quot;,
+      &quot;isEmailConfirmed&quot;: false
+    },
+    &quot;__v&quot;: 0,
+    &quot;_id&quot;: &quot;63ea05cb584efc6316540e8b&quot;,
+    &quot;designation&quot;: &quot;Default wallet&quot;,
+    &quot;cumulative_performance_date&quot;: &quot;2023-02-10T16:31:49.155Z&quot;,
+    &quot;user&quot;: null
+  },
+  {
+    &quot;initial_value&quot;: 0,
+    &quot;cumulative_performance&quot;: 0,
+    &quot;liquidity_value&quot;: 0,
+    &quot;performance_hebdo&quot;: 0,
+    &quot;liquidity_frequency&quot;: 0,
+    &quot;ytd&quot;: 0,
+    &quot;products&quot;: [
+    ],
+    &quot;gestionnaire&quot;: {
+      &quot;birth_day&quot;: &quot;1970-01-01T05:28:20.118Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$CmVSy8UmmadypLu7y7d/eOs4baSNkYk6ja2gsFrI/4Z74ix0r4PZy&quot;,
+      &quot;role&quot;: [
+        &quot;User&quot;
+      ],
+      &quot;phone&quot;: &quot;696074199&quot;,
+      &quot;isCreatedByAdmin&quot;: false,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;fafnirukihj&quot;,
+      &quot;_id&quot;: &quot;63c80c13e56165ca64b4a6cb&quot;,
+      &quot;isActive&quot;: false,
+      &quot;first_name&quot;: &quot;Fafnirou3kl&quot;,
+      &quot;email&quot;: &quot;hamman2@mail.com&quot;,
+      &quot;isEmailConfirmed&quot;: false
+    },
+    &quot;__v&quot;: 0,
+    &quot;_id&quot;: &quot;63eb9ddc475413c1984e04cc&quot;,
+    &quot;designation&quot;: &quot;Default wallet&quot;,
+    &quot;cumulative_performance_date&quot;: &quot;2023-02-14T07:44:47.497Z&quot;,
+    &quot;user&quot;: {
+      &quot;birth_day&quot;: &quot;2004-12-09T00:00:00.000Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$yv06XX7izet8dxzpc8l2iOvPg409Wkd.WWu4TRz2QXPYedGZfvNaa&quot;,
+      &quot;role&quot;: [
+        &quot;Admin&quot;
+      ],
+      &quot;phone&quot;: &quot;0274597637&quot;,
+      &quot;isCreatedByAdmin&quot;: true,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;Fluet&quot;,
+      &quot;_id&quot;: &quot;63eb9ddc475413c1984e04c8&quot;,
+      &quot;isActive&quot;: true,
+      &quot;first_name&quot;: &quot;mariette&quot;,
+      &quot;email&quot;: &quot;fluet.mariette@yopmail.com&quot;,
+      &quot;isEmailConfirmed&quot;: true
+    }
+  },
+  {
+    &quot;initial_value&quot;: 0,
+    &quot;cumulative_performance&quot;: 0,
+    &quot;liquidity_value&quot;: 0,
+    &quot;performance_hebdo&quot;: 0,
+    &quot;liquidity_frequency&quot;: 0,
+    &quot;ytd&quot;: 0,
+    &quot;products&quot;: [
+    ],
+    &quot;gestionnaire&quot;: {
+      &quot;birth_day&quot;: &quot;1970-01-01T05:28:20.118Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$CmVSy8UmmadypLu7y7d/eOs4baSNkYk6ja2gsFrI/4Z74ix0r4PZy&quot;,
+      &quot;role&quot;: [
+        &quot;User&quot;
+      ],
+      &quot;phone&quot;: &quot;696074199&quot;,
+      &quot;isCreatedByAdmin&quot;: false,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;fafnirukihj&quot;,
+      &quot;_id&quot;: &quot;63c80c13e56165ca64b4a6cb&quot;,
+      &quot;isActive&quot;: false,
+      &quot;first_name&quot;: &quot;Fafnirou3kl&quot;,
+      &quot;email&quot;: &quot;hamman2@mail.com&quot;,
+      &quot;isEmailConfirmed&quot;: false
+    },
+    &quot;__v&quot;: 0,
+    &quot;_id&quot;: &quot;63eba2a8fcce97226f762a4e&quot;,
+    &quot;designation&quot;: &quot;Default wallet&quot;,
+    &quot;cumulative_performance_date&quot;: &quot;2023-02-14T15:00:03.307Z&quot;,
+    &quot;user&quot;: {
+      &quot;birth_day&quot;: &quot;2004-12-09T00:00:00.000Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$nBA5IugESftbSIcdr9oOYujN0VP77FDCbYxAit0qfgLz9feKy5HvW&quot;,
+      &quot;role&quot;: [
+        &quot;Admin&quot;
+      ],
+      &quot;phone&quot;: &quot;0261566377&quot;,
+      &quot;isCreatedByAdmin&quot;: true,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;Leverett &quot;,
+      &quot;_id&quot;: &quot;63eba2a7fcce97226f762a4a&quot;,
+      &quot;isActive&quot;: true,
+      &quot;first_name&quot;: &quot;pirouet&quot;,
+      &quot;email&quot;: &quot;pirouet.leverett@yopmail.com&quot;,
+      &quot;isEmailConfirmed&quot;: true
+    }
+  },
+  {
+    &quot;initial_value&quot;: 0,
+    &quot;cumulative_performance&quot;: 0,
+    &quot;liquidity_value&quot;: 0,
+    &quot;performance_hebdo&quot;: 0,
+    &quot;liquidity_frequency&quot;: 0,
+    &quot;ytd&quot;: 0,
+    &quot;products&quot;: [
+    ],
+    &quot;gestionnaire&quot;: {
+      &quot;birth_day&quot;: &quot;1970-01-01T05:28:20.118Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$CmVSy8UmmadypLu7y7d/eOs4baSNkYk6ja2gsFrI/4Z74ix0r4PZy&quot;,
+      &quot;role&quot;: [
+        &quot;User&quot;
+      ],
+      &quot;phone&quot;: &quot;696074199&quot;,
+      &quot;isCreatedByAdmin&quot;: false,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;fafnirukihj&quot;,
+      &quot;_id&quot;: &quot;63c80c13e56165ca64b4a6cb&quot;,
+      &quot;isActive&quot;: false,
+      &quot;first_name&quot;: &quot;Fafnirou3kl&quot;,
+      &quot;email&quot;: &quot;hamman2@mail.com&quot;,
+      &quot;isEmailConfirmed&quot;: false
+    },
+    &quot;__v&quot;: 0,
+    &quot;_id&quot;: &quot;63eba3a5fcce97226f762a5b&quot;,
+    &quot;designation&quot;: &quot;Default wallet&quot;,
+    &quot;cumulative_performance_date&quot;: &quot;2023-02-14T15:00:03.307Z&quot;,
+    &quot;user&quot;: {
+      &quot;birth_day&quot;: &quot;1970-01-01T05:33:10.509Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$Cz7ln1EmQGbmw7iHOBkfNuK548MqmMH1uGVSmlma.DED3FQuc9ZYq&quot;,
+      &quot;role&quot;: [
+        &quot;User&quot;
+      ],
+      &quot;phone&quot;: &quot;696894199&quot;,
+      &quot;isCreatedByAdmin&quot;: true,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;Dayrep&quot;,
+      &quot;_id&quot;: &quot;63eba3a4fcce97226f762a57&quot;,
+      &quot;isActive&quot;: false,
+      &quot;first_name&quot;: &quot;Bired&quot;,
+      &quot;email&quot;: &quot;bired1978@dayrep.com&quot;,
+      &quot;isEmailConfirmed&quot;: true
+    }
+  },
+  {
+    &quot;initial_value&quot;: 0,
+    &quot;cumulative_performance&quot;: 0,
+    &quot;liquidity_value&quot;: 0,
+    &quot;performance_hebdo&quot;: 0,
+    &quot;liquidity_frequency&quot;: 0,
+    &quot;ytd&quot;: 0,
+    &quot;products&quot;: [
+    ],
+    &quot;gestionnaire&quot;: {
+      &quot;birth_day&quot;: &quot;1970-01-01T05:28:20.118Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$CmVSy8UmmadypLu7y7d/eOs4baSNkYk6ja2gsFrI/4Z74ix0r4PZy&quot;,
+      &quot;role&quot;: [
+        &quot;User&quot;
+      ],
+      &quot;phone&quot;: &quot;696074199&quot;,
+      &quot;isCreatedByAdmin&quot;: false,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;fafnirukihj&quot;,
+      &quot;_id&quot;: &quot;63c80c13e56165ca64b4a6cb&quot;,
+      &quot;isActive&quot;: false,
+      &quot;first_name&quot;: &quot;Fafnirou3kl&quot;,
+      &quot;email&quot;: &quot;hamman2@mail.com&quot;,
+      &quot;isEmailConfirmed&quot;: false
+    },
+    &quot;__v&quot;: 0,
+    &quot;_id&quot;: &quot;63eba437ced4433df65d5490&quot;,
+    &quot;designation&quot;: &quot;Default wallet&quot;,
+    &quot;cumulative_performance_date&quot;: &quot;2023-02-14T15:07:08.843Z&quot;,
+    &quot;user&quot;: {
+      &quot;birth_day&quot;: &quot;2004-12-09T00:00:00.000Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$OcquP3sxJqDaP6bUQFVD1.x3FPtemMLv9sW.BufHd0LJ.3ge5lJ9u&quot;,
+      &quot;role&quot;: [
+        &quot;Admin&quot;
+      ],
+      &quot;phone&quot;: &quot;44555566666&quot;,
+      &quot;isCreatedByAdmin&quot;: true,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;ffff&quot;,
+      &quot;_id&quot;: &quot;63eba437ced4433df65d548b&quot;,
+      &quot;isActive&quot;: false,
+      &quot;first_name&quot;: &quot;fffff bghhhh&quot;,
+      &quot;email&quot;: &quot;dd@yopmail.com&quot;,
+      &quot;isEmailConfirmed&quot;: true
+    }
+  },
+  {
+    &quot;initial_value&quot;: 0,
+    &quot;cumulative_performance&quot;: 0,
+    &quot;liquidity_value&quot;: 0,
+    &quot;performance_hebdo&quot;: 0,
+    &quot;liquidity_frequency&quot;: 0,
+    &quot;ytd&quot;: 0,
+    &quot;products&quot;: [
+    ],
+    &quot;gestionnaire&quot;: {
+      &quot;birth_day&quot;: &quot;1970-01-01T05:28:20.118Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$CmVSy8UmmadypLu7y7d/eOs4baSNkYk6ja2gsFrI/4Z74ix0r4PZy&quot;,
+      &quot;role&quot;: [
+        &quot;User&quot;
+      ],
+      &quot;phone&quot;: &quot;696074199&quot;,
+      &quot;isCreatedByAdmin&quot;: false,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;fafnirukihj&quot;,
+      &quot;_id&quot;: &quot;63c80c13e56165ca64b4a6cb&quot;,
+      &quot;isActive&quot;: false,
+      &quot;first_name&quot;: &quot;Fafnirou3kl&quot;,
+      &quot;email&quot;: &quot;hamman2@mail.com&quot;,
+      &quot;isEmailConfirmed&quot;: false
+    },
+    &quot;__v&quot;: 0,
+    &quot;_id&quot;: &quot;63eba4b8ced4433df65d549e&quot;,
+    &quot;designation&quot;: &quot;Default wallet&quot;,
+    &quot;cumulative_performance_date&quot;: &quot;2023-02-14T15:07:08.843Z&quot;,
+    &quot;user&quot;: {
+      &quot;birth_day&quot;: &quot;2004-12-09T00:00:00.000Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$eWBezgi3zwGOu.mLxc7AEOfV1BRIwTwb7bnai0vcIUCVVLWYQq8A.&quot;,
+      &quot;role&quot;: [
+        &quot;Admin&quot;
+      ],
+      &quot;phone&quot;: &quot;123456789&quot;,
+      &quot;isCreatedByAdmin&quot;: true,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;Gabriaux&quot;,
+      &quot;_id&quot;: &quot;63eba4b8ced4433df65d549a&quot;,
+      &quot;isActive&quot;: false,
+      &quot;first_name&quot;: &quot;Gifford &quot;,
+      &quot;email&quot;: &quot;gifford.leverett@yopmail.com&quot;,
+      &quot;isEmailConfirmed&quot;: true
+    }
+  },
+  {
+    &quot;initial_value&quot;: 0,
+    &quot;cumulative_performance&quot;: 0,
+    &quot;liquidity_value&quot;: 0,
+    &quot;performance_hebdo&quot;: 0,
+    &quot;liquidity_frequency&quot;: 0,
+    &quot;ytd&quot;: 0,
+    &quot;products&quot;: [
+    ],
+    &quot;gestionnaire&quot;: {
+      &quot;birth_day&quot;: &quot;1970-01-01T05:28:20.118Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$CmVSy8UmmadypLu7y7d/eOs4baSNkYk6ja2gsFrI/4Z74ix0r4PZy&quot;,
+      &quot;role&quot;: [
+        &quot;User&quot;
+      ],
+      &quot;phone&quot;: &quot;696074199&quot;,
+      &quot;isCreatedByAdmin&quot;: false,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;fafnirukihj&quot;,
+      &quot;_id&quot;: &quot;63c80c13e56165ca64b4a6cb&quot;,
+      &quot;isActive&quot;: false,
+      &quot;first_name&quot;: &quot;Fafnirou3kl&quot;,
+      &quot;email&quot;: &quot;hamman2@mail.com&quot;,
+      &quot;isEmailConfirmed&quot;: false
+    },
+    &quot;__v&quot;: 0,
+    &quot;_id&quot;: &quot;63eba61eced4433df65d54b0&quot;,
+    &quot;designation&quot;: &quot;Default wallet&quot;,
+    &quot;cumulative_performance_date&quot;: &quot;2023-02-14T15:07:08.843Z&quot;,
+    &quot;user&quot;: {
+      &quot;birth_day&quot;: &quot;1970-01-01T05:33:10.509Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$IVEppXxuipoFaZJ.nnMW5OQ.M.0i32Jb1KX.b65ykbTg0F3ZY0txe&quot;,
+      &quot;role&quot;: [
+        &quot;Admin&quot;
+      ],
+      &quot;phone&quot;: &quot;696894199&quot;,
+      &quot;isCreatedByAdmin&quot;: true,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;mappuye&quot;,
+      &quot;_id&quot;: &quot;63eba61dced4433df65d54ac&quot;,
+      &quot;isActive&quot;: true,
+      &quot;first_name&quot;: &quot;praufe&quot;,
+      &quot;email&quot;: &quot;praufeimmappuye-6059@yopmail.com&quot;,
+      &quot;isEmailConfirmed&quot;: true
+    }
+  },
+  {
+    &quot;initial_value&quot;: 0,
+    &quot;cumulative_performance&quot;: 0,
+    &quot;liquidity_value&quot;: 0,
+    &quot;performance_hebdo&quot;: 0,
+    &quot;liquidity_frequency&quot;: 0,
+    &quot;ytd&quot;: 0,
+    &quot;products&quot;: [
+    ],
+    &quot;gestionnaire&quot;: {
+      &quot;birth_day&quot;: &quot;1970-01-01T05:28:20.118Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$CmVSy8UmmadypLu7y7d/eOs4baSNkYk6ja2gsFrI/4Z74ix0r4PZy&quot;,
+      &quot;role&quot;: [
+        &quot;User&quot;
+      ],
+      &quot;phone&quot;: &quot;696074199&quot;,
+      &quot;isCreatedByAdmin&quot;: false,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;fafnirukihj&quot;,
+      &quot;_id&quot;: &quot;63c80c13e56165ca64b4a6cb&quot;,
+      &quot;isActive&quot;: false,
+      &quot;first_name&quot;: &quot;Fafnirou3kl&quot;,
+      &quot;email&quot;: &quot;hamman2@mail.com&quot;,
+      &quot;isEmailConfirmed&quot;: false
+    },
+    &quot;__v&quot;: 0,
+    &quot;_id&quot;: &quot;63eba64bced4433df65d54b7&quot;,
+    &quot;designation&quot;: &quot;Default wallet&quot;,
+    &quot;cumulative_performance_date&quot;: &quot;2023-02-14T15:07:08.843Z&quot;,
+    &quot;user&quot;: {
+      &quot;birth_day&quot;: &quot;1976-02-12T23:00:00.000Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$l7tdbMjE3Hr0r7JEBpJS1uEBNgPiC5lCMr.PPu8fn9figqVgC7YFi&quot;,
+      &quot;role&quot;: [
+        &quot;User&quot;
+      ],
+      &quot;phone&quot;: &quot;0130804537&quot;,
+      &quot;isCreatedByAdmin&quot;: true,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;Brochu&quot;,
+      &quot;_id&quot;: &quot;63eba64aced4433df65d54b3&quot;,
+      &quot;isActive&quot;: true,
+      &quot;first_name&quot;: &quot; Marie Christiane &quot;,
+      &quot;email&quot;: &quot;marie.brochu@yopmail.com&quot;,
+      &quot;isEmailConfirmed&quot;: true
+    }
+  },
+  {
+    &quot;initial_value&quot;: 0,
+    &quot;cumulative_performance&quot;: 0,
+    &quot;liquidity_value&quot;: 0,
+    &quot;performance_hebdo&quot;: 0,
+    &quot;liquidity_frequency&quot;: 0,
+    &quot;ytd&quot;: 0,
+    &quot;products&quot;: [
+    ],
+    &quot;gestionnaire&quot;: {
+      &quot;birth_day&quot;: &quot;1970-01-01T05:28:20.118Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$CmVSy8UmmadypLu7y7d/eOs4baSNkYk6ja2gsFrI/4Z74ix0r4PZy&quot;,
+      &quot;role&quot;: [
+        &quot;User&quot;
+      ],
+      &quot;phone&quot;: &quot;696074199&quot;,
+      &quot;isCreatedByAdmin&quot;: false,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;fafnirukihj&quot;,
+      &quot;_id&quot;: &quot;63c80c13e56165ca64b4a6cb&quot;,
+      &quot;isActive&quot;: false,
+      &quot;first_name&quot;: &quot;Fafnirou3kl&quot;,
+      &quot;email&quot;: &quot;hamman2@mail.com&quot;,
+      &quot;isEmailConfirmed&quot;: false
+    },
+    &quot;__v&quot;: 0,
+    &quot;_id&quot;: &quot;63eba7e3ced4433df65d54d2&quot;,
+    &quot;designation&quot;: &quot;Default wallet&quot;,
+    &quot;cumulative_performance_date&quot;: &quot;2023-02-14T15:07:08.843Z&quot;,
+    &quot;user&quot;: {
+      &quot;birth_day&quot;: &quot;2004-12-09T00:00:00.000Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$.mqVfGrCpAJv2TXsmwYCTO.F7JRBlTHqFlFQo8RB/yrFNfkHZEsmW&quot;,
+      &quot;role&quot;: [
+        &quot;Admin&quot;
+      ],
+      &quot;phone&quot;: &quot;123456789&quot;,
+      &quot;isCreatedByAdmin&quot;: true,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;Rossignol&quot;,
+      &quot;_id&quot;: &quot;63eba7e3ced4433df65d54ce&quot;,
+      &quot;isActive&quot;: true,
+      &quot;first_name&quot;: &quot;St&eacute;phane &quot;,
+      &quot;email&quot;: &quot;stephane.ross@yopmail.com&quot;,
+      &quot;isEmailConfirmed&quot;: true
+    }
+  },
+  {
+    &quot;initial_value&quot;: 0,
+    &quot;cumulative_performance&quot;: 0,
+    &quot;liquidity_value&quot;: 0,
+    &quot;performance_hebdo&quot;: 0,
+    &quot;liquidity_frequency&quot;: 0,
+    &quot;ytd&quot;: 0,
+    &quot;products&quot;: [
+    ],
+    &quot;gestionnaire&quot;: {
+      &quot;birth_day&quot;: &quot;1970-01-01T05:28:20.118Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$CmVSy8UmmadypLu7y7d/eOs4baSNkYk6ja2gsFrI/4Z74ix0r4PZy&quot;,
+      &quot;role&quot;: [
+        &quot;User&quot;
+      ],
+      &quot;phone&quot;: &quot;696074199&quot;,
+      &quot;isCreatedByAdmin&quot;: false,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;fafnirukihj&quot;,
+      &quot;_id&quot;: &quot;63c80c13e56165ca64b4a6cb&quot;,
+      &quot;isActive&quot;: false,
+      &quot;first_name&quot;: &quot;Fafnirou3kl&quot;,
+      &quot;email&quot;: &quot;hamman2@mail.com&quot;,
+      &quot;isEmailConfirmed&quot;: false
+    },
+    &quot;__v&quot;: 0,
+    &quot;_id&quot;: &quot;63ebabf3ced4433df65d54e5&quot;,
+    &quot;designation&quot;: &quot;Default wallet&quot;,
+    &quot;cumulative_performance_date&quot;: &quot;2023-02-14T15:07:08.843Z&quot;,
+    &quot;user&quot;: {
+      &quot;birth_day&quot;: &quot;2016-12-31T23:00:00.000Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$AJCOW02oFEeklV14KLLIf.e.m35sisNyVg2K32218Hqnj9Q6Tatbe&quot;,
+      &quot;role&quot;: [
+        &quot;User&quot;
+      ],
+      &quot;phone&quot;: &quot;0127376454&quot;,
+      &quot;isCreatedByAdmin&quot;: true,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;Chr&eacute;tien&quot;,
+      &quot;_id&quot;: &quot;63ebabf2ced4433df65d54e1&quot;,
+      &quot;isActive&quot;: true,
+      &quot;first_name&quot;: &quot;Gaston &quot;,
+      &quot;email&quot;: &quot;gaston.chretien@yopmail.com&quot;,
+      &quot;isEmailConfirmed&quot;: false
+    }
+  },
+  {
+    &quot;initial_value&quot;: 0,
+    &quot;cumulative_performance&quot;: 0,
+    &quot;liquidity_value&quot;: 0,
+    &quot;performance_hebdo&quot;: 0,
+    &quot;liquidity_frequency&quot;: 0,
+    &quot;ytd&quot;: 0,
+    &quot;products&quot;: [
+    ],
+    &quot;gestionnaire&quot;: {
+      &quot;birth_day&quot;: &quot;1970-01-01T05:28:20.118Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$CmVSy8UmmadypLu7y7d/eOs4baSNkYk6ja2gsFrI/4Z74ix0r4PZy&quot;,
+      &quot;role&quot;: [
+        &quot;User&quot;
+      ],
+      &quot;phone&quot;: &quot;696074199&quot;,
+      &quot;isCreatedByAdmin&quot;: false,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;fafnirukihj&quot;,
+      &quot;_id&quot;: &quot;63c80c13e56165ca64b4a6cb&quot;,
+      &quot;isActive&quot;: false,
+      &quot;first_name&quot;: &quot;Fafnirou3kl&quot;,
+      &quot;email&quot;: &quot;hamman2@mail.com&quot;,
+      &quot;isEmailConfirmed&quot;: false
+    },
+    &quot;__v&quot;: 0,
+    &quot;_id&quot;: &quot;63ebac633e256801c0324afe&quot;,
+    &quot;designation&quot;: &quot;Default wallet&quot;,
+    &quot;cumulative_performance_date&quot;: &quot;2023-02-14T15:43:29.931Z&quot;,
+    &quot;user&quot;: {
+      &quot;birth_day&quot;: &quot;1999-02-14T00:00:00.000Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$4S/tofgIUtJzfuJkv2I6s.GIgB8RvvrB8nvWh4Yiux8G0599tyAMS&quot;,
+      &quot;role&quot;: [
+        &quot;User&quot;
+      ],
+      &quot;phone&quot;: &quot;0665085356&quot;,
+      &quot;isCreatedByAdmin&quot;: false,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;Chretien&quot;,
+      &quot;_id&quot;: &quot;63ebac633e256801c0324afa&quot;,
+      &quot;isActive&quot;: false,
+      &quot;first_name&quot;: &quot;Pierre&quot;,
+      &quot;email&quot;: &quot;pierre.chretien@yopmail.com&quot;,
+      &quot;isEmailConfirmed&quot;: true
+    }
+  },
+  {
+    &quot;initial_value&quot;: 0,
+    &quot;cumulative_performance&quot;: 0,
+    &quot;liquidity_value&quot;: 0,
+    &quot;performance_hebdo&quot;: 0,
+    &quot;liquidity_frequency&quot;: 0,
+    &quot;ytd&quot;: 0,
+    &quot;products&quot;: [
+    ],
+    &quot;gestionnaire&quot;: {
+      &quot;birth_day&quot;: &quot;1970-01-01T05:28:20.118Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$CmVSy8UmmadypLu7y7d/eOs4baSNkYk6ja2gsFrI/4Z74ix0r4PZy&quot;,
+      &quot;role&quot;: [
+        &quot;User&quot;
+      ],
+      &quot;phone&quot;: &quot;696074199&quot;,
+      &quot;isCreatedByAdmin&quot;: false,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;fafnirukihj&quot;,
+      &quot;_id&quot;: &quot;63c80c13e56165ca64b4a6cb&quot;,
+      &quot;isActive&quot;: false,
+      &quot;first_name&quot;: &quot;Fafnirou3kl&quot;,
+      &quot;email&quot;: &quot;hamman2@mail.com&quot;,
+      &quot;isEmailConfirmed&quot;: false
+    },
+    &quot;__v&quot;: 0,
+    &quot;_id&quot;: &quot;63eca75d21e6713f8b9f54c3&quot;,
+    &quot;designation&quot;: &quot;Default wallet&quot;,
+    &quot;cumulative_performance_date&quot;: &quot;2023-02-14T16:10:11.461Z&quot;,
+    &quot;user&quot;: {
+      &quot;birth_day&quot;: &quot;2003-02-15T00:00:00.000Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$P8AGzDh6FQ0R0DYi9sG3VeVJmVsLBVFFg85OUiFmxBbLOtmNBo2ki&quot;,
+      &quot;role&quot;: [
+        &quot;User&quot;
+      ],
+      &quot;phone&quot;: &quot;655757902&quot;,
+      &quot;isCreatedByAdmin&quot;: false,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;Tendong&quot;,
+      &quot;_id&quot;: &quot;63eca75c21e6713f8b9f54bf&quot;,
+      &quot;isActive&quot;: true,
+      &quot;first_name&quot;: &quot;Gabriel&quot;,
+      &quot;email&quot;: &quot;gabitendong@gmail.com&quot;,
+      &quot;isEmailConfirmed&quot;: true
+    }
+  },
+  {
+    &quot;initial_value&quot;: 0,
+    &quot;cumulative_performance&quot;: 0,
+    &quot;liquidity_value&quot;: 0,
+    &quot;performance_hebdo&quot;: 0,
+    &quot;liquidity_frequency&quot;: 0,
+    &quot;ytd&quot;: 0,
+    &quot;products&quot;: [
+    ],
+    &quot;gestionnaire&quot;: {
+      &quot;birth_day&quot;: &quot;1970-01-01T05:28:20.118Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$CmVSy8UmmadypLu7y7d/eOs4baSNkYk6ja2gsFrI/4Z74ix0r4PZy&quot;,
+      &quot;role&quot;: [
+        &quot;User&quot;
+      ],
+      &quot;phone&quot;: &quot;696074199&quot;,
+      &quot;isCreatedByAdmin&quot;: false,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;fafnirukihj&quot;,
+      &quot;_id&quot;: &quot;63c80c13e56165ca64b4a6cb&quot;,
+      &quot;isActive&quot;: false,
+      &quot;first_name&quot;: &quot;Fafnirou3kl&quot;,
+      &quot;email&quot;: &quot;hamman2@mail.com&quot;,
+      &quot;isEmailConfirmed&quot;: false
+    },
+    &quot;__v&quot;: 0,
+    &quot;_id&quot;: &quot;63eca87e265224556e412672&quot;,
+    &quot;designation&quot;: &quot;Default wallet&quot;,
+    &quot;cumulative_performance_date&quot;: &quot;2023-02-15T09:39:15.654Z&quot;,
+    &quot;user&quot;: {
+      &quot;birth_day&quot;: &quot;2000-12-12T00:00:00.000Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$vjCSrc3bqwG0QCcEVlUB1.J6mm2nZl33vRdd2Bp1onct3XEXRm4Ra&quot;,
+      &quot;role&quot;: [
+        &quot;SuperAdmin&quot;
+      ],
+      &quot;phone&quot;: &quot;655797902&quot;,
+      &quot;isCreatedByAdmin&quot;: false,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;Okourou&quot;,
+      &quot;_id&quot;: &quot;63eca87e265224556e41266e&quot;,
+      &quot;isActive&quot;: true,
+      &quot;first_name&quot;: &quot;Francine&quot;,
+      &quot;email&quot;: &quot;francine.okourou@gmail.com&quot;,
+      &quot;isEmailConfirmed&quot;: true
+    }
+  },
+  {
+    &quot;initial_value&quot;: 0,
+    &quot;cumulative_performance&quot;: 0,
+    &quot;liquidity_value&quot;: 0,
+    &quot;performance_hebdo&quot;: 0,
+    &quot;liquidity_frequency&quot;: 0,
+    &quot;ytd&quot;: 0,
+    &quot;products&quot;: [
+    ],
+    &quot;gestionnaire&quot;: {
+      &quot;birth_day&quot;: &quot;1970-01-01T05:28:20.118Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$CmVSy8UmmadypLu7y7d/eOs4baSNkYk6ja2gsFrI/4Z74ix0r4PZy&quot;,
+      &quot;role&quot;: [
+        &quot;User&quot;
+      ],
+      &quot;phone&quot;: &quot;696074199&quot;,
+      &quot;isCreatedByAdmin&quot;: false,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;fafnirukihj&quot;,
+      &quot;_id&quot;: &quot;63c80c13e56165ca64b4a6cb&quot;,
+      &quot;isActive&quot;: false,
+      &quot;first_name&quot;: &quot;Fafnirou3kl&quot;,
+      &quot;email&quot;: &quot;hamman2@mail.com&quot;,
+      &quot;isEmailConfirmed&quot;: false
+    },
+    &quot;__v&quot;: 0,
+    &quot;_id&quot;: &quot;63ecaaf36cb610809cab441c&quot;,
+    &quot;designation&quot;: &quot;Default wallet&quot;,
+    &quot;cumulative_performance_date&quot;: &quot;2023-02-15T09:35:17.690Z&quot;,
+    &quot;user&quot;: {
+      &quot;birth_day&quot;: &quot;1987-02-14T23:00:00.000Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$AIoTBL558nxMzLxy8vMT4uB630G8PbYnuRYTwvqaXir3PmAbK/iTi&quot;,
+      &quot;role&quot;: [
+        &quot;User&quot;
+      ],
+      &quot;phone&quot;: &quot;0825632699&quot;,
+      &quot;isCreatedByAdmin&quot;: true,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;Akabueze&quot;,
+      &quot;_id&quot;: &quot;63ecaaf26cb610809cab4418&quot;,
+      &quot;isActive&quot;: false,
+      &quot;first_name&quot;: &quot;Chisom&quot;,
+      &quot;email&quot;: &quot;chisom.aka@yopmail.com&quot;,
+      &quot;isEmailConfirmed&quot;: true
+    }
+  },
+  {
+    &quot;initial_value&quot;: 0,
+    &quot;cumulative_performance&quot;: 0,
+    &quot;liquidity_value&quot;: 0,
+    &quot;performance_hebdo&quot;: 0,
+    &quot;liquidity_frequency&quot;: 0,
+    &quot;ytd&quot;: 0,
+    &quot;products&quot;: [
+    ],
+    &quot;gestionnaire&quot;: {
+      &quot;birth_day&quot;: &quot;1970-01-01T05:28:20.118Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$CmVSy8UmmadypLu7y7d/eOs4baSNkYk6ja2gsFrI/4Z74ix0r4PZy&quot;,
+      &quot;role&quot;: [
+        &quot;User&quot;
+      ],
+      &quot;phone&quot;: &quot;696074199&quot;,
+      &quot;isCreatedByAdmin&quot;: false,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;fafnirukihj&quot;,
+      &quot;_id&quot;: &quot;63c80c13e56165ca64b4a6cb&quot;,
+      &quot;isActive&quot;: false,
+      &quot;first_name&quot;: &quot;Fafnirou3kl&quot;,
+      &quot;email&quot;: &quot;hamman2@mail.com&quot;,
+      &quot;isEmailConfirmed&quot;: false
+    },
+    &quot;__v&quot;: 0,
+    &quot;_id&quot;: &quot;63ecaca56cb610809cab444a&quot;,
+    &quot;designation&quot;: &quot;Default wallet&quot;,
+    &quot;cumulative_performance_date&quot;: &quot;2023-02-15T09:35:17.690Z&quot;,
+    &quot;user&quot;: {
+      &quot;birth_day&quot;: &quot;2016-12-31T23:00:00.000Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$6v6lFJBUL0A02xcfIVjI9unqB6llbYvTB0NEsHx8vchEG1nfPs4FS&quot;,
+      &quot;role&quot;: [
+        &quot;User&quot;
+      ],
+      &quot;phone&quot;: &quot;07678765656&quot;,
+      &quot;isCreatedByAdmin&quot;: true,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;Ebelechukwu&quot;,
+      &quot;_id&quot;: &quot;63ecaca56cb610809cab4446&quot;,
+      &quot;isActive&quot;: false,
+      &quot;first_name&quot;: &quot;Chimezie &quot;,
+      &quot;email&quot;: &quot;chimezie.aka@yopmail.com&quot;,
+      &quot;isEmailConfirmed&quot;: true
+    }
+  },
+  {
+    &quot;initial_value&quot;: 0,
+    &quot;cumulative_performance&quot;: 0,
+    &quot;liquidity_value&quot;: 0,
+    &quot;performance_hebdo&quot;: 0,
+    &quot;liquidity_frequency&quot;: 0,
+    &quot;ytd&quot;: 0,
+    &quot;products&quot;: [
+    ],
+    &quot;gestionnaire&quot;: {
+      &quot;birth_day&quot;: &quot;1970-01-01T05:28:20.118Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$CmVSy8UmmadypLu7y7d/eOs4baSNkYk6ja2gsFrI/4Z74ix0r4PZy&quot;,
+      &quot;role&quot;: [
+        &quot;User&quot;
+      ],
+      &quot;phone&quot;: &quot;696074199&quot;,
+      &quot;isCreatedByAdmin&quot;: false,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;fafnirukihj&quot;,
+      &quot;_id&quot;: &quot;63c80c13e56165ca64b4a6cb&quot;,
+      &quot;isActive&quot;: false,
+      &quot;first_name&quot;: &quot;Fafnirou3kl&quot;,
+      &quot;email&quot;: &quot;hamman2@mail.com&quot;,
+      &quot;isEmailConfirmed&quot;: false
+    },
+    &quot;__v&quot;: 0,
+    &quot;_id&quot;: &quot;63ecae586cb610809cab4460&quot;,
+    &quot;designation&quot;: &quot;Default wallet&quot;,
+    &quot;cumulative_performance_date&quot;: &quot;2023-02-15T09:35:17.690Z&quot;,
+    &quot;user&quot;: {
+      &quot;birth_day&quot;: &quot;2016-12-31T23:00:00.000Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$DJJedtFoORIMJ6Rr/xq/eez8pZH3KoOwnSL6xB2.u4P303r4ixPFG&quot;,
+      &quot;role&quot;: [
+        &quot;User&quot;
+      ],
+      &quot;phone&quot;: &quot;06789876765&quot;,
+      &quot;isCreatedByAdmin&quot;: true,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;Elechi&quot;,
+      &quot;_id&quot;: &quot;63ecae576cb610809cab445c&quot;,
+      &quot;isActive&quot;: true,
+      &quot;first_name&quot;: &quot;Okoli &quot;,
+      &quot;email&quot;: &quot;rolland.aka@yopmail.com&quot;,
+      &quot;isEmailConfirmed&quot;: true
+    }
+  },
+  {
+    &quot;initial_value&quot;: 0,
+    &quot;cumulative_performance&quot;: 0,
+    &quot;liquidity_value&quot;: 0,
+    &quot;performance_hebdo&quot;: 0,
+    &quot;liquidity_frequency&quot;: 0,
+    &quot;ytd&quot;: 0,
+    &quot;products&quot;: [
+    ],
+    &quot;gestionnaire&quot;: {
+      &quot;birth_day&quot;: &quot;1970-01-01T05:28:20.118Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$CmVSy8UmmadypLu7y7d/eOs4baSNkYk6ja2gsFrI/4Z74ix0r4PZy&quot;,
+      &quot;role&quot;: [
+        &quot;User&quot;
+      ],
+      &quot;phone&quot;: &quot;696074199&quot;,
+      &quot;isCreatedByAdmin&quot;: false,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;fafnirukihj&quot;,
+      &quot;_id&quot;: &quot;63c80c13e56165ca64b4a6cb&quot;,
+      &quot;isActive&quot;: false,
+      &quot;first_name&quot;: &quot;Fafnirou3kl&quot;,
+      &quot;email&quot;: &quot;hamman2@mail.com&quot;,
+      &quot;isEmailConfirmed&quot;: false
+    },
+    &quot;__v&quot;: 0,
+    &quot;_id&quot;: &quot;63ecaf676cb610809cab4477&quot;,
+    &quot;designation&quot;: &quot;Default wallet&quot;,
+    &quot;cumulative_performance_date&quot;: &quot;2023-02-15T09:35:17.690Z&quot;,
+    &quot;user&quot;: {
+      &quot;birth_day&quot;: &quot;2016-12-31T23:00:00.000Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$x68m6VfAPXk2eCh9O6/7FufhvJ9v2Z0MHWniDUpfhP4X6Uu8VAoIa&quot;,
+      &quot;role&quot;: [
+        &quot;User&quot;
+      ],
+      &quot;phone&quot;: &quot;0987654321&quot;,
+      &quot;isCreatedByAdmin&quot;: true,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;Zinachidi&quot;,
+      &quot;_id&quot;: &quot;63ecaf666cb610809cab4473&quot;,
+      &quot;isActive&quot;: true,
+      &quot;first_name&quot;: &quot;Chinemeremma &quot;,
+      &quot;email&quot;: &quot;zina.aka@yopmail.com&quot;,
+      &quot;isEmailConfirmed&quot;: true
+    }
+  },
+  {
+    &quot;initial_value&quot;: 0,
+    &quot;cumulative_performance&quot;: 0,
+    &quot;liquidity_value&quot;: 0,
+    &quot;performance_hebdo&quot;: 0,
+    &quot;liquidity_frequency&quot;: 0,
+    &quot;ytd&quot;: 0,
+    &quot;products&quot;: [
+    ],
+    &quot;gestionnaire&quot;: {
+      &quot;birth_day&quot;: &quot;1970-01-01T05:28:20.118Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$CmVSy8UmmadypLu7y7d/eOs4baSNkYk6ja2gsFrI/4Z74ix0r4PZy&quot;,
+      &quot;role&quot;: [
+        &quot;User&quot;
+      ],
+      &quot;phone&quot;: &quot;696074199&quot;,
+      &quot;isCreatedByAdmin&quot;: false,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;fafnirukihj&quot;,
+      &quot;_id&quot;: &quot;63c80c13e56165ca64b4a6cb&quot;,
+      &quot;isActive&quot;: false,
+      &quot;first_name&quot;: &quot;Fafnirou3kl&quot;,
+      &quot;email&quot;: &quot;hamman2@mail.com&quot;,
+      &quot;isEmailConfirmed&quot;: false
+    },
+    &quot;__v&quot;: 0,
+    &quot;_id&quot;: &quot;63ecb02d6cb610809cab4489&quot;,
+    &quot;designation&quot;: &quot;Default wallet&quot;,
+    &quot;cumulative_performance_date&quot;: &quot;2023-02-15T09:35:17.690Z&quot;,
+    &quot;user&quot;: {
+      &quot;birth_day&quot;: &quot;2005-02-07T23:00:00.000Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$eF9hDrRyEGVXUK9ZVE3b/uh4e80zEQTZ9JK5zIJG3BvmFeXP9nH4i&quot;,
+      &quot;role&quot;: [
+        &quot;User&quot;
+      ],
+      &quot;phone&quot;: &quot;0987654321&quot;,
+      &quot;isCreatedByAdmin&quot;: true,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;Iweobiegbulam&quot;,
+      &quot;_id&quot;: &quot;63ecb02c6cb610809cab4485&quot;,
+      &quot;isActive&quot;: true,
+      &quot;first_name&quot;: &quot;Dike &quot;,
+      &quot;email&quot;: &quot;dike.aka@yopmail.com&quot;,
+      &quot;isEmailConfirmed&quot;: true
+    }
+  },
+  {
+    &quot;initial_value&quot;: 0,
+    &quot;cumulative_performance&quot;: 0,
+    &quot;liquidity_value&quot;: 0,
+    &quot;performance_hebdo&quot;: 0,
+    &quot;liquidity_frequency&quot;: 0,
+    &quot;ytd&quot;: 0,
+    &quot;products&quot;: [
+    ],
+    &quot;gestionnaire&quot;: {
+      &quot;birth_day&quot;: &quot;1970-01-01T05:28:20.118Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$CmVSy8UmmadypLu7y7d/eOs4baSNkYk6ja2gsFrI/4Z74ix0r4PZy&quot;,
+      &quot;role&quot;: [
+        &quot;User&quot;
+      ],
+      &quot;phone&quot;: &quot;696074199&quot;,
+      &quot;isCreatedByAdmin&quot;: false,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;fafnirukihj&quot;,
+      &quot;_id&quot;: &quot;63c80c13e56165ca64b4a6cb&quot;,
+      &quot;isActive&quot;: false,
+      &quot;first_name&quot;: &quot;Fafnirou3kl&quot;,
+      &quot;email&quot;: &quot;hamman2@mail.com&quot;,
+      &quot;isEmailConfirmed&quot;: false
+    },
+    &quot;__v&quot;: 0,
+    &quot;_id&quot;: &quot;63ecdfd56cb610809cab45c9&quot;,
+    &quot;designation&quot;: &quot;Default wallet&quot;,
+    &quot;cumulative_performance_date&quot;: &quot;2023-02-15T09:35:17.690Z&quot;,
+    &quot;user&quot;: {
+      &quot;birth_day&quot;: &quot;1970-01-01T05:33:10.509Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$YpLDon1zoWxoGFnPzOzmfuPdELs.QO68EuOIz7eZrp/PwRIctmytG&quot;,
+      &quot;role&quot;: [
+        &quot;User&quot;
+      ],
+      &quot;phone&quot;: &quot;696894199&quot;,
+      &quot;isCreatedByAdmin&quot;: true,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;Zara&quot;,
+      &quot;_id&quot;: &quot;63ecdfd46cb610809cab45c5&quot;,
+      &quot;isActive&quot;: true,
+      &quot;first_name&quot;: &quot;Tesfaye7&quot;,
+      &quot;email&quot;: &quot;tesf5@gmail.com&quot;,
+      &quot;isEmailConfirmed&quot;: false
+    }
+  },
+  {
+    &quot;initial_value&quot;: 0,
+    &quot;cumulative_performance&quot;: 0,
+    &quot;liquidity_value&quot;: 0,
+    &quot;performance_hebdo&quot;: 0,
+    &quot;liquidity_frequency&quot;: 0,
+    &quot;ytd&quot;: 0,
+    &quot;products&quot;: [
+    ],
+    &quot;gestionnaire&quot;: {
+      &quot;birth_day&quot;: &quot;1970-01-01T05:28:20.118Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$CmVSy8UmmadypLu7y7d/eOs4baSNkYk6ja2gsFrI/4Z74ix0r4PZy&quot;,
+      &quot;role&quot;: [
+        &quot;User&quot;
+      ],
+      &quot;phone&quot;: &quot;696074199&quot;,
+      &quot;isCreatedByAdmin&quot;: false,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;fafnirukihj&quot;,
+      &quot;_id&quot;: &quot;63c80c13e56165ca64b4a6cb&quot;,
+      &quot;isActive&quot;: false,
+      &quot;first_name&quot;: &quot;Fafnirou3kl&quot;,
+      &quot;email&quot;: &quot;hamman2@mail.com&quot;,
+      &quot;isEmailConfirmed&quot;: false
+    },
+    &quot;__v&quot;: 0,
+    &quot;_id&quot;: &quot;63ecdfd86cb610809cab45cc&quot;,
+    &quot;designation&quot;: &quot;string&quot;,
+    &quot;cumulative_performance_date&quot;: &quot;2023-02-15T00:00:00.000Z&quot;,
+    &quot;user&quot;: {
+      &quot;birth_day&quot;: &quot;1970-01-01T05:28:20.118Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$CmVSy8UmmadypLu7y7d/eOs4baSNkYk6ja2gsFrI/4Z74ix0r4PZy&quot;,
+      &quot;role&quot;: [
+        &quot;User&quot;
+      ],
+      &quot;phone&quot;: &quot;696074199&quot;,
+      &quot;isCreatedByAdmin&quot;: false,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;fafnirukihj&quot;,
+      &quot;_id&quot;: &quot;63c80c13e56165ca64b4a6cb&quot;,
+      &quot;isActive&quot;: false,
+      &quot;first_name&quot;: &quot;Fafnirou3kl&quot;,
+      &quot;email&quot;: &quot;hamman2@mail.com&quot;,
+      &quot;isEmailConfirmed&quot;: false
+    }
+  },
+  {
+    &quot;initial_value&quot;: 0,
+    &quot;cumulative_performance&quot;: 0,
+    &quot;liquidity_value&quot;: 0,
+    &quot;performance_hebdo&quot;: 0,
+    &quot;liquidity_frequency&quot;: 0,
+    &quot;ytd&quot;: 0,
+    &quot;products&quot;: [
+    ],
+    &quot;gestionnaire&quot;: {
+      &quot;birth_day&quot;: &quot;1970-01-01T05:28:20.118Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$CmVSy8UmmadypLu7y7d/eOs4baSNkYk6ja2gsFrI/4Z74ix0r4PZy&quot;,
+      &quot;role&quot;: [
+        &quot;User&quot;
+      ],
+      &quot;phone&quot;: &quot;696074199&quot;,
+      &quot;isCreatedByAdmin&quot;: false,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;fafnirukihj&quot;,
+      &quot;_id&quot;: &quot;63c80c13e56165ca64b4a6cb&quot;,
+      &quot;isActive&quot;: false,
+      &quot;first_name&quot;: &quot;Fafnirou3kl&quot;,
+      &quot;email&quot;: &quot;hamman2@mail.com&quot;,
+      &quot;isEmailConfirmed&quot;: false
+    },
+    &quot;__v&quot;: 0,
+    &quot;_id&quot;: &quot;63ecfb79da9e7ea1ed36f529&quot;,
+    &quot;designation&quot;: &quot;string&quot;,
+    &quot;cumulative_performance_date&quot;: &quot;2023-02-15T00:00:00.000Z&quot;,
+    &quot;user&quot;: {
+      &quot;birth_day&quot;: &quot;1970-01-01T05:28:20.118Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$CmVSy8UmmadypLu7y7d/eOs4baSNkYk6ja2gsFrI/4Z74ix0r4PZy&quot;,
+      &quot;role&quot;: [
+        &quot;User&quot;
+      ],
+      &quot;phone&quot;: &quot;696074199&quot;,
+      &quot;isCreatedByAdmin&quot;: false,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;fafnirukihj&quot;,
+      &quot;_id&quot;: &quot;63c80c13e56165ca64b4a6cb&quot;,
+      &quot;isActive&quot;: false,
+      &quot;first_name&quot;: &quot;Fafnirou3kl&quot;,
+      &quot;email&quot;: &quot;hamman2@mail.com&quot;,
+      &quot;isEmailConfirmed&quot;: false
+    }
+  },
+  {
+    &quot;initial_value&quot;: 0,
+    &quot;cumulative_performance&quot;: 0,
+    &quot;liquidity_value&quot;: 0,
+    &quot;performance_hebdo&quot;: 0,
+    &quot;liquidity_frequency&quot;: 0,
+    &quot;ytd&quot;: 0,
+    &quot;products&quot;: [
+    ],
+    &quot;gestionnaire&quot;: {
+      &quot;birth_day&quot;: &quot;1970-01-01T05:28:20.118Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$CmVSy8UmmadypLu7y7d/eOs4baSNkYk6ja2gsFrI/4Z74ix0r4PZy&quot;,
+      &quot;role&quot;: [
+        &quot;User&quot;
+      ],
+      &quot;phone&quot;: &quot;696074199&quot;,
+      &quot;isCreatedByAdmin&quot;: false,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;fafnirukihj&quot;,
+      &quot;_id&quot;: &quot;63c80c13e56165ca64b4a6cb&quot;,
+      &quot;isActive&quot;: false,
+      &quot;first_name&quot;: &quot;Fafnirou3kl&quot;,
+      &quot;email&quot;: &quot;hamman2@mail.com&quot;,
+      &quot;isEmailConfirmed&quot;: false
+    },
+    &quot;__v&quot;: 0,
+    &quot;_id&quot;: &quot;63ecfeffda9e7ea1ed36f557&quot;,
+    &quot;designation&quot;: &quot;string&quot;,
+    &quot;cumulative_performance_date&quot;: &quot;2023-02-15T00:00:00.000Z&quot;,
+    &quot;user&quot;: {
+      &quot;birth_day&quot;: &quot;1970-01-01T05:28:20.118Z&quot;,
+      &quot;password&quot;: &quot;$2b$10$CmVSy8UmmadypLu7y7d/eOs4baSNkYk6ja2gsFrI/4Z74ix0r4PZy&quot;,
+      &quot;role&quot;: [
+        &quot;User&quot;
+      ],
+      &quot;phone&quot;: &quot;696074199&quot;,
+      &quot;isCreatedByAdmin&quot;: false,
+      &quot;__v&quot;: 0,
+      &quot;last_name&quot;: &quot;fafnirukihj&quot;,
+      &quot;_id&quot;: &quot;63c80c13e56165ca64b4a6cb&quot;,
+      &quot;isActive&quot;: false,
+      &quot;first_name&quot;: &quot;Fafnirou3kl&quot;,
+      &quot;email&quot;: &quot;hamman2@mail.com&quot;,
+      &quot;isEmailConfirmed&quot;: false
+    }
+  }
+]
+ 
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">match response[0].initial_value == 0</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And failed">
+  <span class="keyword indention">And</span>
+  <span class="name">assert response.length == 38</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-5">
+          <a>did</a>
+      </div>
+      <div id="msg-5" class="collapse collapsable-details  in ">
+        <pre>did not evaluate to 'true': response.length == 38
+classpath:examples/tests/Get.feature:36</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-6">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-6" class="collapse collapsable-details">
+        <pre>17:17:29.892 classpath:examples/tests/Get.feature:36
+And assert response.length == 38
+did not evaluate to 'true': response.length == 38
+classpath:examples/tests/Get.feature:36
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">print responseStatus</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+    <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_1759317257.html">examples/tests/Get.feature</a>
+    </div>
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_4048441212.html">@Get07</a>
+       <a href="report-tag_494055589.html">@GetScenario</a>
+</div>
+
+
+  <span class="lead-duration duration">1.287</span>
+
+
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-7">
+
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">GET product BY ID</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-7" class="collapse collapsable-details  in ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-8">
+
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-8" class="inner-level collapse collapsable-details  in ">
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">path '/api/v1/product/63e4f9e4e1cbdc16bbbe9d82'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">method GET</span>
+
+  <span class="lead-duration duration">1.283</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-9">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-9" class="collapse collapsable-details">
+        <pre>17:17:34.797 request:
+1 &gt; GET https://pesa-backend-production.up.railway.app/api/v1/product/63e4f9e4e1cbdc16bbbe9d82
+1 &gt; Content-type: application/json
+1 &gt; Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZWNhNzVjMjFlNjcxM2Y4YjlmNTRiZiIsImlhdCI6MTY3NjQ3Nzg0NSwiZXhwIjoxNjc2NTY0MjQ1fQ.QUHJg0xeVM3JID0ypz_RheLVsJLHTphT8FyMFwllKes
+1 &gt; Host: pesa-backend-production.up.railway.app
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_261)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+17:17:36.078 response time in milliseconds: 1280
+1 &lt; 200
+1 &lt; x-powered-by: Express
+1 &lt; access-control-allow-origin: *
+1 &lt; date: Wed, 15 Feb 2023 16:17:36 GMT
+1 &lt; content-length: 0
+1 &lt; x-envoy-upstream-service-time: 255
+1 &lt; server: railway
+
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">print response</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-10">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-10" class="collapse collapsable-details">
+        <pre>17:17:36.079 [print]  
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And failed">
+  <span class="keyword indention">And</span>
+  <span class="name">match response.designation == 'SC GR&eacute;'</span>
+
+  <span class="lead-duration duration">0.002</span>
+
+</div>
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-11">
+          <a>match</a>
+      </div>
+      <div id="msg-11" class="collapse collapsable-details  in ">
+        <pre>match failed: EQUALS
+  $ | data types don't match (NULL:STRING)
+  null
+  'SC GR&eacute;'
+
+classpath:examples/tests/Get.feature:76</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-12">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-12" class="collapse collapsable-details">
+        <pre>17:17:36.082 classpath:examples/tests/Get.feature:76
+And match response.designation == 'SC GR&eacute;'
+match failed: EQUALS
+  $ | data types don't match (NULL:STRING)
+  null
+  'SC GR&eacute;'
+
+classpath:examples/tests/Get.feature:76
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">print responseStatus</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+    <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_2_3771396219.html">examples/tests/Post.feature</a>
+    </div>
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_1214558976.html">@Post01</a>
+       <a href="report-tag_3641623727.html">@PostScenario</a>
+</div>
+
+
+  <span class="lead-duration duration">1.275</span>
+
+
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-13">
+
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Create user to PESA Solutions</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-13" class="collapse collapsable-details  in ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-14">
+
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-14" class="inner-level collapse collapsable-details  in ">
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">path '/api/v1/user/register'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">request requestBody[0]</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">method POST</span>
+
+  <span class="lead-duration duration">1.274</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-15">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-15" class="collapse collapsable-details">
+        <pre>17:17:44.731 request:
+1 &gt; POST https://pesa-backend-production.up.railway.app/api/v1/user/register
+1 &gt; Content-type: application/json; charset=UTF-8
+1 &gt; Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZWNhNzVjMjFlNjcxM2Y4YjlmNTRiZiIsImlhdCI6MTY3NjQ3Nzg0NSwiZXhwIjoxNjc2NTY0MjQ1fQ.QUHJg0xeVM3JID0ypz_RheLVsJLHTphT8FyMFwllKes
+1 &gt; Content-Length: 212
+1 &gt; Host: pesa-backend-production.up.railway.app
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_261)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;birth_day&quot;:&quot;19990509&quot;,&quot;password&quot;:362014,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;696894199&quot;,&quot;isCreatedByAdmin&quot;:true,&quot;last_name&quot;:&quot;Zara&quot;,&quot;isActive&quot;:true,&quot;first_name&quot;:&quot;Tesfaye7&quot;,&quot;email&quot;:&quot;tesf5@gmail.com&quot;,&quot;isEmailConfirmed&quot;:false}
+
+17:17:46.003 response time in milliseconds: 1272
+1 &lt; 400
+1 &lt; x-powered-by: Express
+1 &lt; access-control-allow-origin: *
+1 &lt; content-type: application/json; charset=utf-8
+1 &lt; content-length: 60
+1 &lt; etag: W/&quot;3c-sOjAHxUfop+VJJ441DfKxdsX/wo&quot;
+1 &lt; date: Wed, 15 Feb 2023 16:17:46 GMT
+1 &lt; x-envoy-upstream-service-time: 257
+1 &lt; server: railway
+{&quot;message&quot;:&quot;Cet utilisateur existe d&eacute;j&agrave;&quot;,&quot;statusCode&quot;:400}
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then failed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 201</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-16">
+          <a>status</a>
+      </div>
+      <div id="msg-16" class="collapse collapsable-details  in ">
+        <pre>status code was: 400, expected: 201, response time in milliseconds: 1272, url: https://pesa-backend-production.up.railway.app/api/v1/user/register, response: 
+{&quot;statusCode&quot;:400,&quot;message&quot;:&quot;Cet utilisateur existe d&eacute;j&agrave;&quot;}
+classpath:examples/tests/Post.feature:17</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-17">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-17" class="collapse collapsable-details">
+        <pre>17:17:46.004 classpath:examples/tests/Post.feature:17
+Then status 201
+status code was: 400, expected: 201, response time in milliseconds: 1272, url: https://pesa-backend-production.up.railway.app/api/v1/user/register, response: 
+{&quot;statusCode&quot;:400,&quot;message&quot;:&quot;Cet utilisateur existe d&eacute;j&agrave;&quot;}
+classpath:examples/tests/Post.feature:17
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">print response</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+    <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_2_3771396219.html">examples/tests/Post.feature</a>
+    </div>
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_1214558979.html">@Post04</a>
+       <a href="report-tag_3641623727.html">@PostScenario</a>
+</div>
+
+
+  <span class="lead-duration duration">2.557</span>
+
+
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-18">
+
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Create a product subscription</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-18" class="collapse collapsable-details  in ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-19">
+
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-19" class="inner-level collapse collapsable-details  in ">
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">path '/api/v1/product-subscription'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">request requestBody[3]</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">method POST</span>
+
+  <span class="lead-duration duration">2.556</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-20">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-20" class="collapse collapsable-details">
+        <pre>17:17:49.902 request:
+1 &gt; POST https://pesa-backend-production.up.railway.app/api/v1/product-subscription
+1 &gt; Content-type: application/json; charset=UTF-8
+1 &gt; Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZWNhNzVjMjFlNjcxM2Y4YjlmNTRiZiIsImlhdCI6MTY3NjQ3Nzg0NSwiZXhwIjoxNjc2NTY0MjQ1fQ.QUHJg0xeVM3JID0ypz_RheLVsJLHTphT8FyMFwllKes
+1 &gt; Content-Length: 84
+1 &gt; Host: pesa-backend-production.up.railway.app
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_261)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;volume&quot;:10,&quot;product&quot;:&quot;63e4f9e4e1cbdc16bbbe9d82&quot;,&quot;user&quot;:&quot;63c80c13e56165ca64b4a6cb&quot;}
+
+17:17:52.458 response time in milliseconds: 2556
+1 &lt; 500
+1 &lt; x-powered-by: Express
+1 &lt; access-control-allow-origin: *
+1 &lt; content-type: application/json; charset=utf-8
+1 &lt; content-length: 52
+1 &lt; etag: W/&quot;34-rlKccw1E+/fV8niQk4oFitDfPro&quot;
+1 &lt; date: Wed, 15 Feb 2023 16:17:53 GMT
+1 &lt; x-envoy-upstream-service-time: 1530
+1 &lt; server: railway
+1 &lt; connection: close
+{&quot;message&quot;:&quot;Internal server error&quot;,&quot;statusCode&quot;:500}
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then failed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 201</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-21">
+          <a>status</a>
+      </div>
+      <div id="msg-21" class="collapse collapsable-details  in ">
+        <pre>status code was: 500, expected: 201, response time in milliseconds: 2556, url: https://pesa-backend-production.up.railway.app/api/v1/product-subscription, response: 
+{&quot;statusCode&quot;:500,&quot;message&quot;:&quot;Internal server error&quot;}
+classpath:examples/tests/Post.feature:45</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-22">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-22" class="collapse collapsable-details">
+        <pre>17:17:52.458 classpath:examples/tests/Post.feature:45
+Then status 201
+status code was: 500, expected: 201, response time in milliseconds: 2556, url: https://pesa-backend-production.up.railway.app/api/v1/product-subscription, response: 
+{&quot;statusCode&quot;:500,&quot;message&quot;:&quot;Internal server error&quot;}
+classpath:examples/tests/Post.feature:45
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">print response</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+        </div>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-1 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+<br/>
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
