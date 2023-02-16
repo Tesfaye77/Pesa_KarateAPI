@@ -1,0 +1,19 @@
+[ {
+  "first_name": "F",
+  "last_name": "fafniru",
+  "email": "fafnifafnir@mail.com",
+  "phone": "696074199"
+},
+
+{
+  "designation": "produitDeTest7",
+  "volume": 2,
+  "cours": 0,
+  "rate_of_return": 3,
+  "interest_rate": 2,
+  "liquidity_frequency":
+  "mensuel",
+  "validity_date_cours": "2022-12-02T08:30:38.998Z",
+  "type":
+  "action"
+}]
