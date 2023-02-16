@@ -73,8 +73,8 @@ $(document).ready(function() {
   </thead>
   <tbody>
     <tr class="info">
-      <td>Report-Name</td>
-      <td>15 f&eacute;vr. 2023, 17:17</td>
+      <td>Z-Train-Report-API</td>
+      <td>16 f&eacute;vr. 2023, 16:49</td>
     </tr>
   </tbody>
 </table>
@@ -127,19 +127,19 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">@Get04</td>
-          <td      class="passed"    >7</td>
-          <td >0</td>
-          <td >0</td>
+          <td      class="passed"    >1</td>
+          <td      class="failed"    >1</td>
+          <td     class="skipped"   >5</td>
           <td >0</td>
           <td >0</td>
           <td class="total">7</td>
 
-          <td  class="passed"    >1</td>
           <td >0</td>
+          <td  class="failed"    >1</td>
           <td class="total">1</td>
 
-          <td class="duration" data-value="1773627700">1.773</td>
-          <td class="passed">Passed</td>
+          <td class="duration" data-value="5007457500">5.007</td>
+          <td class="failed">Failed</td>
         </tr>
         </tbody>
 
@@ -182,12 +182,12 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">1.773</span>
+  <span class="lead-duration duration">5.007</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Scenario</span>
   <span class="name">GET wallet info</span>
 
@@ -198,16 +198,16 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-1" class="collapse collapsable-details ">
+  <div id="element-1" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-2">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-2">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -217,7 +217,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-2" class="inner-level collapse collapsable-details ">
+  <div id="steps-2" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
@@ -248,11 +248,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-When passed">
+<div class="brief step-name-When failed">
   <span class="keyword indention">When</span>
   <span class="name">method GET</span>
 
-  <span class="lead-duration duration">1.769</span>
+  <span class="lead-duration duration">5.006</span>
 
 </div>
 
@@ -261,36 +261,42 @@ $(document).ready(function() {
 
 
 
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-3">
+          <a>http</a>
+      </div>
+      <div id="msg-3" class="collapse collapsable-details  in ">
+        <pre>http call failed after 5006 milliseconds for url: https://pesa-backend-production.up.railway.app/api/v1/wallet/63df5c36ad437ea9f60e8034
+classpath:examples/tests/Get.feature:43</pre>
+      </div>
+    </div>
+  </div>
+
 
 
 
   <div class="inner-level">
     <div class="docstring indention">
-      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-3">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-4">
           <a>Doc string</a>
       </div>
-      <div id="msg-3" class="collapse collapsable-details">
-        <pre>17:17:29.907 request:
+      <div id="msg-4" class="collapse collapsable-details">
+        <pre>16:49:23.981 request:
 1 &gt; GET https://pesa-backend-production.up.railway.app/api/v1/wallet/63df5c36ad437ea9f60e8034
 1 &gt; Content-type: application/json
-1 &gt; Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZWNhNzVjMjFlNjcxM2Y4YjlmNTRiZiIsImlhdCI6MTY3NjQ3Nzg0NSwiZXhwIjoxNjc2NTY0MjQ1fQ.QUHJg0xeVM3JID0ypz_RheLVsJLHTphT8FyMFwllKes
+1 &gt; Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZWNhNzVjMjFlNjcxM2Y4YjlmNTRiZiIsImlhdCI6MTY3NjU2MjU1MSwiZXhwIjoxNjc2NjQ4OTUxfQ.EmMsSpapiWV59ThGDr6mymQ2_M9OcsPSAQlJ073yrn4
 1 &gt; Host: pesa-backend-production.up.railway.app
 1 &gt; Connection: Keep-Alive
-1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_261)
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.1)
 1 &gt; Accept-Encoding: gzip,deflate
 
 
-17:17:31.674 response time in milliseconds: 1767
-1 &lt; 200
-1 &lt; x-powered-by: Express
-1 &lt; access-control-allow-origin: *
-1 &lt; content-type: application/json; charset=utf-8
-1 &lt; content-length: 961
-1 &lt; etag: W/&quot;3c1-D7geoFED6ZIWMMGmCerUW9sFTN0&quot;
-1 &lt; date: Wed, 15 Feb 2023 16:17:32 GMT
-1 &lt; x-envoy-upstream-service-time: 766
-1 &lt; server: railway
-{&quot;initial_value&quot;:0,&quot;cumulative_performance&quot;:0,&quot;liquidity_value&quot;:0,&quot;performance_hebdo&quot;:0,&quot;liquidity_frequency&quot;:0,&quot;ytd&quot;:0,&quot;products&quot;:[],&quot;gestionnaire&quot;:{&quot;birth_day&quot;:&quot;1970-01-01T05:28:20.118Z&quot;,&quot;password&quot;:&quot;$2b$10$CmVSy8UmmadypLu7y7d\/eOs4baSNkYk6ja2gsFrI\/4Z74ix0r4PZy&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;696074199&quot;,&quot;isCreatedByAdmin&quot;:false,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;fafnirukihj&quot;,&quot;_id&quot;:&quot;63c80c13e56165ca64b4a6cb&quot;,&quot;isActive&quot;:false,&quot;first_name&quot;:&quot;Fafnirou3kl&quot;,&quot;email&quot;:&quot;hamman2@mail.com&quot;,&quot;isEmailConfirmed&quot;:false},&quot;__v&quot;:0,&quot;_id&quot;:&quot;63df5c36ad437ea9f60e8034&quot;,&quot;designation&quot;:&quot;Default wallet&quot;,&quot;cumulative_performance_date&quot;:&quot;2023-02-05T07:35:01.012Z&quot;,&quot;user&quot;:{&quot;birth_day&quot;:&quot;2000-12-12T00:00:00.000Z&quot;,&quot;password&quot;:&quot;$2b$10$1DVBH2HY8R4WMBDSkdCaEOTLIe\/\/6tXF9BbrxEmYz5atQYQbf7iK.&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;655757902&quot;,&quot;isCreatedByAdmin&quot;:false,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;Gabriel&quot;,&quot;_id&quot;:&quot;63df5c36ad437ea9f60e8033&quot;,&quot;isActive&quot;:false,&quot;first_name&quot;:&quot;Tendong&quot;,&quot;email&quot;:&quot;gabitendong1@gmail.com&quot;,&quot;isEmailConfirmed&quot;:false}}
+16:49:28.985 karate.org.apache.http.conn.ConnectTimeoutException: Connect to pesa-backend-production.up.railway.app:443 [pesa-backend-production.up.railway.app/104.196.232.237] failed: Connect timed out, http call failed after 5006 milliseconds for url: https://pesa-backend-production.up.railway.app/api/v1/wallet/63df5c36ad437ea9f60e8034
+16:49:28.985 classpath:examples/tests/Get.feature:43
+When method GET
+http call failed after 5006 milliseconds for url: https://pesa-backend-production.up.railway.app/api/v1/wallet/63df5c36ad437ea9f60e8034
+classpath:examples/tests/Get.feature:43
 </pre>
       </div>
     </div>
@@ -306,7 +312,7 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then passed">
+<div class="brief step-name-Then skipped">
   <span class="keyword indention">Then</span>
   <span class="name">status 200</span>
 
@@ -333,7 +339,7 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-And passed">
+<div class="brief step-name-And skipped">
   <span class="keyword indention">And</span>
   <span class="name">print response</span>
 
@@ -349,63 +355,6 @@ $(document).ready(function() {
 
 
 
-  <div class="inner-level">
-    <div class="docstring indention">
-      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-4">
-          <a>Doc string</a>
-      </div>
-      <div id="msg-4" class="collapse collapsable-details">
-        <pre>17:17:31.676 [print] {
-  &quot;initial_value&quot;: 0,
-  &quot;cumulative_performance&quot;: 0,
-  &quot;liquidity_value&quot;: 0,
-  &quot;performance_hebdo&quot;: 0,
-  &quot;liquidity_frequency&quot;: 0,
-  &quot;ytd&quot;: 0,
-  &quot;products&quot;: [
-  ],
-  &quot;gestionnaire&quot;: {
-    &quot;birth_day&quot;: &quot;1970-01-01T05:28:20.118Z&quot;,
-    &quot;password&quot;: &quot;$2b$10$CmVSy8UmmadypLu7y7d/eOs4baSNkYk6ja2gsFrI/4Z74ix0r4PZy&quot;,
-    &quot;role&quot;: [
-      &quot;User&quot;
-    ],
-    &quot;phone&quot;: &quot;696074199&quot;,
-    &quot;isCreatedByAdmin&quot;: false,
-    &quot;__v&quot;: 0,
-    &quot;last_name&quot;: &quot;fafnirukihj&quot;,
-    &quot;_id&quot;: &quot;63c80c13e56165ca64b4a6cb&quot;,
-    &quot;isActive&quot;: false,
-    &quot;first_name&quot;: &quot;Fafnirou3kl&quot;,
-    &quot;email&quot;: &quot;hamman2@mail.com&quot;,
-    &quot;isEmailConfirmed&quot;: false
-  },
-  &quot;__v&quot;: 0,
-  &quot;_id&quot;: &quot;63df5c36ad437ea9f60e8034&quot;,
-  &quot;designation&quot;: &quot;Default wallet&quot;,
-  &quot;cumulative_performance_date&quot;: &quot;2023-02-05T07:35:01.012Z&quot;,
-  &quot;user&quot;: {
-    &quot;birth_day&quot;: &quot;2000-12-12T00:00:00.000Z&quot;,
-    &quot;password&quot;: &quot;$2b$10$1DVBH2HY8R4WMBDSkdCaEOTLIe//6tXF9BbrxEmYz5atQYQbf7iK.&quot;,
-    &quot;role&quot;: [
-      &quot;User&quot;
-    ],
-    &quot;phone&quot;: &quot;655757902&quot;,
-    &quot;isCreatedByAdmin&quot;: false,
-    &quot;__v&quot;: 0,
-    &quot;last_name&quot;: &quot;Gabriel&quot;,
-    &quot;_id&quot;: &quot;63df5c36ad437ea9f60e8033&quot;,
-    &quot;isActive&quot;: false,
-    &quot;first_name&quot;: &quot;Tendong&quot;,
-    &quot;email&quot;: &quot;gabitendong1@gmail.com&quot;,
-    &quot;isEmailConfirmed&quot;: false
-  }
-}
- 
-</pre>
-      </div>
-    </div>
-  </div>
 
 
 
@@ -417,7 +366,7 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-And passed">
+<div class="brief step-name-And skipped">
   <span class="keyword indention">And</span>
   <span class="name">match response.initial_value == 0</span>
 
@@ -444,11 +393,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-And passed">
+<div class="brief step-name-And skipped">
   <span class="keyword indention">And</span>
   <span class="name">assert response.length == null</span>
 
-  <span class="lead-duration duration">0.001</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -471,7 +420,7 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-And passed">
+<div class="brief step-name-And skipped">
   <span class="keyword indention">And</span>
   <span class="name">print responseStatus</span>
 
@@ -487,17 +436,6 @@ $(document).ready(function() {
 
 
 
-  <div class="inner-level">
-    <div class="docstring indention">
-      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-5">
-          <a>Doc string</a>
-      </div>
-      <div id="msg-5" class="collapse collapsable-details">
-        <pre>17:17:31.679 [print] 200 
-</pre>
-      </div>
-    </div>
-  </div>
 
 
 

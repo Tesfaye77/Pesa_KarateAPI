@@ -18,12 +18,12 @@
     "product": "63e4f9e4e1cbdc16bbbe9d82",
     "user": "63c80c13e56165ca64b4a6cb",
     "designation": "string",
-    "initial_value": 0,
-    "liquidity_frequency": 0,
-    "cumulative_performance": 0,
-    "performance_hebdo": 0,
-    "cumulative_performance_date": "2023-02-15",
-    "liquidity_value": 0,
+    "initial_value": 1255.28383,
+    "liquidity_frequency": 50000.300,
+    "cumulative_performance": 100,
+    "performance_hebdo": 200,
+    "cumulative_performance_date": "2023-02-16",
+    "liquidity_value": 45000.200,
     "YTD": 0
 
   },
