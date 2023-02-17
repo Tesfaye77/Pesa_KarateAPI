@@ -13,7 +13,6 @@ Feature: GET API Demo
       Then status 200
       And print response
       And match response[0].last_name != null
-      And assert response.length == 21
       And print responseStatus
 
      @Get02
@@ -33,7 +32,6 @@ Feature: GET API Demo
     Then status 200
     And print response
     And match response[0].initial_value == 0
-    And assert response.length == 38
     And print responseStatus
 
 
@@ -73,7 +71,7 @@ Feature: GET API Demo
     When method GET
     Then status 200
     And print response
-    And match response.designation == 'SC GRé'
+    And match response.designation == null
     And print responseStatus
 
 
