@@ -6,16 +6,19 @@ Feature: POST API Demo
     * url  baseUrl
     * header Content-type = 'application/json'
     * def requestBody = read("datas/registerdata.json")
+    * def requestUser = read("datas/create.json")
     * header Authorization = authorization
 
 
     @Post01
-  Scenario: Create user to PESA Solutions
+  Scenario Outline: Create user to PESA Solutions
     Given path '/api/v1/user/register'
-    And request requestBody[0]
+    And request { "first_name":<first_name>, "last_name":<last_name>,"email":<email>,"phone":'<phone>',"birth_day": <birth_day>,"password": <password>,"role":<role>,"isActive": <isActive>,"isEmailConfirmed":<isEmailConfirmed>,"isCreatedByAdmin":<isCreatedByAdmin>}
     When method POST
     Then status 201
     And print response
+      Examples:
+        |requestUser  |
 
 
 

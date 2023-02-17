@@ -39,8 +39,9 @@ public void testParallel() {
         long starttime = System.nanoTime();
         long endtime = System.nanoTime();
         Results results = Runner.path("classpath:examples/tests/")
+                .tags("@GetScenario")
                 .outputCucumberJson(true)
-                .parallel(1);
+                .parallel(5);
         TestRunner.generateReport(results.getReportDir());
         assertTrue(results.getErrorMessages(), results.getFailCount() == 0);
     }

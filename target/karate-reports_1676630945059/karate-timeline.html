@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"pool-1-thread-1","id":1},{"content":"pool-1-thread-2","id":2},{"content":"pool-1-thread-3","id":3},{"content":"pool-1-thread-4","id":4},{"content":"pool-1-thread-5","id":5}];
+var items = [{"id":1,"group":1,"content":"examples\/tests\/Get[1:10]","start":1676624691998,"end":1676624696400,"title":"examples\/tests\/Get[1:10] 10:04:51.998-10:04:56.400 GET all users","className":"failed"},{"id":2,"group":2,"content":"examples\/tests\/Get[2:20]","start":1676624692002,"end":1676624697641,"title":"examples\/tests\/Get[2:20] 10:04:52.002-10:04:57.641 GET user infos"},{"id":3,"group":3,"content":"examples\/tests\/Get[3:30]","start":1676624692004,"end":1676624697405,"title":"examples\/tests\/Get[3:30] 10:04:52.004-10:04:57.405 GET all wallet","className":"failed"},{"id":4,"group":4,"content":"examples\/tests\/Get[4:41]","start":1676624692010,"end":1676624697904,"title":"examples\/tests\/Get[4:41] 10:04:52.010-10:04:57.904 GET wallet info"},{"id":5,"group":5,"content":"examples\/tests\/Get[5:52]","start":1676624692031,"end":1676624697598,"title":"examples\/tests\/Get[5:52] 10:04:52.031-10:04:57.598 GET wallet info by user id"},{"id":6,"group":1,"content":"examples\/tests\/Get[6:61]","start":1676624696409,"end":1676624698883,"title":"examples\/tests\/Get[6:61] 10:04:56.409-10:04:58.883 GET all products"},{"id":7,"group":3,"content":"examples\/tests\/Get[7:71]","start":1676624697414,"end":1676624698834,"title":"examples\/tests\/Get[7:71] 10:04:57.414-10:04:58.834 GET product BY ID","className":"failed"},{"id":8,"group":5,"content":"examples\/tests\/Get[8:81]","start":1676624697615,"end":1676624699599,"title":"examples\/tests\/Get[8:81] 10:04:57.615-10:04:59.599 GET all record of product subscription"},{"id":9,"group":2,"content":"examples\/tests\/Get[9:91]","start":1676624697648,"end":1676624698946,"title":"examples\/tests\/Get[9:91] 10:04:57.648-10:04:58.946 GET specific product subscription by user_id"},{"id":10,"group":4,"content":"examples\/tests\/Get[10:102]","start":1676624697910,"end":1676624699180,"title":"examples\/tests\/Get[10:102] 10:04:57.910-10:04:59.180 GET specific product subscription by product_id"},{"id":11,"group":3,"content":"examples\/tests\/Get[11:113]","start":1676624698840,"end":1676624700354,"title":"examples\/tests\/Get[11:113] 10:04:58.840-10:05:00.354 GET one record of product subscription by id"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>

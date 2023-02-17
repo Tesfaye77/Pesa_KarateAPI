@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="res/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="res/karate-report.css" type="text/css"/>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <script type="text/javascript" src="res/jquery.min.js"></script>
+    <script type="text/javascript" src="res/jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="res/bootstrap.min.js"></script>
+    <script type="text/javascript" src="res/karate-report.js"></script>
+    <title>examples.tests.Get</title>  
+  </head>
+  <body>   
+    <div id="root-container">
+      <div id="leftnav">
+                
+        <div>
+  <div class="nav-logo">
+    <a href="karate-summary.html">
+      <img src="karate-logo.svg" alt="Karate"/>
+    </a>
+    <div class="nav-count">
+      <div id="nav-pass" class="bg-success">0</div>
+      <div id="nav-fail" class="bg-danger">1</div>
+    </div>
+  </div>
+  <div id="nav-type">
+    <div>Scenarios</div>
+  </div>         
+  <div id="nav-date">
+    <div>2023-02-17 11:52:23 AM</div>
+  </div>        
+</div>
+
+        <div class="nav-container">
+          <div class="nav-item failed">
+            <a href="#[1:10]"><span>[1:10]</span> <span>GET all users</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="content">
+        <div class="page-heading alert alert-primary">
+          <a href="karate-summary.html">Summary</a><span class="feature-label">|</span>
+          <a href="karate-tags.html">Tags</a><span class="feature-label">|</span>
+          <span class="feature-label">Feature:</span>
+          <span class="feature-path">examples/tests/Get.feature</span><span class="feature-label">|</span>
+          <span class="feature-name">GET API Demo</span>
+          <span class="feature-description"></span>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1:10]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">GetScenario</a><a class="badge badge-primary" href="karate-tags.html">Get01</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1:10]</span>
+                <span class="scenario-name">GET all users</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>1264</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[1:10]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[1:10]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url  baseUrl</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.5">11:52:22.396 &lt;&lt; lock released, cached callSingle: login.feature
+</div>   
+
+  <div>
+        
+    <div class="step-row">
+      <div class="step-container" id="0.5.0.call">
+        <div class="step-ref bg-step">&gt;&gt;</div>
+        <div class="step-indent"></div>
+        <div class="step-cell passed">examples.tests.login</div>
+      </div>
+      <div class="time-cell passed">2631</div>
+    </div>
+    <div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="0.5.0.call">
+    <div class="step-container" id="0.5.0.call.0.6">
+      <div class="step-ref bg-step">6</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url  baseUrl</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.5.0.call.0.6">11:52:19.711 &gt;&gt; lock acquired, begin callSingle: login.feature
+</div>   
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="0.5.0.call">
+    <div class="step-container" id="0.5.0.call.0.7">
+      <div class="step-ref bg-step">7</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Content-type = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="0.5.0.call">
+    <div class="step-container" id="0.5.0.call.0.8">
+      <div class="step-ref bg-step">8</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def requestBody = read(&quot;datas/logindata.json&quot;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">63</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="0.5.0.call">
+    <div class="step-container" id="0.5.0.call.0.13">
+      <div class="step-ref bg-step">13</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/api/v1/auth/login&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">9</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="0.5.0.call">
+    <div class="step-container" id="0.5.0.call.0.14">
+      <div class="step-ref bg-step">14</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request requestBody</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="0.5.0.call">
+    <div class="step-container" id="0.5.0.call.0.15">
+      <div class="step-ref bg-step">15</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2552</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.5.0.call.0.15">11:52:20.786 request:
+1 &gt; POST https://pesa-backend-production.up.railway.app/api/v1/auth/login
+1 &gt; Content-type: application/json; charset=UTF-8
+1 &gt; Content-Length: 51
+1 &gt; Host: pesa-backend-production.up.railway.app
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_261)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;password&quot;:123457,&quot;email&quot;:&quot;gabitendong@gmail.com&quot;}
+
+11:52:22.387 response time in milliseconds: 1598
+1 &lt; 201
+1 &lt; x-powered-by: Express
+1 &lt; access-control-allow-origin: *
+1 &lt; content-type: application/json; charset=utf-8
+1 &lt; content-length: 524
+1 &lt; etag: W/&quot;20c-C+0eQQtsBzkA475OT+I4r7z7ZHg&quot;
+1 &lt; date: Fri, 17 Feb 2023 10:52:23 GMT
+1 &lt; x-envoy-upstream-service-time: 317
+1 &lt; server: railway
+{&quot;user&quot;:{&quot;birth_day&quot;:&quot;2003-02-15T00:00:00.000Z&quot;,&quot;password&quot;:&quot;$2b$10$P8AGzDh6FQ0R0DYi9sG3VeVJmVsLBVFFg85OUiFmxBbLOtmNBo2ki&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;655757902&quot;,&quot;isCreatedByAdmin&quot;:false,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;Tendong&quot;,&quot;_id&quot;:&quot;63eca75c21e6713f8b9f54bf&quot;,&quot;isActive&quot;:true,&quot;first_name&quot;:&quot;Gabriel&quot;,&quot;email&quot;:&quot;gabitendong@gmail.com&quot;,&quot;isEmailConfirmed&quot;:true},&quot;token&quot;:&quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZWNhNzVjMjFlNjcxM2Y4YjlmNTRiZiIsImlhdCI6MTY3NjYzMTE0MywiZXhwIjoxNjc2NzE3NTQzfQ.-AZ2jk_OXc_kskk_R2MOZwn4Oa3tpKwEiGevfnQhj7g&quot;}
+</div>   
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="0.5.0.call">
+    <div class="step-container" id="0.5.0.call.0.16">
+      <div class="step-ref bg-step">16</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 201</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="0.5.0.call">
+    <div class="step-container" id="0.5.0.call.0.17">
+      <div class="step-ref bg-step">17</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>print response</span>
+      </div>
+    </div>
+    <div class="time-cell passed">6</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.5.0.call.0.17">11:52:22.394 [print] {
+  &quot;user&quot;: {
+    &quot;birth_day&quot;: &quot;2003-02-15T00:00:00.000Z&quot;,
+    &quot;password&quot;: &quot;$2b$10$P8AGzDh6FQ0R0DYi9sG3VeVJmVsLBVFFg85OUiFmxBbLOtmNBo2ki&quot;,
+    &quot;role&quot;: [
+      &quot;User&quot;
+    ],
+    &quot;phone&quot;: &quot;655757902&quot;,
+    &quot;isCreatedByAdmin&quot;: false,
+    &quot;__v&quot;: 0,
+    &quot;last_name&quot;: &quot;Tendong&quot;,
+    &quot;_id&quot;: &quot;63eca75c21e6713f8b9f54bf&quot;,
+    &quot;isActive&quot;: true,
+    &quot;first_name&quot;: &quot;Gabriel&quot;,
+    &quot;email&quot;: &quot;gabitendong@gmail.com&quot;,
+    &quot;isEmailConfirmed&quot;: true
+  },
+  &quot;token&quot;: &quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZWNhNzVjMjFlNjcxM2Y4YjlmNTRiZiIsImlhdCI6MTY3NjYzMTE0MywiZXhwIjoxNjc2NzE3NTQzfQ.-AZ2jk_OXc_kskk_R2MOZwn4Oa3tpKwEiGevfnQhj7g&quot;
+}
+ 
+</div>   
+
+  
+
+</div>
+</div>
+    </div>    
+  </div>
+
+</div>
+</div>
+          <div data-parent="[1:10]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.6">
+      <div class="step-ref bg-step">6</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Content-type = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1:10]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.7">
+      <div class="step-ref bg-step">7</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Authorization = authorization</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.11">
+      <div class="step-ref passed">11</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/api/v1/user&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.12">
+      <div class="step-ref passed">12</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method GET</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1240</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.12">11:52:22.406 request:
+1 &gt; GET https://pesa-backend-production.up.railway.app/api/v1/user
+1 &gt; Content-type: application/json
+1 &gt; Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZWNhNzVjMjFlNjcxM2Y4YjlmNTRiZiIsImlhdCI6MTY3NjYzMTE0MywiZXhwIjoxNjc2NzE3NTQzfQ.-AZ2jk_OXc_kskk_R2MOZwn4Oa3tpKwEiGevfnQhj7g
+1 &gt; Host: pesa-backend-production.up.railway.app
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_261)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+11:52:23.642 response time in milliseconds: 1230
+1 &lt; 200
+1 &lt; x-powered-by: Express
+1 &lt; access-control-allow-origin: *
+1 &lt; content-type: application/json; charset=utf-8
+1 &lt; content-length: 8451
+1 &lt; etag: W/&quot;2103-Ogbl9VQz9cApF6Brhl4q8+GaOLk&quot;
+1 &lt; date: Fri, 17 Feb 2023 10:52:24 GMT
+1 &lt; x-envoy-upstream-service-time: 476
+1 &lt; server: railway
+[{&quot;birth_day&quot;:&quot;1970-01-01T05:33:10.501Z&quot;,&quot;password&quot;:&quot;$2b$10$guLY3aS7eMyjqyLCghgMdu6Y4WfOWbsOsOIMzP5K9APtvXLcYOUga&quot;,&quot;role&quot;:[&quot;SuperAdmin&quot;],&quot;phone&quot;:&quot;696074199&quot;,&quot;isCreatedByAdmin&quot;:false,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;fafniru&quot;,&quot;_id&quot;:&quot;63ca63e13b641efd19438730&quot;,&quot;isActive&quot;:true,&quot;first_name&quot;:&quot;Fafniru&quot;,&quot;email&quot;:&quot;root@gmail.com&quot;,&quot;isEmailConfirmed&quot;:true},{&quot;birth_day&quot;:&quot;2000-01-24T00:00:00.000Z&quot;,&quot;password&quot;:&quot;$2b$10$gEIs1rvdZKl1rm26qjYEjebygzCnDj.xoRSOeSTWmzdcySIF5X7Cm&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;654785425&quot;,&quot;isCreatedByAdmin&quot;:false,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;Tendong&quot;,&quot;_id&quot;:&quot;63cfa0075c79aca924389367&quot;,&quot;isActive&quot;:true,&quot;first_name&quot;:&quot;Gabriel&quot;,&quot;email&quot;:&quot;gabriel.tendongpk71@gmail.com&quot;,&quot;isEmailConfirmed&quot;:true},{&quot;birth_day&quot;:&quot;2004-12-18T00:00:00.000Z&quot;,&quot;password&quot;:&quot;$2b$10$mp.wTtDMMVMOSq.M0TviXeFMgspoZr6B1WcRjo1CA9mwDpK3vxRMq&quot;,&quot;role&quot;:[&quot;Admin&quot;],&quot;phone&quot;:&quot;+237696074190&quot;,&quot;isCreatedByAdmin&quot;:false,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;AHMADOU&quot;,&quot;_id&quot;:&quot;63cfb71d07003e7ecec8115a&quot;,&quot;isActive&quot;:true,&quot;first_name&quot;:&quot;Hamman bello&quot;,&quot;email&quot;:&quot;gabitendongoff@gmail.com&quot;,&quot;isEmailConfirmed&quot;:true},{&quot;birth_day&quot;:&quot;1970-01-01T05:33:10.501Z&quot;,&quot;password&quot;:&quot;$2b$10$wW356.N\/ruscwy1Vwzn7..DieIemLFb9zedwJIAXFtAPP5xQ.BEG.&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;696074199&quot;,&quot;isCreatedByAdmin&quot;:false,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;Merkelom&quot;,&quot;_id&quot;:&quot;63da93afd78544f455dab69c&quot;,&quot;isActive&quot;:true,&quot;first_name&quot;:&quot;Batch4&quot;,&quot;email&quot;:&quot;batch1956@amysy.com&quot;,&quot;isEmailConfirmed&quot;:false},{&quot;birth_day&quot;:&quot;2004-12-09T00:00:00.000Z&quot;,&quot;password&quot;:&quot;$2b$10$rhqmsRb9dt9lejVLe8UDwewqIN7R\/Xkojf5LAwlZ.RdFWr5pw880W&quot;,&quot;role&quot;:[&quot;Admin&quot;],&quot;phone&quot;:&quot;+334567898765&quot;,&quot;isCreatedByAdmin&quot;:true,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;L. Luttrell&quot;,&quot;_id&quot;:&quot;63e27048993b5f9a52eb82ac&quot;,&quot;isActive&quot;:true,&quot;first_name&quot;:&quot;Daniel &quot;,&quot;email&quot;:&quot;dankiel.luttrell@yopmail.com&quot;,&quot;isEmailConfirmed&quot;:true},{&quot;birth_day&quot;:&quot;2004-12-09T00:00:00.000Z&quot;,&quot;password&quot;:&quot;$2b$10$sP.A0rPhSmxKb0cHZeYkAeAOpC.VeBhwSU\/.H.yAtCxvWYnDvKePq&quot;,&quot;role&quot;:[&quot;Admin&quot;],&quot;phone&quot;:&quot;+237696074190&quot;,&quot;isCreatedByAdmin&quot;:true,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;POLA&quot;,&quot;_id&quot;:&quot;63e27913993b5f9a52eb83d3&quot;,&quot;isActive&quot;:true,&quot;first_name&quot;:&quot;AHMADOU&quot;,&quot;email&quot;:&quot;dankiel.luttrfell@yopmail.com&quot;,&quot;isEmailConfirmed&quot;:true},{&quot;birth_day&quot;:&quot;2004-12-09T00:00:00.000Z&quot;,&quot;password&quot;:&quot;$2b$10$KkZCbA3Uply7zeFH7i5oq.NiBqeSsSSysvv4JxNJ27vNQkSPdxla.&quot;,&quot;role&quot;:[&quot;Admin&quot;],&quot;phone&quot;:&quot;+336767898765&quot;,&quot;isCreatedByAdmin&quot;:true,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;E. Bryan&quot;,&quot;_id&quot;:&quot;63e283ad993b5f9a52eb859d&quot;,&quot;isActive&quot;:true,&quot;first_name&quot;:&quot;judith&quot;,&quot;email&quot;:&quot;judith.bryan@yopmail.com&quot;,&quot;isEmailConfirmed&quot;:true},{&quot;birth_day&quot;:&quot;2004-12-09T00:00:00.000Z&quot;,&quot;password&quot;:&quot;$2b$10$uq12Jk0e2MbTggvNE8kbIOEbZ2zzNcjeSubFJO2DJpt557SF\/hDba&quot;,&quot;role&quot;:[&quot;Admin&quot;],&quot;phone&quot;:&quot;+330236999380&quot;,&quot;isCreatedByAdmin&quot;:true,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;Vernadeau&quot;,&quot;_id&quot;:&quot;63e3804224786384b87f177a&quot;,&quot;isActive&quot;:true,&quot;first_name&quot;:&quot;Huette&quot;,&quot;email&quot;:&quot;dorothee.thibodeau@yopmail.com&quot;,&quot;isEmailConfirmed&quot;:true},{&quot;birth_day&quot;:&quot;2004-12-09T00:00:00.000Z&quot;,&quot;password&quot;:&quot;$2b$10$1q6UFCHlYHm1g\/o.3G0cSegtBCVXg8KB0E0lVWTF7lkqTJkJslJfa&quot;,&quot;role&quot;:[&quot;Admin&quot;],&quot;phone&quot;:&quot;+335678987654&quot;,&quot;isCreatedByAdmin&quot;:true,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;BOSS&quot;,&quot;_id&quot;:&quot;63e523ade1cbdc16bbbea1fc&quot;,&quot;isActive&quot;:true,&quot;first_name&quot;:&quot;Eric Jacques&quot;,&quot;email&quot;:&quot;eric.boss@yopmail.com&quot;,&quot;isEmailConfirmed&quot;:true},{&quot;birth_day&quot;:&quot;2004-12-09T00:00:00.000Z&quot;,&quot;password&quot;:&quot;$2b$10$yv06XX7izet8dxzpc8l2iOvPg409Wkd.WWu4TRz2QXPYedGZfvNaa&quot;,&quot;role&quot;:[&quot;Admin&quot;],&quot;phone&quot;:&quot;0274597637&quot;,&quot;isCreatedByAdmin&quot;:true,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;Fluet&quot;,&quot;_id&quot;:&quot;63eb9ddc475413c1984e04c8&quot;,&quot;isActive&quot;:true,&quot;first_name&quot;:&quot;mariette&quot;,&quot;email&quot;:&quot;fluet.mariette@yopmail.com&quot;,&quot;isEmailConfirmed&quot;:true},{&quot;birth_day&quot;:&quot;2004-12-09T00:00:00.000Z&quot;,&quot;password&quot;:&quot;$2b$10$nBA5IugESftbSIcdr9oOYujN0VP77FDCbYxAit0qfgLz9feKy5HvW&quot;,&quot;role&quot;:[&quot;Admin&quot;],&quot;phone&quot;:&quot;0261566377&quot;,&quot;isCreatedByAdmin&quot;:true,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;Leverett &quot;,&quot;_id&quot;:&quot;63eba2a7fcce97226f762a4a&quot;,&quot;isActive&quot;:true,&quot;first_name&quot;:&quot;pirouet&quot;,&quot;email&quot;:&quot;pirouet.leverett@yopmail.com&quot;,&quot;isEmailConfirmed&quot;:true},{&quot;birth_day&quot;:&quot;1970-01-01T05:33:10.509Z&quot;,&quot;password&quot;:&quot;$2b$10$IVEppXxuipoFaZJ.nnMW5OQ.M.0i32Jb1KX.b65ykbTg0F3ZY0txe&quot;,&quot;role&quot;:[&quot;Admin&quot;],&quot;phone&quot;:&quot;696894199&quot;,&quot;isCreatedByAdmin&quot;:true,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;mappuye&quot;,&quot;_id&quot;:&quot;63eba61dced4433df65d54ac&quot;,&quot;isActive&quot;:true,&quot;first_name&quot;:&quot;praufe&quot;,&quot;email&quot;:&quot;praufeimmappuye-6059@yopmail.com&quot;,&quot;isEmailConfirmed&quot;:true},{&quot;birth_day&quot;:&quot;1976-02-12T23:00:00.000Z&quot;,&quot;password&quot;:&quot;$2b$10$l7tdbMjE3Hr0r7JEBpJS1uEBNgPiC5lCMr.PPu8fn9figqVgC7YFi&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;0130804537&quot;,&quot;isCreatedByAdmin&quot;:true,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;Brochu&quot;,&quot;_id&quot;:&quot;63eba64aced4433df65d54b3&quot;,&quot;isActive&quot;:true,&quot;first_name&quot;:&quot; Marie Christiane &quot;,&quot;email&quot;:&quot;marie.brochu@yopmail.com&quot;,&quot;isEmailConfirmed&quot;:true},{&quot;birth_day&quot;:&quot;2004-12-09T00:00:00.000Z&quot;,&quot;password&quot;:&quot;$2b$10$.mqVfGrCpAJv2TXsmwYCTO.F7JRBlTHqFlFQo8RB\/yrFNfkHZEsmW&quot;,&quot;role&quot;:[&quot;Admin&quot;],&quot;phone&quot;:&quot;123456789&quot;,&quot;isCreatedByAdmin&quot;:true,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;Rossignol&quot;,&quot;_id&quot;:&quot;63eba7e3ced4433df65d54ce&quot;,&quot;isActive&quot;:true,&quot;first_name&quot;:&quot;Stéphane &quot;,&quot;email&quot;:&quot;stephane.ross@yopmail.com&quot;,&quot;isEmailConfirmed&quot;:true},{&quot;birth_day&quot;:&quot;2016-12-31T23:00:00.000Z&quot;,&quot;password&quot;:&quot;$2b$10$AJCOW02oFEeklV14KLLIf.e.m35sisNyVg2K32218Hqnj9Q6Tatbe&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;0127376454&quot;,&quot;isCreatedByAdmin&quot;:true,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;Chrétien&quot;,&quot;_id&quot;:&quot;63ebabf2ced4433df65d54e1&quot;,&quot;isActive&quot;:true,&quot;first_name&quot;:&quot;Gaston &quot;,&quot;email&quot;:&quot;gaston.chretien@yopmail.com&quot;,&quot;isEmailConfirmed&quot;:false},{&quot;birth_day&quot;:&quot;2003-02-15T00:00:00.000Z&quot;,&quot;password&quot;:&quot;$2b$10$P8AGzDh6FQ0R0DYi9sG3VeVJmVsLBVFFg85OUiFmxBbLOtmNBo2ki&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;655757902&quot;,&quot;isCreatedByAdmin&quot;:false,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;Tendong&quot;,&quot;_id&quot;:&quot;63eca75c21e6713f8b9f54bf&quot;,&quot;isActive&quot;:true,&quot;first_name&quot;:&quot;Gabriel&quot;,&quot;email&quot;:&quot;gabitendong@gmail.com&quot;,&quot;isEmailConfirmed&quot;:true},{&quot;birth_day&quot;:&quot;2000-12-12T00:00:00.000Z&quot;,&quot;password&quot;:&quot;$2b$10$vjCSrc3bqwG0QCcEVlUB1.J6mm2nZl33vRdd2Bp1onct3XEXRm4Ra&quot;,&quot;role&quot;:[&quot;SuperAdmin&quot;],&quot;phone&quot;:&quot;655797902&quot;,&quot;isCreatedByAdmin&quot;:false,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;Okourou&quot;,&quot;_id&quot;:&quot;63eca87e265224556e41266e&quot;,&quot;isActive&quot;:true,&quot;first_name&quot;:&quot;Francine&quot;,&quot;email&quot;:&quot;francine.okourou@gmail.com&quot;,&quot;isEmailConfirmed&quot;:true},{&quot;birth_day&quot;:&quot;2016-12-31T23:00:00.000Z&quot;,&quot;password&quot;:&quot;$2b$10$DJJedtFoORIMJ6Rr\/xq\/eez8pZH3KoOwnSL6xB2.u4P303r4ixPFG&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;06789876765&quot;,&quot;isCreatedByAdmin&quot;:true,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;Elechi&quot;,&quot;_id&quot;:&quot;63ecae576cb610809cab445c&quot;,&quot;isActive&quot;:true,&quot;first_name&quot;:&quot;Okoli &quot;,&quot;email&quot;:&quot;rolland.aka@yopmail.com&quot;,&quot;isEmailConfirmed&quot;:true},{&quot;birth_day&quot;:&quot;2016-12-31T23:00:00.000Z&quot;,&quot;password&quot;:&quot;$2b$10$x68m6VfAPXk2eCh9O6\/7FufhvJ9v2Z0MHWniDUpfhP4X6Uu8VAoIa&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;0987654321&quot;,&quot;isCreatedByAdmin&quot;:true,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;Zinachidi&quot;,&quot;_id&quot;:&quot;63ecaf666cb610809cab4473&quot;,&quot;isActive&quot;:true,&quot;first_name&quot;:&quot;Chinemeremma &quot;,&quot;email&quot;:&quot;zina.aka@yopmail.com&quot;,&quot;isEmailConfirmed&quot;:true},{&quot;birth_day&quot;:&quot;2005-02-07T23:00:00.000Z&quot;,&quot;password&quot;:&quot;$2b$10$eF9hDrRyEGVXUK9ZVE3b\/uh4e80zEQTZ9JK5zIJG3BvmFeXP9nH4i&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;0987654321&quot;,&quot;isCreatedByAdmin&quot;:true,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;Iweobiegbulam&quot;,&quot;_id&quot;:&quot;63ecb02c6cb610809cab4485&quot;,&quot;isActive&quot;:true,&quot;first_name&quot;:&quot;Dike &quot;,&quot;email&quot;:&quot;dike.aka@yopmail.com&quot;,&quot;isEmailConfirmed&quot;:true},{&quot;birth_day&quot;:&quot;1970-01-01T05:33:10.509Z&quot;,&quot;password&quot;:&quot;$2b$10$YpLDon1zoWxoGFnPzOzmfuPdELs.QO68EuOIz7eZrp\/PwRIctmytG&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;696894199&quot;,&quot;isCreatedByAdmin&quot;:true,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;Zara&quot;,&quot;_id&quot;:&quot;63ecdfd46cb610809cab45c5&quot;,&quot;isActive&quot;:true,&quot;first_name&quot;:&quot;Tesfaye7&quot;,&quot;email&quot;:&quot;tesf5@gmail.com&quot;,&quot;isEmailConfirmed&quot;:false},{&quot;birth_day&quot;:&quot;1999-05-09T00:00:00.000Z&quot;,&quot;password&quot;:&quot;$2b$10$OePjek26axPHOOcxSFC6guy2l38lFTK\/NEnfDLhsmAC.QSYliV7Fm&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;696894199&quot;,&quot;isCreatedByAdmin&quot;:true,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;Zara&quot;,&quot;_id&quot;:&quot;63ef3db98b2891650680aa47&quot;,&quot;isActive&quot;:true,&quot;first_name&quot;:&quot;Tesfa&quot;,&quot;email&quot;:&quot;ulrich777@mail.com&quot;,&quot;isEmailConfirmed&quot;:false},{&quot;birth_day&quot;:&quot;1999-05-09T00:00:00.000Z&quot;,&quot;password&quot;:&quot;$2b$10$i6dGlsBtRK45bDcRR2g8seTKIJzW50V7dcU.zV\/r1vJbmCdzO1tZW&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;696894199&quot;,&quot;isCreatedByAdmin&quot;:true,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;Zara&quot;,&quot;_id&quot;:&quot;63ef3dbc8b2891650680aa4e&quot;,&quot;isActive&quot;:true,&quot;first_name&quot;:&quot;Tesy&quot;,&quot;email&quot;:&quot;tesf7@gmail.com&quot;,&quot;isEmailConfirmed&quot;:false},{&quot;birth_day&quot;:&quot;2000-01-01T00:00:00.000Z&quot;,&quot;password&quot;:&quot;$2b$10$ujSu42KMf1VzZNo9LY7RTekXmF4fy\/D.s5USfqKOT0oxJgJmNeugm&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;655432453&quot;,&quot;isCreatedByAdmin&quot;:false,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;test23&quot;,&quot;_id&quot;:&quot;63ef43218b2891650680aa6b&quot;,&quot;isActive&quot;:true,&quot;first_name&quot;:&quot;test23&quot;,&quot;email&quot;:&quot;gt@test.com&quot;,&quot;isEmailConfirmed&quot;:false},{&quot;birth_day&quot;:&quot;2000-01-01T00:00:00.000Z&quot;,&quot;password&quot;:&quot;$2b$10$5cOxAsxld3ceisKPmquurOMQGQ0ZNa7jpPtVOY4Ff5IIpFlbOeMzG&quot;,&quot;role&quot;:[&quot;User&quot;],&quot;phone&quot;:&quot;655732453&quot;,&quot;isCreatedByAdmin&quot;:false,&quot;__v&quot;:0,&quot;last_name&quot;:&quot;test24&quot;,&quot;_id&quot;:&quot;63ef436a8b2891650680aa95&quot;,&quot;isActive&quot;:true,&quot;first_name&quot;:&quot;test24&quot;,&quot;email&quot;:&quot;gt2@test.com&quot;,&quot;isEmailConfirmed&quot;:false}]
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.13">
+      <div class="step-ref passed">13</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.14">
+      <div class="step-ref passed">14</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>print response</span>
+      </div>
+    </div>
+    <div class="time-cell passed">4</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.14">11:52:23.648 [print] [
+  {
+    &quot;birth_day&quot;: &quot;1970-01-01T05:33:10.501Z&quot;,
+    &quot;password&quot;: &quot;$2b$10$guLY3aS7eMyjqyLCghgMdu6Y4WfOWbsOsOIMzP5K9APtvXLcYOUga&quot;,
+    &quot;role&quot;: [
+      &quot;SuperAdmin&quot;
+    ],
+    &quot;phone&quot;: &quot;696074199&quot;,
+    &quot;isCreatedByAdmin&quot;: false,
+    &quot;__v&quot;: 0,
+    &quot;last_name&quot;: &quot;fafniru&quot;,
+    &quot;_id&quot;: &quot;63ca63e13b641efd19438730&quot;,
+    &quot;isActive&quot;: true,
+    &quot;first_name&quot;: &quot;Fafniru&quot;,
+    &quot;email&quot;: &quot;root@gmail.com&quot;,
+    &quot;isEmailConfirmed&quot;: true
+  },
+  {
+    &quot;birth_day&quot;: &quot;2000-01-24T00:00:00.000Z&quot;,
+    &quot;password&quot;: &quot;$2b$10$gEIs1rvdZKl1rm26qjYEjebygzCnDj.xoRSOeSTWmzdcySIF5X7Cm&quot;,
+    &quot;role&quot;: [
+      &quot;User&quot;
+    ],
+    &quot;phone&quot;: &quot;654785425&quot;,
+    &quot;isCreatedByAdmin&quot;: false,
+    &quot;__v&quot;: 0,
+    &quot;last_name&quot;: &quot;Tendong&quot;,
+    &quot;_id&quot;: &quot;63cfa0075c79aca924389367&quot;,
+    &quot;isActive&quot;: true,
+    &quot;first_name&quot;: &quot;Gabriel&quot;,
+    &quot;email&quot;: &quot;gabriel.tendongpk71@gmail.com&quot;,
+    &quot;isEmailConfirmed&quot;: true
+  },
+  {
+    &quot;birth_day&quot;: &quot;2004-12-18T00:00:00.000Z&quot;,
+    &quot;password&quot;: &quot;$2b$10$mp.wTtDMMVMOSq.M0TviXeFMgspoZr6B1WcRjo1CA9mwDpK3vxRMq&quot;,
+    &quot;role&quot;: [
+      &quot;Admin&quot;
+    ],
+    &quot;phone&quot;: &quot;+237696074190&quot;,
+    &quot;isCreatedByAdmin&quot;: false,
+    &quot;__v&quot;: 0,
+    &quot;last_name&quot;: &quot;AHMADOU&quot;,
+    &quot;_id&quot;: &quot;63cfb71d07003e7ecec8115a&quot;,
+    &quot;isActive&quot;: true,
+    &quot;first_name&quot;: &quot;Hamman bello&quot;,
+    &quot;email&quot;: &quot;gabitendongoff@gmail.com&quot;,
+    &quot;isEmailConfirmed&quot;: true
+  },
+  {
+    &quot;birth_day&quot;: &quot;1970-01-01T05:33:10.501Z&quot;,
+    &quot;password&quot;: &quot;$2b$10$wW356.N/ruscwy1Vwzn7..DieIemLFb9zedwJIAXFtAPP5xQ.BEG.&quot;,
+    &quot;role&quot;: [
+      &quot;User&quot;
+    ],
+    &quot;phone&quot;: &quot;696074199&quot;,
+    &quot;isCreatedByAdmin&quot;: false,
+    &quot;__v&quot;: 0,
+    &quot;last_name&quot;: &quot;Merkelom&quot;,
+    &quot;_id&quot;: &quot;63da93afd78544f455dab69c&quot;,
+    &quot;isActive&quot;: true,
+    &quot;first_name&quot;: &quot;Batch4&quot;,
+    &quot;email&quot;: &quot;batch1956@amysy.com&quot;,
+    &quot;isEmailConfirmed&quot;: false
+  },
+  {
+    &quot;birth_day&quot;: &quot;2004-12-09T00:00:00.000Z&quot;,
+    &quot;password&quot;: &quot;$2b$10$rhqmsRb9dt9lejVLe8UDwewqIN7R/Xkojf5LAwlZ.RdFWr5pw880W&quot;,
+    &quot;role&quot;: [
+      &quot;Admin&quot;
+    ],
+    &quot;phone&quot;: &quot;+334567898765&quot;,
+    &quot;isCreatedByAdmin&quot;: true,
+    &quot;__v&quot;: 0,
+    &quot;last_name&quot;: &quot;L. Luttrell&quot;,
+    &quot;_id&quot;: &quot;63e27048993b5f9a52eb82ac&quot;,
+    &quot;isActive&quot;: true,
+    &quot;first_name&quot;: &quot;Daniel &quot;,
+    &quot;email&quot;: &quot;dankiel.luttrell@yopmail.com&quot;,
+    &quot;isEmailConfirmed&quot;: true
+  },
+  {
+    &quot;birth_day&quot;: &quot;2004-12-09T00:00:00.000Z&quot;,
+    &quot;password&quot;: &quot;$2b$10$sP.A0rPhSmxKb0cHZeYkAeAOpC.VeBhwSU/.H.yAtCxvWYnDvKePq&quot;,
+    &quot;role&quot;: [
+      &quot;Admin&quot;
+    ],
+    &quot;phone&quot;: &quot;+237696074190&quot;,
+    &quot;isCreatedByAdmin&quot;: true,
+    &quot;__v&quot;: 0,
+    &quot;last_name&quot;: &quot;POLA&quot;,
+    &quot;_id&quot;: &quot;63e27913993b5f9a52eb83d3&quot;,
+    &quot;isActive&quot;: true,
+    &quot;first_name&quot;: &quot;AHMADOU&quot;,
+    &quot;email&quot;: &quot;dankiel.luttrfell@yopmail.com&quot;,
+    &quot;isEmailConfirmed&quot;: true
+  },
+  {
+    &quot;birth_day&quot;: &quot;2004-12-09T00:00:00.000Z&quot;,
+    &quot;password&quot;: &quot;$2b$10$KkZCbA3Uply7zeFH7i5oq.NiBqeSsSSysvv4JxNJ27vNQkSPdxla.&quot;,
+    &quot;role&quot;: [
+      &quot;Admin&quot;
+    ],
+    &quot;phone&quot;: &quot;+336767898765&quot;,
+    &quot;isCreatedByAdmin&quot;: true,
+    &quot;__v&quot;: 0,
+    &quot;last_name&quot;: &quot;E. Bryan&quot;,
+    &quot;_id&quot;: &quot;63e283ad993b5f9a52eb859d&quot;,
+    &quot;isActive&quot;: true,
+    &quot;first_name&quot;: &quot;judith&quot;,
+    &quot;email&quot;: &quot;judith.bryan@yopmail.com&quot;,
+    &quot;isEmailConfirmed&quot;: true
+  },
+  {
+    &quot;birth_day&quot;: &quot;2004-12-09T00:00:00.000Z&quot;,
+    &quot;password&quot;: &quot;$2b$10$uq12Jk0e2MbTggvNE8kbIOEbZ2zzNcjeSubFJO2DJpt557SF/hDba&quot;,
+    &quot;role&quot;: [
+      &quot;Admin&quot;
+    ],
+    &quot;phone&quot;: &quot;+330236999380&quot;,
+    &quot;isCreatedByAdmin&quot;: true,
+    &quot;__v&quot;: 0,
+    &quot;last_name&quot;: &quot;Vernadeau&quot;,
+    &quot;_id&quot;: &quot;63e3804224786384b87f177a&quot;,
+    &quot;isActive&quot;: true,
+    &quot;first_name&quot;: &quot;Huette&quot;,
+    &quot;email&quot;: &quot;dorothee.thibodeau@yopmail.com&quot;,
+    &quot;isEmailConfirmed&quot;: true
+  },
+  {
+    &quot;birth_day&quot;: &quot;2004-12-09T00:00:00.000Z&quot;,
+    &quot;password&quot;: &quot;$2b$10$1q6UFCHlYHm1g/o.3G0cSegtBCVXg8KB0E0lVWTF7lkqTJkJslJfa&quot;,
+    &quot;role&quot;: [
+      &quot;Admin&quot;
+    ],
+    &quot;phone&quot;: &quot;+335678987654&quot;,
+    &quot;isCreatedByAdmin&quot;: true,
+    &quot;__v&quot;: 0,
+    &quot;last_name&quot;: &quot;BOSS&quot;,
+    &quot;_id&quot;: &quot;63e523ade1cbdc16bbbea1fc&quot;,
+    &quot;isActive&quot;: true,
+    &quot;first_name&quot;: &quot;Eric Jacques&quot;,
+    &quot;email&quot;: &quot;eric.boss@yopmail.com&quot;,
+    &quot;isEmailConfirmed&quot;: true
+  },
+  {
+    &quot;birth_day&quot;: &quot;2004-12-09T00:00:00.000Z&quot;,
+    &quot;password&quot;: &quot;$2b$10$yv06XX7izet8dxzpc8l2iOvPg409Wkd.WWu4TRz2QXPYedGZfvNaa&quot;,
+    &quot;role&quot;: [
+      &quot;Admin&quot;
+    ],
+    &quot;phone&quot;: &quot;0274597637&quot;,
+    &quot;isCreatedByAdmin&quot;: true,
+    &quot;__v&quot;: 0,
+    &quot;last_name&quot;: &quot;Fluet&quot;,
+    &quot;_id&quot;: &quot;63eb9ddc475413c1984e04c8&quot;,
+    &quot;isActive&quot;: true,
+    &quot;first_name&quot;: &quot;mariette&quot;,
+    &quot;email&quot;: &quot;fluet.mariette@yopmail.com&quot;,
+    &quot;isEmailConfirmed&quot;: true
+  },
+  {
+    &quot;birth_day&quot;: &quot;2004-12-09T00:00:00.000Z&quot;,
+    &quot;password&quot;: &quot;$2b$10$nBA5IugESftbSIcdr9oOYujN0VP77FDCbYxAit0qfgLz9feKy5HvW&quot;,
+    &quot;role&quot;: [
+      &quot;Admin&quot;
+    ],
+    &quot;phone&quot;: &quot;0261566377&quot;,
+    &quot;isCreatedByAdmin&quot;: true,
+    &quot;__v&quot;: 0,
+    &quot;last_name&quot;: &quot;Leverett &quot;,
+    &quot;_id&quot;: &quot;63eba2a7fcce97226f762a4a&quot;,
+    &quot;isActive&quot;: true,
+    &quot;first_name&quot;: &quot;pirouet&quot;,
+    &quot;email&quot;: &quot;pirouet.leverett@yopmail.com&quot;,
+    &quot;isEmailConfirmed&quot;: true
+  },
+  {
+    &quot;birth_day&quot;: &quot;1970-01-01T05:33:10.509Z&quot;,
+    &quot;password&quot;: &quot;$2b$10$IVEppXxuipoFaZJ.nnMW5OQ.M.0i32Jb1KX.b65ykbTg0F3ZY0txe&quot;,
+    &quot;role&quot;: [
+      &quot;Admin&quot;
+    ],
+    &quot;phone&quot;: &quot;696894199&quot;,
+    &quot;isCreatedByAdmin&quot;: true,
+    &quot;__v&quot;: 0,
+    &quot;last_name&quot;: &quot;mappuye&quot;,
+    &quot;_id&quot;: &quot;63eba61dced4433df65d54ac&quot;,
+    &quot;isActive&quot;: true,
+    &quot;first_name&quot;: &quot;praufe&quot;,
+    &quot;email&quot;: &quot;praufeimmappuye-6059@yopmail.com&quot;,
+    &quot;isEmailConfirmed&quot;: true
+  },
+  {
+    &quot;birth_day&quot;: &quot;1976-02-12T23:00:00.000Z&quot;,
+    &quot;password&quot;: &quot;$2b$10$l7tdbMjE3Hr0r7JEBpJS1uEBNgPiC5lCMr.PPu8fn9figqVgC7YFi&quot;,
+    &quot;role&quot;: [
+      &quot;User&quot;
+    ],
+    &quot;phone&quot;: &quot;0130804537&quot;,
+    &quot;isCreatedByAdmin&quot;: true,
+    &quot;__v&quot;: 0,
+    &quot;last_name&quot;: &quot;Brochu&quot;,
+    &quot;_id&quot;: &quot;63eba64aced4433df65d54b3&quot;,
+    &quot;isActive&quot;: true,
+    &quot;first_name&quot;: &quot; Marie Christiane &quot;,
+    &quot;email&quot;: &quot;marie.brochu@yopmail.com&quot;,
+    &quot;isEmailConfirmed&quot;: true
+  },
+  {
+    &quot;birth_day&quot;: &quot;2004-12-09T00:00:00.000Z&quot;,
+    &quot;password&quot;: &quot;$2b$10$.mqVfGrCpAJv2TXsmwYCTO.F7JRBlTHqFlFQo8RB/yrFNfkHZEsmW&quot;,
+    &quot;role&quot;: [
+      &quot;Admin&quot;
+    ],
+    &quot;phone&quot;: &quot;123456789&quot;,
+    &quot;isCreatedByAdmin&quot;: true,
+    &quot;__v&quot;: 0,
+    &quot;last_name&quot;: &quot;Rossignol&quot;,
+    &quot;_id&quot;: &quot;63eba7e3ced4433df65d54ce&quot;,
+    &quot;isActive&quot;: true,
+    &quot;first_name&quot;: &quot;Stéphane &quot;,
+    &quot;email&quot;: &quot;stephane.ross@yopmail.com&quot;,
+    &quot;isEmailConfirmed&quot;: true
+  },
+  {
+    &quot;birth_day&quot;: &quot;2016-12-31T23:00:00.000Z&quot;,
+    &quot;password&quot;: &quot;$2b$10$AJCOW02oFEeklV14KLLIf.e.m35sisNyVg2K32218Hqnj9Q6Tatbe&quot;,
+    &quot;role&quot;: [
+      &quot;User&quot;
+    ],
+    &quot;phone&quot;: &quot;0127376454&quot;,
+    &quot;isCreatedByAdmin&quot;: true,
+    &quot;__v&quot;: 0,
+    &quot;last_name&quot;: &quot;Chrétien&quot;,
+    &quot;_id&quot;: &quot;63ebabf2ced4433df65d54e1&quot;,
+    &quot;isActive&quot;: true,
+    &quot;first_name&quot;: &quot;Gaston &quot;,
+    &quot;email&quot;: &quot;gaston.chretien@yopmail.com&quot;,
+    &quot;isEmailConfirmed&quot;: false
+  },
+  {
+    &quot;birth_day&quot;: &quot;2003-02-15T00:00:00.000Z&quot;,
+    &quot;password&quot;: &quot;$2b$10$P8AGzDh6FQ0R0DYi9sG3VeVJmVsLBVFFg85OUiFmxBbLOtmNBo2ki&quot;,
+    &quot;role&quot;: [
+      &quot;User&quot;
+    ],
+    &quot;phone&quot;: &quot;655757902&quot;,
+    &quot;isCreatedByAdmin&quot;: false,
+    &quot;__v&quot;: 0,
+    &quot;last_name&quot;: &quot;Tendong&quot;,
+    &quot;_id&quot;: &quot;63eca75c21e6713f8b9f54bf&quot;,
+    &quot;isActive&quot;: true,
+    &quot;first_name&quot;: &quot;Gabriel&quot;,
+    &quot;email&quot;: &quot;gabitendong@gmail.com&quot;,
+    &quot;isEmailConfirmed&quot;: true
+  },
+  {
+    &quot;birth_day&quot;: &quot;2000-12-12T00:00:00.000Z&quot;,
+    &quot;password&quot;: &quot;$2b$10$vjCSrc3bqwG0QCcEVlUB1.J6mm2nZl33vRdd2Bp1onct3XEXRm4Ra&quot;,
+    &quot;role&quot;: [
+      &quot;SuperAdmin&quot;
+    ],
+    &quot;phone&quot;: &quot;655797902&quot;,
+    &quot;isCreatedByAdmin&quot;: false,
+    &quot;__v&quot;: 0,
+    &quot;last_name&quot;: &quot;Okourou&quot;,
+    &quot;_id&quot;: &quot;63eca87e265224556e41266e&quot;,
+    &quot;isActive&quot;: true,
+    &quot;first_name&quot;: &quot;Francine&quot;,
+    &quot;email&quot;: &quot;francine.okourou@gmail.com&quot;,
+    &quot;isEmailConfirmed&quot;: true
+  },
+  {
+    &quot;birth_day&quot;: &quot;2016-12-31T23:00:00.000Z&quot;,
+    &quot;password&quot;: &quot;$2b$10$DJJedtFoORIMJ6Rr/xq/eez8pZH3KoOwnSL6xB2.u4P303r4ixPFG&quot;,
+    &quot;role&quot;: [
+      &quot;User&quot;
+    ],
+    &quot;phone&quot;: &quot;06789876765&quot;,
+    &quot;isCreatedByAdmin&quot;: true,
+    &quot;__v&quot;: 0,
+    &quot;last_name&quot;: &quot;Elechi&quot;,
+    &quot;_id&quot;: &quot;63ecae576cb610809cab445c&quot;,
+    &quot;isActive&quot;: true,
+    &quot;first_name&quot;: &quot;Okoli &quot;,
+    &quot;email&quot;: &quot;rolland.aka@yopmail.com&quot;,
+    &quot;isEmailConfirmed&quot;: true
+  },
+  {
+    &quot;birth_day&quot;: &quot;2016-12-31T23:00:00.000Z&quot;,
+    &quot;password&quot;: &quot;$2b$10$x68m6VfAPXk2eCh9O6/7FufhvJ9v2Z0MHWniDUpfhP4X6Uu8VAoIa&quot;,
+    &quot;role&quot;: [
+      &quot;User&quot;
+    ],
+    &quot;phone&quot;: &quot;0987654321&quot;,
+    &quot;isCreatedByAdmin&quot;: true,
+    &quot;__v&quot;: 0,
+    &quot;last_name&quot;: &quot;Zinachidi&quot;,
+    &quot;_id&quot;: &quot;63ecaf666cb610809cab4473&quot;,
+    &quot;isActive&quot;: true,
+    &quot;first_name&quot;: &quot;Chinemeremma &quot;,
+    &quot;email&quot;: &quot;zina.aka@yopmail.com&quot;,
+    &quot;isEmailConfirmed&quot;: true
+  },
+  {
+    &quot;birth_day&quot;: &quot;2005-02-07T23:00:00.000Z&quot;,
+    &quot;password&quot;: &quot;$2b$10$eF9hDrRyEGVXUK9ZVE3b/uh4e80zEQTZ9JK5zIJG3BvmFeXP9nH4i&quot;,
+    &quot;role&quot;: [
+      &quot;User&quot;
+    ],
+    &quot;phone&quot;: &quot;0987654321&quot;,
+    &quot;isCreatedByAdmin&quot;: true,
+    &quot;__v&quot;: 0,
+    &quot;last_name&quot;: &quot;Iweobiegbulam&quot;,
+    &quot;_id&quot;: &quot;63ecb02c6cb610809cab4485&quot;,
+    &quot;isActive&quot;: true,
+    &quot;first_name&quot;: &quot;Dike &quot;,
+    &quot;email&quot;: &quot;dike.aka@yopmail.com&quot;,
+    &quot;isEmailConfirmed&quot;: true
+  },
+  {
+    &quot;birth_day&quot;: &quot;1970-01-01T05:33:10.509Z&quot;,
+    &quot;password&quot;: &quot;$2b$10$YpLDon1zoWxoGFnPzOzmfuPdELs.QO68EuOIz7eZrp/PwRIctmytG&quot;,
+    &quot;role&quot;: [
+      &quot;User&quot;
+    ],
+    &quot;phone&quot;: &quot;696894199&quot;,
+    &quot;isCreatedByAdmin&quot;: true,
+    &quot;__v&quot;: 0,
+    &quot;last_name&quot;: &quot;Zara&quot;,
+    &quot;_id&quot;: &quot;63ecdfd46cb610809cab45c5&quot;,
+    &quot;isActive&quot;: true,
+    &quot;first_name&quot;: &quot;Tesfaye7&quot;,
+    &quot;email&quot;: &quot;tesf5@gmail.com&quot;,
+    &quot;isEmailConfirmed&quot;: false
+  },
+  {
+    &quot;birth_day&quot;: &quot;1999-05-09T00:00:00.000Z&quot;,
+    &quot;password&quot;: &quot;$2b$10$OePjek26axPHOOcxSFC6guy2l38lFTK/NEnfDLhsmAC.QSYliV7Fm&quot;,
+    &quot;role&quot;: [
+      &quot;User&quot;
+    ],
+    &quot;phone&quot;: &quot;696894199&quot;,
+    &quot;isCreatedByAdmin&quot;: true,
+    &quot;__v&quot;: 0,
+    &quot;last_name&quot;: &quot;Zara&quot;,
+    &quot;_id&quot;: &quot;63ef3db98b2891650680aa47&quot;,
+    &quot;isActive&quot;: true,
+    &quot;first_name&quot;: &quot;Tesfa&quot;,
+    &quot;email&quot;: &quot;ulrich777@mail.com&quot;,
+    &quot;isEmailConfirmed&quot;: false
+  },
+  {
+    &quot;birth_day&quot;: &quot;1999-05-09T00:00:00.000Z&quot;,
+    &quot;password&quot;: &quot;$2b$10$i6dGlsBtRK45bDcRR2g8seTKIJzW50V7dcU.zV/r1vJbmCdzO1tZW&quot;,
+    &quot;role&quot;: [
+      &quot;User&quot;
+    ],
+    &quot;phone&quot;: &quot;696894199&quot;,
+    &quot;isCreatedByAdmin&quot;: true,
+    &quot;__v&quot;: 0,
+    &quot;last_name&quot;: &quot;Zara&quot;,
+    &quot;_id&quot;: &quot;63ef3dbc8b2891650680aa4e&quot;,
+    &quot;isActive&quot;: true,
+    &quot;first_name&quot;: &quot;Tesy&quot;,
+    &quot;email&quot;: &quot;tesf7@gmail.com&quot;,
+    &quot;isEmailConfirmed&quot;: false
+  },
+  {
+    &quot;birth_day&quot;: &quot;2000-01-01T00:00:00.000Z&quot;,
+    &quot;password&quot;: &quot;$2b$10$ujSu42KMf1VzZNo9LY7RTekXmF4fy/D.s5USfqKOT0oxJgJmNeugm&quot;,
+    &quot;role&quot;: [
+      &quot;User&quot;
+    ],
+    &quot;phone&quot;: &quot;655432453&quot;,
+    &quot;isCreatedByAdmin&quot;: false,
+    &quot;__v&quot;: 0,
+    &quot;last_name&quot;: &quot;test23&quot;,
+    &quot;_id&quot;: &quot;63ef43218b2891650680aa6b&quot;,
+    &quot;isActive&quot;: true,
+    &quot;first_name&quot;: &quot;test23&quot;,
+    &quot;email&quot;: &quot;gt@test.com&quot;,
+    &quot;isEmailConfirmed&quot;: false
+  },
+  {
+    &quot;birth_day&quot;: &quot;2000-01-01T00:00:00.000Z&quot;,
+    &quot;password&quot;: &quot;$2b$10$5cOxAsxld3ceisKPmquurOMQGQ0ZNa7jpPtVOY4Ff5IIpFlbOeMzG&quot;,
+    &quot;role&quot;: [
+      &quot;User&quot;
+    ],
+    &quot;phone&quot;: &quot;655732453&quot;,
+    &quot;isCreatedByAdmin&quot;: false,
+    &quot;__v&quot;: 0,
+    &quot;last_name&quot;: &quot;test24&quot;,
+    &quot;_id&quot;: &quot;63ef436a8b2891650680aa95&quot;,
+    &quot;isActive&quot;: true,
+    &quot;first_name&quot;: &quot;test24&quot;,
+    &quot;email&quot;: &quot;gt2@test.com&quot;,
+    &quot;isEmailConfirmed&quot;: false
+  }
+]
+ 
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.15">
+      <div class="step-ref passed">15</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response[0].last_name != null</span>
+      </div>
+    </div>
+    <div class="time-cell passed">13</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.16">
+      <div class="step-ref failed">16</div>
+      
+      <div class="step-cell failed">
+        <span>And</span>&nbsp;<span>assert response.length == 21</span>
+      </div>
+    </div>
+    <div class="time-cell failed">6</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.16">11:52:23.668 classpath:examples/tests/Get.feature:16
+And assert response.length == 21
+did not evaluate to &#39;true&#39;: response.length == 21
+classpath:examples/tests/Get.feature:16
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.17">
+      <div class="step-ref skipped">17</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>print responseStatus</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

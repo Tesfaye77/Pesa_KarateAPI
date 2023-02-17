@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"examples\/tests\/Get[1:10]","start":1676621809600,"end":1676621815500,"title":"examples\/tests\/Get[1:10] 09:16:49.600-09:16:55.500 GET all users"},{"id":2,"group":1,"content":"examples\/tests\/Get[2:20]","start":1676621815511,"end":1676621817023,"title":"examples\/tests\/Get[2:20] 09:16:55.511-09:16:57.023 GET user infos"},{"id":3,"group":1,"content":"examples\/tests\/Get[3:30]","start":1676621817032,"end":1676621820764,"title":"examples\/tests\/Get[3:30] 09:16:57.032-09:17:00.764 GET all wallet","className":"failed"},{"id":4,"group":1,"content":"examples\/tests\/Get[4:41]","start":1676621820772,"end":1676621822503,"title":"examples\/tests\/Get[4:41] 09:17:00.772-09:17:02.503 GET wallet info"},{"id":5,"group":1,"content":"examples\/tests\/Get[5:52]","start":1676621822514,"end":1676621824221,"title":"examples\/tests\/Get[5:52] 09:17:02.514-09:17:04.221 GET wallet info by user id"},{"id":6,"group":1,"content":"examples\/tests\/Get[6:61]","start":1676621824228,"end":1676621825490,"title":"examples\/tests\/Get[6:61] 09:17:04.228-09:17:05.490 GET all products"},{"id":7,"group":1,"content":"examples\/tests\/Get[7:71]","start":1676621825498,"end":1676621826757,"title":"examples\/tests\/Get[7:71] 09:17:05.498-09:17:06.757 GET product BY ID","className":"failed"},{"id":8,"group":1,"content":"examples\/tests\/Get[8:81]","start":1676621826762,"end":1676621828249,"title":"examples\/tests\/Get[8:81] 09:17:06.762-09:17:08.249 GET all record of product subscription"},{"id":9,"group":1,"content":"examples\/tests\/Get[9:91]","start":1676621828254,"end":1676621829478,"title":"examples\/tests\/Get[9:91] 09:17:08.254-09:17:09.478 GET specific product subscription by user_id"},{"id":10,"group":1,"content":"examples\/tests\/Get[10:102]","start":1676621829482,"end":1676621830734,"title":"examples\/tests\/Get[10:102] 09:17:09.482-09:17:10.734 GET specific product subscription by product_id"},{"id":11,"group":1,"content":"examples\/tests\/Get[11:113]","start":1676621830740,"end":1676621832230,"title":"examples\/tests\/Get[11:113] 09:17:10.740-09:17:12.230 GET one record of product subscription by id"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>

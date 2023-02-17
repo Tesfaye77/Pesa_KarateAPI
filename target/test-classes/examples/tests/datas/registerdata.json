@@ -1,8 +1,8 @@
 [
   {
-  "first_name": "Tesfaye7",
+  "first_name": "Tesfa",
   "last_name": "Zara",
-  "email": "tesf5@gmail.com",
+  "email": "tesf6@gmail.com",
   "phone": "696894199",
   "birth_day": "19990509",
   "password": 362014,
@@ -11,6 +11,18 @@
   "isEmailConfirmed": false,
   "isCreatedByAdmin": true
 },
+  {
+    "first_name": "Tesy",
+    "last_name": "Zara",
+    "email": "tesf7@gmail.com",
+    "phone": "696894199",
+    "birth_day": "19990509",
+    "password": 362014,
+    "role": ["User"],
+    "isActive": true,
+    "isEmailConfirmed": false,
+    "isCreatedByAdmin": true
+  },
 
 
   {
@@ -31,10 +43,10 @@
   {
     "designation": "Ulrich",
     "transmitter": "Kamer",
-    "value_initial": 15000,
-    "value_liquidity": 10000,
+    "value_initial": 150.3,
+    "value_liquidity": 99.99,
     "perfomance_hebdo": 20,
-    "maturity": "ZZ20",
+    "maturity": "high",
     "rate_of_return": 0,
     "Annual_rate": 12,
     "Annual_return": 13,

@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"examples\/tests\/login[1:12]","start":1676564816302,"end":1676564817412,"title":"examples\/tests\/login[1:12] 17:26:56.302-17:26:57.412 Login user to PESA Solutions"},{"id":2,"group":1,"content":"examples\/tests\/Post[1:13]","start":1676564817606,"end":1676564818625,"title":"examples\/tests\/Post[1:13] 17:26:57.606-17:26:58.625 Create user to PESA Solutions","className":"failed"},{"id":3,"group":1,"content":"examples\/tests\/Post[2:23]","start":1676564818628,"end":1676564819970,"title":"examples\/tests\/Post[2:23] 17:26:58.628-17:26:59.970 Create wallet to PESA Solutions"},{"id":4,"group":1,"content":"examples\/tests\/Post[3:32]","start":1676564819973,"end":1676564821271,"title":"examples\/tests\/Post[3:32] 17:26:59.973-17:27:01.271 Create product to PESA Solutions"},{"id":5,"group":1,"content":"examples\/tests\/Post[4:41]","start":1676564821275,"end":1676564824600,"title":"examples\/tests\/Post[4:41] 17:27:01.275-17:27:04.600 Create a product subscription","className":"failed"},{"id":6,"group":1,"content":"examples\/tests\/Get[1:10]","start":1676564793027,"end":1676564798756,"title":"examples\/tests\/Get[1:10] 17:26:33.027-17:26:38.756 GET all users"},{"id":7,"group":1,"content":"examples\/tests\/Get[2:20]","start":1676564798766,"end":1676564800053,"title":"examples\/tests\/Get[2:20] 17:26:38.766-17:26:40.053 GET user infos"},{"id":8,"group":1,"content":"examples\/tests\/Get[3:30]","start":1676564800060,"end":1676564803240,"title":"examples\/tests\/Get[3:30] 17:26:40.060-17:26:43.240 GET all wallet","className":"failed"},{"id":9,"group":1,"content":"examples\/tests\/Get[4:41]","start":1676564803248,"end":1676564804792,"title":"examples\/tests\/Get[4:41] 17:26:43.248-17:26:44.792 GET wallet info"},{"id":10,"group":1,"content":"examples\/tests\/Get[5:52]","start":1676564804799,"end":1676564806355,"title":"examples\/tests\/Get[5:52] 17:26:44.799-17:26:46.355 GET wallet info by user id"},{"id":11,"group":1,"content":"examples\/tests\/Get[6:61]","start":1676564806360,"end":1676564807402,"title":"examples\/tests\/Get[6:61] 17:26:46.360-17:26:47.402 GET all products"},{"id":12,"group":1,"content":"examples\/tests\/Get[7:71]","start":1676564807407,"end":1676564808448,"title":"examples\/tests\/Get[7:71] 17:26:47.407-17:26:48.448 GET product BY ID","className":"failed"},{"id":13,"group":1,"content":"examples\/tests\/Get[8:81]","start":1676564808454,"end":1676564811324,"title":"examples\/tests\/Get[8:81] 17:26:48.454-17:26:51.324 GET all record of product subscription"},{"id":14,"group":1,"content":"examples\/tests\/Get[9:91]","start":1676564811330,"end":1676564812673,"title":"examples\/tests\/Get[9:91] 17:26:51.330-17:26:52.673 GET specific product subscription by user_id"},{"id":15,"group":1,"content":"examples\/tests\/Get[10:102]","start":1676564812677,"end":1676564813712,"title":"examples\/tests\/Get[10:102] 17:26:52.677-17:26:53.712 GET specific product subscription by product_id"},{"id":16,"group":1,"content":"examples\/tests\/Get[11:113]","start":1676564813717,"end":1676564814999,"title":"examples\/tests\/Get[11:113] 17:26:53.717-17:26:54.999 GET one record of product subscription by id"},{"id":17,"group":1,"content":"examples\/tests\/Patch[1:15]","start":1676564817494,"end":1676564817513,"title":"examples\/tests\/Patch[1:15] 17:26:57.494-17:26:57.513 Update User pass","className":"failed"},{"id":18,"group":1,"content":"examples\/tests\/Patch[2:25]","start":1676564817517,"end":1676564817520,"title":"examples\/tests\/Patch[2:25] 17:26:57.517-17:26:57.520 Update Product","className":"failed"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>

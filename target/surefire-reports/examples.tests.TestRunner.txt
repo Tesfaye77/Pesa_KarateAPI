@@ -1,24 +1,20 @@
 -------------------------------------------------------------------------------
 Test set: examples.tests.TestRunner
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 51.209 s <<< FAILURE! - in examples.tests.TestRunner
-examples.tests.TestRunner.testParallel  Time elapsed: 51.151 s  <<< FAILURE!
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 16.101 s <<< FAILURE! - in examples.tests.TestRunner
+examples.tests.TestRunner.testParallel  Time elapsed: 16.042 s  <<< FAILURE!
 junit.framework.AssertionFailedError: 
-status code was: 400, expected: 201, response time in milliseconds: 1022, url: https://pesa-backend-production.up.railway.app/api/v1/user/register, response: 
-{"statusCode":400,"message":"Cet utilisateur existe déjà"}
-classpath:examples/tests/Post.feature:17
-status code was: 500, expected: 201, response time in milliseconds: 2345, url: https://pesa-backend-production.up.railway.app/api/v1/product-subscription, response: 
-{"statusCode":500,"message":"Internal server error"}
-classpath:examples/tests/Post.feature:45
+did not evaluate to 'true': response.length == 21
+classpath:examples/tests/Get.feature:16
 did not evaluate to 'true': response.length == 38
 classpath:examples/tests/Get.feature:36
-http call failed after 5006 milliseconds for url: https://pesa-backend-production.up.railway.app/api/v1/wallet/63df5c36ad437ea9f60e8034
-classpath:examples/tests/Get.feature:43
 match failed: EQUALS
   $ | data types don't match (NULL:STRING)
   null
   'SC GRé'
 
 classpath:examples/tests/Get.feature:76
-	at examples.tests.TestRunner.testParallel(TestRunner.java:45)
+http call failed after 5012 milliseconds for url: https://pesa-backend-production.up.railway.app/api/v1/product-subscription/63d2a4867ab834e9abe21c21
+classpath:examples/tests/Get.feature:115
+	at examples.tests.TestRunner.testParallel(TestRunner.java:46)
 
